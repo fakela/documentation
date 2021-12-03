@@ -21,7 +21,7 @@ In order to authenticate your requests, you must include a valid API key using a
 }
 [/block]
 
-```
+```bash
 Authorization: Token <my-apikey-here>
 ```
 
