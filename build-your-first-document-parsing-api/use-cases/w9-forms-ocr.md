@@ -184,4 +184,4 @@ Now is the time to train your W9 deep learning model in the Training section of 
 
 In a few hours (minutes if you're fast), you’ll get your first model trained and will be able to use your custom OCR API for parsing W9 forms in your application.
 
- To get more information about the training phase, please refer to the  [Getting Started tutorial](doc:build-your-first-document-parsing-api). If you have any question regarding your use case, feel free to reach out on our chat!.
+ To get more information about the training phase, please refer to the  [Getting Started tutorial](doc:build-your-first-document-parsing-api). If you have any question regarding your use case, feel free to reach out on our chat!..
