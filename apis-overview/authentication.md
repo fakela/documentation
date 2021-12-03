@@ -21,9 +21,14 @@ In order to authenticate your requests, you must include a valid API key using a
 }
 [/block]
 
+[block:code]
 ```bash
   Authorization: Token <my-apikey-here>
 ```
+```bash 2
+  Authorization: Token <my-apikey-here>
+```
+[/block]
 
 For each API, you can create as many api keys as you want in the credentials page. See [Platform tour](doc:platform-tour#api----api-keys) for more information.
 
