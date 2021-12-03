@@ -13,13 +13,23 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Getting my sinch-readme-sync version
+        uses: actions/checkout@v2
+        with:
+          repository: 'fharper/readme-sync'
+          path: 'readme-sync'
+
       - name: Setting up Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '14'
 
-      - name: Installing sinch-readme-sync
-        run: npm i --ignore-scripts -g @sinch/readme-sync
+      - name: Installing readme-sync
+        run: |
+          cd readme-sync
+          npm install
+          npm link
+          cd ..
 
       - name: Push new documentation changes
         run: readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} -d . push
