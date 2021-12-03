@@ -20,6 +20,7 @@ In a few seconds, the API extracts a set of data from your pdfs or photos of inv
   ]
 }
 [/block]
+![](https://files.readme.io/533b81f-invoice_cover.jpeg)
 > Total amount including taxes
 > Total amount excluding taxes
 > Invoice number
