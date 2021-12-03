@@ -25,10 +25,8 @@ In order to authenticate your requests, you must include a valid API key using a
 {
   "codes": [
     {
-      "code": "Authorization: Token <my-apikey-here>
-      is on
-      multiple
-      line",
+      "code": "Authorization: Token <my-apikey-here>\
+      is on",
       "language": "text",
       "name": "HTTP Headers"
     }
