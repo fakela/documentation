@@ -19,7 +19,7 @@ jobs:
           node-version: '14'
 
       - name: Installing sinch-readme-sync
-        run: npm i --ignore-scripts -g @sinch-readme-sync
+        run: npm i --ignore-scripts -g @sinch/readme-sync
 
       - name: Get modified files
         id: changed-files
