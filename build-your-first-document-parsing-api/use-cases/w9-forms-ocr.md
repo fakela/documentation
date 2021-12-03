@@ -14,9 +14,22 @@ This article describes how to build an OCR API that extracts data from W9 forms 
 First, we’re going to define what fields we want to extract from your **W9**. 
 
 
-![capture-decran-2021-01-25-a-120927.png](images/0807a15-capture-decran-2021-01-25-a-120927.png)
-W9 form key data extraction
-
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/0807a15-capture-decran-2021-01-25-a-120927.png",
+        "capture-decran-2021-01-25-a-120927.png",
+        458,
+        595,
+        "#eaeaea"
+      ],
+      "caption": "W9 form key data extraction"
+    }
+  ]
+}
+[/block]
   * **Name**: The taxpayer's name. 
   *  **Address**: The taxpayer's mailing address (number, street, and apt)
   *  **City**: The taxpayer's city.
@@ -40,100 +53,63 @@ That’s it for our use case. Feel free to add any other relevant data to fit yo
 Once you have defined the list of fields you want to extract from your W9, head over to the platform and press the ‘**Create a new API**’ button.
 
  
+[block:html]
+{
+  "html": "You land now on the setup page. <a \n   href=\"https://mindee-public-website-dev.s3.amazonaws.com/blog/2021/01/25/w-9.png\"\n   target=\"_blank\">Here is the image</a> you can use to set up the API. For instance, my setup is as follows:"
+}
+[/block]
 
-<div class="magic-block-html">
-    You land now on the setup page. <a 
-      href="https://mindee-public-website-dev.s3.amazonaws.com/blog/2021/01/25/w-9.png"
-      target="_blank">Here is the image</a> you can use to set up the API. For instance, my setup is as follows:
-</div>
-
-
-![Capture d’écran 2021-04-09 à 14.39.43.png](images/2323247-Capture_decran_2021-04-09_a_14.39.43.png)
-Set up your model
-
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/2323247-Capture_decran_2021-04-09_a_14.39.43.png",
+        "Capture d’écran 2021-04-09 à 14.39.43.png",
+        1119,
+        448,
+        "#f6f7f8"
+      ],
+      "caption": "Set up your model"
+    }
+  ]
+}
+[/block]
 Once you’re ready, click on the “**next**” button. We are going to specify the data types for each of the fields we want our API to extract.
 
 
-![Capture d’écran 2021-04-09 à 14.39.48.png](images/c4174a1-Capture_decran_2021-04-09_a_14.39.48.png)
-Define your model
-
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/c4174a1-Capture_decran_2021-04-09_a_14.39.48.png",
+        "Capture d’écran 2021-04-09 à 14.39.48.png",
+        1119,
+        448,
+        "#fafbfd"
+      ],
+      "caption": "Define your model"
+    }
+  ]
+}
+[/block]
 To move forward, you have two possibilities:
 
 **Upload a json config**
 Copy the following JSON into a file and upload it on the interface
 
 
-```json
+[block:code]
 {
-  "problem_type_": {
-    "classificator": { "features": [], "features_name": [] },
-    "selector": {
-      "features": [
-        {
-          "cfg": { "filter": { "alpha": -1, "numeric": 0 } },
-          "handwritten": false,
-          "name": "name",
-          "public_name": "Name",
-          "semantics": "word"
-        },
-        {
-          "cfg": { "filter": { "alpha": -1, "numeric": -1 } },
-          "handwritten": false,
-          "name": "address",
-          "public_name": "Address",
-          "semantics": "word"
-        },
-        {
-          "cfg": { "filter": { "alpha": -1, "numeric": 0 } },
-          "handwritten": false,
-          "name": "city",
-          "public_name": "City",
-          "semantics": "word"
-        },
-        {
-          "cfg": { "filter": { "alpha": -1, "numeric": 0 } },
-          "handwritten": false,
-          "name": "state",
-          "public_name": "State",
-          "semantics": "word"
-        },
-        {
-          "cfg": { "filter": { "is_integer": -1 } },
-          "handwritten": false,
-          "name": "zip_code",
-          "public_name": "Zip Code",
-          "semantics": "amount"
-        },
-        {
-          "cfg": { "filter": { "convention": "US" } },
-          "handwritten": false,
-          "name": "date",
-          "public_name": "Date",
-          "semantics": "date"
-        },
-        {
-          "cfg": { "filter": { "is_integer": -1 } },
-          "handwritten": true,
-          "name": "employer_id",
-          "public_name": "Employer ID",
-          "semantics": "amount"
-        }
-      ],
-      "features_name": [
-        "name",
-        "address",
-        "city",
-        "state",
-        "zip_code",
-        "date",
-        "employer_id"
-      ]
+  "codes": [
+    {
+      "code": "{\n  \"problem_type\": {\n    \"classificator\": { \"features\": [], \"features_name\": [] },\n    \"selector\": {\n      \"features\": [\n        {\n          \"cfg\": { \"filter\": { \"alpha\": -1, \"numeric\": 0 } },\n          \"handwritten\": false,\n          \"name\": \"name\",\n          \"public_name\": \"Name\",\n          \"semantics\": \"word\"\n        },\n        {\n          \"cfg\": { \"filter\": { \"alpha\": -1, \"numeric\": -1 } },\n          \"handwritten\": false,\n          \"name\": \"address\",\n          \"public_name\": \"Address\",\n          \"semantics\": \"word\"\n        },\n        {\n          \"cfg\": { \"filter\": { \"alpha\": -1, \"numeric\": 0 } },\n          \"handwritten\": false,\n          \"name\": \"city\",\n          \"public_name\": \"City\",\n          \"semantics\": \"word\"\n        },\n        {\n          \"cfg\": { \"filter\": { \"alpha\": -1, \"numeric\": 0 } },\n          \"handwritten\": false,\n          \"name\": \"state\",\n          \"public_name\": \"State\",\n          \"semantics\": \"word\"\n        },\n        {\n          \"cfg\": { \"filter\": { \"is_integer\": -1 } },\n          \"handwritten\": false,\n          \"name\": \"zip_code\",\n          \"public_name\": \"Zip Code\",\n          \"semantics\": \"amount\"\n        },\n        {\n          \"cfg\": { \"filter\": { \"convention\": \"US\" } },\n          \"handwritten\": false,\n          \"name\": \"date\",\n          \"public_name\": \"Date\",\n          \"semantics\": \"date\"\n        },\n        {\n          \"cfg\": { \"filter\": { \"is_integer\": -1 } },\n          \"handwritten\": true,\n          \"name\": \"employer_id\",\n          \"public_name\": \"Employer ID\",\n          \"semantics\": \"amount\"\n        }\n      ],\n      \"features_name\": [\n        \"name\",\n        \"address\",\n        \"city\",\n        \"state\",\n        \"zip_code\",\n        \"date\",\n        \"employer_id\"\n      ]\n    }\n  }\n}",
+      "language": "json"
     }
-  }
+  ]
 }
-```
-
-
+[/block]
 **Or build your data model manually**
 Using the interface, add up to your data model each field.
 
@@ -155,9 +131,22 @@ Once you’re done setting up your data model, press the **Start training your m
 
  
 
-![Capture d’écran 2021-04-09 à 14.41.00.png](images/5ffd015-Capture_decran_2021-04-09_a_14.41.00.png)
-Ready to train model
-
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/5ffd015-Capture_decran_2021-04-09_a_14.41.00.png",
+        "Capture d’écran 2021-04-09 à 14.41.00.png",
+        1118,
+        638,
+        "#fbfbfc"
+      ],
+      "caption": "Ready to train model"
+    }
+  ]
+}
+[/block]
  
  
 ## Train your W9 OCR
@@ -167,9 +156,22 @@ Ready to train model
 
 
  
-![Capture d’écran 2021-04-09 à 14.42.35.png](images/0674e79-Capture_decran_2021-04-09_a_14.42.35.png)
-Train your W9 model
-
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/0674e79-Capture_decran_2021-04-09_a_14.42.35.png",
+        "Capture d’écran 2021-04-09 à 14.42.35.png",
+        1314,
+        773,
+        "#e4e6ef"
+      ],
+      "caption": "Train your W9 model"
+    }
+  ]
+}
+[/block]
  
 
 You’re all set! 
