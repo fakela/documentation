@@ -20,9 +20,9 @@ jobs:
 
       - name: Installing sinch-readme-sync
         run: npm i --ignore-scripts -g @sinch/readme-sync
-      
-      - if: failure()
-        run: echo "Something went wrong"
 
       - name: Push new documentation changes
         run: readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} -d . push
+
+      - if: failure()
+        run: echo "Something went wrong"
