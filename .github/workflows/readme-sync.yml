@@ -19,11 +19,13 @@ jobs:
           node-version: '14'
 
       - name: Installing sinch-readme-sync
-        run: npm ci --ignore-scripts -g sinch-readme-sync
+        run: npm i --ignore-scripts -g sinch-readme-sync
 
       - name: Get modified files
         id: changed-files
         uses: tj-actions/changed-files@v11.7
+        with:
+           files: \.md$
 
       - name: Push new documentation changes
         run: |
