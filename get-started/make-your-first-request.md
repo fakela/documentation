@@ -147,7 +147,16 @@ Once you are logged in, you'll land on the APIs hub where you can see your APIs 
 [/block]
 # The Live Interface
 
-The fourth link is to the Live Interface. You can upload and see your file in our Graphical interface.
+This is your home for no code testing where you see your file in our graphical interface. You can quickly visualize all the extracted fields along with the raw API JSON response. There are two ways to use this:
+
+1. Use ** Use my camera** located at the bottom of the screen to take a picture of your documents.
+[block:callout]
+{
+  "type": "info",
+  "body": "Allow your browser to use your camera. Otherwise, you won't be able to take a picture."
+}
+[/block]
+2. Click on **New document** to upload your files. You may upload several files, which will appear below. Select them to get your extracted fields, as shown below.
 
 [block:image]
 {
@@ -160,6 +169,44 @@ The fourth link is to the Live Interface. You can upload and see your file in ou
         567,
         "#dbd8d3"
       ]
+    }
+  ]
+}
+[/block]
+Once your document is shown on the live interface, it automatically extracts fields and highlights them, allowing you to examine them using **Expected fields** and **API response**. 
+
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/8ce50ae-Screenshot_2021-12-03_at_17.20.56.png",
+        "Screenshot 2021-12-03 at 17.20.56.png",
+        1818,
+        1364,
+        "#b3b1aa"
+      ],
+      "caption": "Expected fields"
+    }
+  ]
+}
+[/block]
+The API response gives a raw JSON of the extracted fields.
+
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/05246cd-Screenshot_2021-12-03_at_17.20.46.png",
+        "Screenshot 2021-12-03 at 17.20.46.png",
+        1816,
+        1410,
+        "#b3b1ab"
+      ],
+      "caption": "API Response"
     }
   ]
 }
