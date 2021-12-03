@@ -20,6 +20,15 @@ In order to authenticate your requests, you must include a valid API key using a
   ]
 }
 [/block]
+
+```
+{
+  "code": "Authorization: Token <my-apikey-here>",
+  "language": "text",
+  "name": "HTTP Headers"
+}
+```
+
 For each API, you can create as many api keys as you want in the credentials page. See [Platform tour](doc:platform-tour#api----api-keys) for more information.
 
 ## API key revocation
