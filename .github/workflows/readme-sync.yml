@@ -22,4 +22,4 @@ jobs:
         run: npm i --ignore-scripts -g @sinch/readme-sync
 
       - name: Push new documentation changes
-        run: readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} push
+        run: readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} -d . push
