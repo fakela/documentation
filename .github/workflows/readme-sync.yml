@@ -21,14 +21,5 @@ jobs:
       - name: Installing sinch-readme-sync
         run: npm i --ignore-scripts -g @sinch/readme-sync
 
-      - name: Get modified files
-        id: changed-files
-        uses: tj-actions/changed-files@v11.7
-        with:
-           files: \.md$
-
       - name: Push new documentation changes
-        run: |
-          for file in ${{ steps.changed-files.outputs.all_modified_files }}; do
-            readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} push -f $file
-          done
+        run: readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} push
