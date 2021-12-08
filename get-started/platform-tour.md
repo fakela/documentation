@@ -8,9 +8,9 @@ next:
     - document-parsing-tutorials
   description: ''
 ---
-## API Store
+## API Hub
 
-When you [sign in](https://platform.mindee.com) to your account, you'll land at the APIs Hub landing page. Where you can find here off-the-shelf APIs in the APIs store as well as the APIs you have created yourself.
+When you [sign in](https://platform.mindee.com) to your account, you'll land on the APIs Hub page. Where you can find here off-the-shelf APIs in the APIs store as well as the APIs you have created yourself.
 
 
 [block:image]
@@ -28,7 +28,8 @@ When you [sign in](https://platform.mindee.com) to your account, you'll land at 
   ]
 }
 [/block]
-To use an API, just click on the corresponding card. If you can't find what you're looking for in the off-the-shelf catalog, you can build it yourself by clicking the **Create a new API ** button. [Follow this tutorial to guide you through the API creation process.](https://developers.mindee.com/docs/build-your-first-document-parsing-api)
+
+To use an API, click on the corresponding API card you want from the API store. If you can't find what you're looking for in the off-the-shelf API Store catalog, you can build it yourself by clicking the **Create a new API ** button. [Follow this tutorial to guide you through the API creation process.](https://developers.mindee.com/docs/build-your-first-document-parsing-api)
 
 
 ## API filtering by Locale
@@ -52,7 +53,7 @@ Some of the APIs listed are relevant only to a certain location, for example,  t
 [/block]
 ## API - Dashboard
  
-From the dashboard section, monitor your API usage.
+From the dashboard section, you can monitor and manage your usage and your plan
 
 
 [block:image]
@@ -74,11 +75,11 @@ From the dashboard section, monitor your API usage.
 
 ### API Usage
 
-Your current monthly plan and usage. Your default subscription is a free plan that lasts forever and automatically renews each month. Click on the "go unlimited" button to adjust your subscription according to your needs. While subscribed to a plan, it will automatically be renewed each month.
-
+You can view your current monthly plan and usage under the API usage section. Your default subscription is a free plan that renews automatically each month. To customize your subscription, click on the "Go unlimited" button. If your plan is active, it will be automatically renewed each month.
 
 
 ### API Metrics
+In the API Metrics section you can view your:
 
 - **Traffic**: Number of inputs processed (images and pdf pages).
 - **Errors**: Number of HTTP errors.
