@@ -89,7 +89,7 @@ In the API Metrics section you can view your:
 
 ## API - Documentation
 
-Whether it's an off-the-shelf API or a custom-built API, you can access specific documentation to help you test and integrate easily.
+Whether it's an off-the-shelf API from the API Store or a custom-built API, you can access specific documentation to help you test and integrate easily.
 
 
 [block:image]
@@ -108,12 +108,18 @@ Whether it's an off-the-shelf API or a custom-built API, you can access specific
   ]
 }
 [/block]
-You can navigate through different sections of the documentation.
+The documentation has different sections which are: API Reference, Response scheme, Limitations, Open API
 
 
 
 
 ### API Reference
+
+From the API reference section you can view: 
+- **HTTP Request**: This contains all the main information you need to make a request to your API, such as base URL, Content-type, Authentication headers, and form data.
+- **Sample code**: Ready to use sample codes in different languages. Copy and paste in your environment.
+
+
 
 [block:image]
 {
@@ -131,12 +137,14 @@ You can navigate through different sections of the documentation.
   ]
 }
 [/block]
-- **HTTP Request**: This contains all the main information you need to make a request to your API, such as base URL, Content-type, Authentication headers, and form data.
-- **Sample code**: Ready to use sample codes in different languages. Copy and paste in your environment.
-
 
 
 ### Response scheme
+
+From the Response scheme section you can view: 
+- **Response structure**: This is a full JSON response example along with a few details about how to access your document level predictions.
+- **Extracted fields**: This provides details about every field extracted by the API within a document.
+
 [block:image]
 {
   "images": [
@@ -153,12 +161,17 @@ You can navigate through different sections of the documentation.
   ]
 }
 [/block]
-- **Response structure**: Full JSON response example along with a few details about how to access your document level predictions.
-- **Extracted fields**: Details about every field extracted by the API within a document.
+
 
 
 
 ### Limitations
+
+From the limitations section you can view: 
+- **Supported documents**: This contains details on the type of documents you can send to the API for parsing.
+- **Rate limits**: Provides information on the rate limits of each API depending on your plan.
+
+
 [block:image]
 {
   "images": [
@@ -175,13 +188,12 @@ You can navigate through different sections of the documentation.
   ]
 }
 [/block]
-- **Supported documents**: Details on the documents you can send to the API for parsing.
-- **Rate limits**: Each API comes with rate limits depending on your plan. You can find them here.
 
 
 
 ### Open API
 
+You can find a swagger-like user interface to navigate through your API technical information. You can also download the Open API configuration of your API.
 
 [block:image]
 {
@@ -199,7 +211,6 @@ You can navigate through different sections of the documentation.
   ]
 }
 [/block]
-You can find a swagger-like user interface to navigate through your API technical information. You can also download the Open API configuration of your API.
 
 
 
