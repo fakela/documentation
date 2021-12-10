@@ -216,7 +216,7 @@ You can find a swagger-like user interface to navigate through your API technica
 
 ## API -  API Keys
 
-Create and manage your API keys. 
+In this section, you can create, retrieve, and delete your API keys. 
 
 
 [block:image]
@@ -235,7 +235,26 @@ Create and manage your API keys.
   ]
 }
 [/block]
-You can create and revoke your API keys from this section. Note that revocation is permanent and cannot be undone.
+
+You can also create multipe API keys according to your needs. Before deleting your API keys, keep in mind that it cannot be revoked. 
+
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/9a3fa30-Screenshot_2021-12-09_at_12.03.05.png",
+        "Screenshot_2021-12-09_at_12.03.05.png",
+        1904,
+        976,
+        "#f9fafa"
+      ],
+      "caption": "Mindee API Keys"
+    }
+  ]
+}
+[/block]
+
 
 
 
