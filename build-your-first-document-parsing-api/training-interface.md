@@ -217,7 +217,21 @@ The /annotations endpoint is automatically called within the interface, but you 
  
 
 Once there are 20 data sent to the annotations endpoint, the training of your first model will start.
-
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/5015005-models.gif",
+        "models.gif",
+        1200,
+        628,
+        "#dadfe6"
+      ]
+    }
+  ]
+}
+[/block]
  
 
 Our deep learning engine will automatically generate and train a model based on the data you send, and a lot of extra features based on computer visions and natural language processing embeddings.
