@@ -2,9 +2,10 @@
 title: Invoice OCR
 excerpt: Automatically extract data from unstructured invoices
 ---
-Mindee’s receipt OCR API uses deep learning to automatically, accurately, and instantaneously parse invoices in your applications.
+Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and instantaneously parse invoices in your applications.
 
-In a few seconds, the API extracts a set of data from your pdfs or photos of invoices:
+In a few seconds, the API extracts a set of data such as: total amount including taxes, invoice number, invoice date, due date, supplier name, supplier identification number (SIRET, EIN, VAT number...), taxes details, locale & currency, payment details (IBAN, Swift, Bic, Account number...) etc from your pdfs or photos of invoices:
+
 [block:image]
 {
   "images": [
@@ -20,17 +21,6 @@ In a few seconds, the API extracts a set of data from your pdfs or photos of inv
   ]
 }
 [/block]
-> Total amount including taxes
-> Total amount excluding taxes
-> Invoice number
-> Invoice date
-> Due date
-> Supplier name
-> Supplier identification number (SIRET, EIN, VAT number...)
-> Taxes details
-> Locale & currency
-> Payment details (IBAN, Swift, Bic, Account number...)
-
 
 
 API Prerequisites
