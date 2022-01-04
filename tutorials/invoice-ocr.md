@@ -4,15 +4,35 @@ excerpt: Automatically extract data from unstructured invoices
 ---
 Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and instantaneously parse invoices in your applications.
 
-In a few seconds, the API extracts a set of data such as: total amount including taxes, invoice number, invoice date, due date, supplier name, supplier identification number (SIRET, EIN, VAT number...), taxes details, locale & currency, payment details (IBAN, Swift, Bic, Account number...) etc from your pdfs or photos of invoices:
+It takes the API a few seconds to extract data from your PDFs or photos of invoices. The API extracts data such as:
+
+- Due date
+- Invoice date
+- Invoice number 
+- Locale & currency
+- Payment details (IBAN, Swift, Bic, Account number...) etc 
+- Supplier identification number (SIRET, EIN, VAT number...)
+- Supplier name
+- Taxes details
+- Total amount including taxes
+
+
+
+
+## API Prerequisites
+
+1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.net/signup) and confirm your email to log in.
+2. An invoice. Use a recently received invoice, or do a [Google Image search](https://www.google.com/search?q=invoice) for an invoice and download a few to test with.
+
+Below is a sample of an invoice we will be using for this example.
 
 [block:image]
 {
   "images": [
     {
       "image": [
-        "https://files.readme.io/1c5f149-1_7wcPoKrXNYBZYTvDcHxhhA.png",
-        "invoice_cover.jpeg",
+        "https://files.readme.io/a74eaa5-c8e283b-sample_invoice.jpeg",
+        "sample_invoice.jpeg",
         504,
         660,
         "#fafafa"
@@ -23,17 +43,11 @@ In a few seconds, the API extracts a set of data such as: total amount including
 [/block]
 
 
-API Prerequisites
-
->1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.net/signup) and confirm your email to log in.
->2. An invoice.  Use a recently received invoice, or do a [Google Image search](https://www.google.com/search?q=invoice) for an invoice and download a few to test with.
-
 
 
 ## Set up the API
 
-Log into your Mindee account and access your Expense Receipt API environment by clicking the Invoice API card:
-
+1. Log into your Mindee account and access your Invoice API dashboard by clicking the **Invoice API card**:
 
 
 [block:image]
@@ -41,8 +55,8 @@ Log into your Mindee account and access your Expense Receipt API environment by 
   "images": [
     {
       "image": [
-        "https://files.readme.io/0ea3678-invoice_card.jpg",
-        "invoice_card.jpg",
+        "https://files.readme.io/a007748-Screenshot_2022-01-03_at_15.20.07.png",
+        "Screenshot_2022-01-03_at_15.20.07.png",
         705,
         631,
         "#fbfcfb"
@@ -52,9 +66,10 @@ Log into your Mindee account and access your Expense Receipt API environment by 
   ]
 }
 [/block]
-When clicking this card, you land on the dashboard page - where you can quickly see API usage (you have none right now, but that will change).  On the left navigation, there are links to “Documentation”, “API Keys” and “Live Interface”.  The docs tab has all of the technical details you’ll need to build for the invoice API. 
 
-Rather than try out the demo, we want to build with the API,  so click on **API Keys** to create an API key.
+2. You'll land on the dashboard page - where you can quickly see API usage (you have none right now, but that will change). On the left navigation, there are links to “Documentation”, “API Keys” and “Live Interface”. The documentation tab has all of the technical details you’ll need to build the invoice API. Rather than try out the Live Interface, we will make an API call manually.
+
+Click on **API Keys** to create an API key.
 
 [block:image]
 {
@@ -71,7 +86,8 @@ Rather than try out the demo, we want to build with the API,  so click on **API 
   ]
 }
 [/block]
-Click on the **Create a new API key** button and name your API key:
+
+3. Click on the **Create a new API key** button and name your API key:
 
 [block:image]
 {
@@ -88,7 +104,8 @@ Click on the **Create a new API key** button and name your API key:
   ]
 }
 [/block]
-Now, we are ready to make an API call.  You can find sample codes for the most popular languages in the "Documentation" tab:
+
+4. Now, we are ready to make an API call. You can find sample codes for the most popular languages in the "Documentation" tab:
 
 
 [block:code]
@@ -119,26 +136,10 @@ Now, we are ready to make an API call.  You can find sample codes for the most p
   ]
 }
 [/block]
-Replace **{my-api-key-here}** with your new API key, and **/path/to/your/file/png** with the path to your invoice.
 
-For our example, we'll use this fake photo of invoice:
- 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c8e283b-sample_invoice.jpg",
-        "sample_invoice.jpg",
-        824,
-        1064,
-        "#f9f9f9"
-      ]
-    }
-  ]
-}
-[/block]
-Paste the cURL sample into your terminal, hit enter, and about a second later, you will receive a JSON response with the invoice details. Since the response is quite verbose, we will walk through the fields section by section.
+5. Replace **{my-api-key-here}** with your new API key, and **/path/to/your/file/png** with the path to your invoice.
+
+6. Paste the CURL sample into your terminal, hit enter, and about a second later, you will receive a JSON response with the invoice details. Since the response is quite verbose, we will walk through the fields section by section.
 
 
 ## API Response
@@ -156,6 +157,7 @@ Here is the full JSON response you get when you call the API:
   ]
 }
 [/block]
+
 ### Extracted fields
 
 Under the ```api_request``` key of the JSON response, you can find some metadata about the request.
@@ -174,11 +176,11 @@ What is probably most important to you is the extracted data. Under the ```docum
 }
 [/block]
 
-The extracted data appears in two different elements of the list.
+The extracted data appears in two different elements on the list.
 
-**Document-level prediction**: ```document > inference > prediction``` is the document level prediction. It contains the different fields extracted at the document level, meaning that for multi-pages pdfs, we reconstruct a single invoice object using all the pages.
+- **Document-level prediction**: ```document > inference > prediction``` is the document level prediction. It contains the different fields extracted at the document level, meaning that for multi-pages pdfs, we reconstruct a single invoice object using all the pages.
 
-**Page-level prediction**: ```document > inference > pages[] > prediction``` is an array, containing the extracted data from each page. For images, there is only one element on this array, but for pdfs, you can find the extracted data for each pdf page.
+- **Page-level prediction**: ```document > inference > pages[] > prediction``` is an array, containing the extracted data from each page. For images, there is only one element on this array, but for pdfs, you can find the extracted data for each pdf page.
 
 Each predicted field contains a **confidence_score** as well as a polygon when the information is located in the image. 
 
@@ -242,10 +244,12 @@ Total amount excluding taxes.
   ]
 }
 [/block]
+
 ### taxes
+
 List of taxes detected in the invoice. Each tax item includes:
-> **value**: tax item amount in the invoice currency
-> **rate**:  tax rate associated to the amount
+- **value**: tax item amount in the invoice currency
+- **rate**:  tax rate associated to the amount
 [block:code]
 {
   "codes": [
@@ -282,8 +286,8 @@ Each item contains different fields, set to null or filled with the right value 
 [/block]
 ### company_registration
 List of company identifier. Each item contains:
-> **value**: the company registration number value
-> **type**: Generic: VAT NUMBER, TAX ID, COMPANY REGISTRATION NUMBER or country specific: TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), RFC (Mexico), GSTIN (India) ...etc
+- **value**: The company registration number value.
+- **type**: This is generic and can include: VAT NUMBER, TAX ID, COMPANY REGISTRATION NUMBER or country specific: TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), RFC (Mexico), GSTIN (India) ...etc
 [block:callout]
 {
   "type": "info",
