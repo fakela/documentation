@@ -120,11 +120,10 @@ In this model, we have set up a field for each type. Once it’s done, it should
 ## Training phase
  
 
-Our API was deployed, and you land now on the training section.
+After following the initial steps, the API will be deployed. Next, you'll land on the **Training** section to train your API.
 
  
-
-Upload the [sample invoice image](https://mindee-public-website.s3.amazonaws.com/blog/2021/01/14/all_fields.jpg) into the document area:
+1. Upload the [sample train ticket image](https://mindee-public-website-dev.s3.amazonaws.com/blog/2021/01/20/train-ticket.jpeg) into the document area.
 
  
 [block:image]
@@ -132,8 +131,8 @@ Upload the [sample invoice image](https://mindee-public-website.s3.amazonaws.com
   "images": [
     {
       "image": [
-        "https://files.readme.io/dde4f40-screenshot-2021-04-25-at-212029.png",
-        "screenshot-2021-04-25-at-212029.png",
+        "https://files.readme.io/3f57776-Screenshot_2021-12-24_at_09.23.56.png",
+        "Screenshot_2021-12-24_at_09.23.56.png",
         1000,
         546,
         "#d8dfe6"
@@ -145,11 +144,8 @@ Upload the [sample invoice image](https://mindee-public-website.s3.amazonaws.com
 
  
 
-Click on any field input in the form, you should see the blue boxes on your document changing.
+2. Click on any field input in the form, as seen below, you should see the blue boxes on your document change.
 
- 
-
- 
 
 
 [block:image]
@@ -157,8 +153,8 @@ Click on any field input in the form, you should see the blue boxes on your docu
   "images": [
     {
       "image": [
-        "https://files.readme.io/e540f4c-screen_recording_2021-04-25_at_212331_ketuqi-1.gif",
-        "screen_recording_2021-04-25_at_212331_ketuqi-1.gif",
+        "https://files.readme.io/e935232-83378ba-Capture_decran_2021-03-29_a_14.09.41.png",
+        "Capture_decran_2021-03-29_a_14.09.41.png",
         1000,
         563,
         "#e3e9f0"
@@ -170,56 +166,52 @@ Click on any field input in the form, you should see the blue boxes on your docu
  
 
  
+The blue boxes displayed on the document for each field are called the *fields candidates*. For each field you set up in your data model, our engine will parse the potential field candidates so that you, or an automatic script can tell the model what field candidate you are actually looking for. 
 
-The blue boxes displayed on the document for each field are actually the *fields candidates*. For each field you set up in your data model, our engine will parse the potential candidates so that a user, you, or an automatic script can tell the model what candidate was actually the one you are looking for.
-
+In the example above, we clicked on the Reservation Number field input in the form and the blue boxes highlight the Reservation Number field candidate in the document. When you hit the blue box corresponding to the Reservation Number in the document, the color changes and the Reservation Number is filled in the field.
  
 
-That’s what happens when you click on the validate button.
+3. Next, click on **Validate**. When you “validate”, you are telling the deep learning model that the blue box is the one corresponding to the Reservation Number. In other words, you are **teaching the model which candidate** is the Reservation Number, and it’s going to learn to extract the right one on new samples. 
 
- 
-
-For example, let’s assume we are looking for the total amount of the invoice. 
-
- 
-
-When you hit the blue box corresponding to the total amount in the document, the color changes and the amount is filled in the field.
-
- 
 [block:image]
 {
   "images": [
     {
       "image": [
-        "https://files.readme.io/c13b265-screenshot-2021-04-25-at-215420.png",
-        "screenshot-2021-04-25-at-215420.png",
-        1000,
-        592,
-        "#dee5ec"
+        "https://files.readme.io/91c02b7-Screenshot_2021-12-24_at_09.38.03.png",
+        "Screenshot_2021-12-24_at_09.38.03.png",
+        1279,
+        571,
+        "#eff6fa"
       ]
     }
   ]
 }
 [/block]
- 
-
-
 
  
 
-When you are going to press “validate”, you are going to tell the deep learning model that this green box was the one corresponding to the total amount. In other words, you are **teaching the model which candidate** is the total amount, and he’s going to learn to extract the right one on new samples.
+4. To send annotation for the model you have created, click on the **validate button** as seen below
 
- 
+[block:image]
+{
+  "images": [
+    {
+      "image": [
+        "https://files.readme.io/7269372-Screenshot_2021-12-24_at_09.42.59.png",
+        "Screenshot_2021-12-24_at_09.42.59.png",
+        1279,
+        571,
+        "#eff6fa"
+      ]
+    }
+  ]
+}
+[/block]
 
-At the very beginning, there is no trained model and calling the /predict endpoint will give you only the candidates for each field, no predictions.
+At the very beginning, there is no trained model and calling the `/predict` endpoint will give you only the candidates for each field, no predictions.
 
- 
-
-Without any prediction, the /predict endpoint and the training cycle looks like this:
-
- 
-
- 
+ Without any prediction, the `/predict` endpoint and the training cycle looks like this:
 
 
 [block:image]
@@ -238,10 +230,7 @@ Without any prediction, the /predict endpoint and the training cycle looks like 
 }
 [/block]
  
-
- 
-
-The /annotations endpoint is automatically called within the interface, but you can also use the API if you want to do this on your own interface.
+The `/annotations` endpoint is automatically called within the interface, but you can also use the API if you want to do this on your own interface.
 
 
  
@@ -296,12 +285,3 @@ When you call the predict endpoint with a trained model, it will perform an infe
   ]
 }
 [/block]
- 
-
-
-
- 
-
- 
-
-If you want to dive deeper into our product, feel free to reach out to our data scientist team: contact@mindee.com
