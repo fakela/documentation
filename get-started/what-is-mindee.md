@@ -11,8 +11,6 @@ next:
 ## What is Mindee?
 [Mindee](https://mindee.com) is a developer platform that enables you to **extract key information from any type of document with your code**. Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
-
-##Products
 ## What does Mindee offer?
 
 ## Who is Minder for?
@@ -21,6 +19,12 @@ Mindee is a powerful document parsing API built for developers and performs best
 - You are dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
 - You need high-quality data extracted.
 - You need data to be retrieved quickly.
+
+## Mindee Products
+
+- Off-the-shelf APIs
+- API Builder
+- docTR
 
 ## Key information extraction
 ## Key concepts
