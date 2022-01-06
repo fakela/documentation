@@ -29,9 +29,7 @@ Mindee have a developer first mindset – we build powerful document parsing API
 
 ## What Mindee offers
 
-### Key information extraction
-
-Extracting a set of specific information from documents is also called **Key information extraction**. The goal is to define a list of fields you want to extract from documents, so you are able to automate a workflow based on this data when a new document comes up.
+1. **Key information extraction**: Extracting a set of specific information from documents is also called **Key information extraction**. The goal is to define a list of fields you want to extract from documents, so you are able to automate a workflow based on this data when a new document comes up.
 
 [block:image]
 {
@@ -62,16 +60,11 @@ For many accounting use cases such as accounts payable automation, you need to e
 
 You can extract those different fields automatically using our [Invoice OCR API](doc:invoice-ocr). This API has been trained to provide you with a precise and accurate solution.
 
-### Extracting key information from your own document type
-
-If you need an API that has not yet been released in our catalog, you can build your own in minutes.
-
+2. **Extracting key information from your own document type**: If you need an API that has not yet been released in our catalog, you can build your own in minutes.
 Using our [API Builder](https://developers.mindee.com/docs/build-your-first-document-parsing-api), you can define your own list of key information and train an API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs, you can find a non-exhaustive list [here](https://developers.mindee.com/docs/use-cases).
 
 
-## Document classification
-
-Sometimes, you need to classify documents automatically in your code. One reason can be that your users upload several different types of documents at once, and you need to identify which is which. Perhaps they upload a single pdf including many different documents. It can be very tricky to automate this depending on your use case.
+3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason can be that your users upload several different types of documents at once, and you need to identify which is which. Perhaps they upload a single pdf including many different documents. It can be very tricky to automate this depending on your use case.
 
 
 [block:image]
@@ -93,4 +86,10 @@ Sometimes, you need to classify documents automatically in your code. One reason
 [Using our API builder](doc:document-classification), you can train a powerful document classification API in minutes, using your own class definitions.
 
 ## Key concepts
+Mindee is centered around the following key concepts which you will frequently encounter in these docs:
 
+- Models. A model is a machine learning model that can be trained to solve a specific document data extraction task, like capturing payment info from invoices.
+- Documents. A semi-structured document like an invoice, receipt, ID document, etc. in a PDF or image format. Any language and any layout.
+- Datasets. A dataset consists of many (typically thousands) of documents that are used to train a specific model.
+- Data bundles. A data bundle is a collection of one or more datasets that has been prepared for Model training.
+- Predictions. When your model has finished training using your Data Bundle it can start capturing data from new and previously unseen documents.
