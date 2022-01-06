@@ -13,22 +13,22 @@ next:
 
 [Mindee](https://mindee.com) is a developer platform that enables you to **extract key information from any type of document with your code**. Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
-
 ## Who is Mindee for?
 Mindee have a developer first mindset – we build powerful document parsing APIs that developers can utilize to solve their problems. Also, Mindee can be used if: 
 
 - You are dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
 - You need high-quality data extracted.
-- You need data to be retrieved quickly.
+- You need data to be retrieved quickly. 
 
 ## Mindee Products
 
-- Off-the-shelf APIs
-- API Builder
-- docTR
+- **Off-the-shelf APIs**: With the Off-the-shelf APIs, you can integrate our data extraction APIs with no coding!. This can easily be used only in the browser for non technical people. Each of our off-the-shelf APIs (Passport OCR API, Receipt OCR API, Invoice OCR API etc) have been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
+- **API Builder**: Mindee APi builder is our battle-tested deep learning OCR algorithms that allows users to design and train an API  to extract the data you need. from any type of document
+- **docTR**: docTR which is also nown as (Document Text Recognition) - is a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning.
+
+## Key concepts
 
 ## Key information extraction
-## Key concepts
 
 Extracting a set of specific information from documents is also called **Key information extraction**. The goal is to define a list of fields you want to extract from documents, so you are able to automate a workflow based on this data when a new document comes up.
 
