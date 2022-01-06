@@ -8,13 +8,14 @@ next:
     - invoice-ocr
   description: ''
 ---
+
 ## What is Mindee?
+
 [Mindee](https://mindee.com) is a developer platform that enables you to **extract key information from any type of document with your code**. Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
-## What does Mindee offer?
 
 ## Who is Mindee for?
-Mindee is a powerful document parsing API built for developers and performs best if:
+Mindee have a developer first mindset – we build powerful document parsing APIs that developers can utilize to solve their problems. Also, Mindee can be used if: 
 
 - You are dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
 - You need high-quality data extracted.
