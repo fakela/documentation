@@ -11,7 +11,8 @@ next:
 
 ## What is Mindee?
 
-[Mindee](https://mindee.com) is a developer platform that enables you to **extract key information from any type of document with your code**. Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
+[Mindee](https://mindee.com) is an API first platform that helps developers automate applications' workflows by standardizing the documents processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports...), developers can easily build their own documents parsing API, thereby enabling any type of business to solve all document-based use cases quickly. 
+Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
 ## Who is Mindee for?
 Mindee have a developer first mindset – we build powerful document parsing APIs that developers can utilize to solve their problems. Also, Mindee can be used if: 
@@ -24,14 +25,13 @@ Mindee have a developer first mindset – we build powerful document parsing API
 
 - **Off-the-shelf APIs**: With the Off-the-shelf APIs, you can integrate our data extraction APIs with no coding!. This can easily be used only in the browser for non technical people. Each of our off-the-shelf APIs (Passport OCR API, Receipt OCR API, Invoice OCR API etc) have been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
 - **API Builder**: Mindee APi builder is our battle-tested deep learning OCR algorithms that allows users to design and train an API  to extract the data you need. from any type of document
-- **docTR**: docTR which is also nown as (Document Text Recognition) - is a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning.
+- **docTR**: docTR which is also known as (Document Text Recognition) - is a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning.
 
-## Key concepts
+## What Mindee offers
 
-## Key information extraction
+### Key information extraction
 
 Extracting a set of specific information from documents is also called **Key information extraction**. The goal is to define a list of fields you want to extract from documents, so you are able to automate a workflow based on this data when a new document comes up.
-
 
 [block:image]
 {
@@ -49,20 +49,18 @@ Extracting a set of specific information from documents is also called **Key inf
   ]
 }
 [/block]
-### Invoice OCR example
 
+Let's take a look at this example: **Invoice OCR example**. 
 For many accounting use cases such as accounts payable automation, you need to extract key information from invoices such as:
-> * Total amount
-> * Invoice date
-> * Due date
-> * Merchant name
-> * Taxes
-> * Invoice number
-> * ...
+ - Due date
+ - Total amount
+ - Invoice date
+ - Invoice number
+ - Merchant name
+ - Taxes
+ - Total amount
 
-You can extract those different fields automatically using our [Invoice OCR API](doc:invoice-ocr).
-
-Each of our off-the-shelf APIs have been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution. We frequently release off-the-shelf APIs such as our [Receipt OCR API](doc:receipt-ocr) or [Passport OCR API](doc:passport-ocr). Feel free to ask us about our roadmap to see what is coming next.
+You can extract those different fields automatically using our [Invoice OCR API](doc:invoice-ocr). This API has been trained to provide you with a precise and accurate solution.
 
 ### Extracting key information from your own document type
 
@@ -93,3 +91,6 @@ Sometimes, you need to classify documents automatically in your code. One reason
 }
 [/block]
 [Using our API builder](doc:document-classification), you can train a powerful document classification API in minutes, using your own class definitions.
+
+## Key concepts
+
