@@ -15,7 +15,7 @@ next:
 
 Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
-## Who is Mindee for?
+## Who is Mindee For?
 
 Mindee has a developer-first mindset and aims to build powerful document parsing APIs that developers can utilize to solve their problems. Mindee can be used if you are:
 
@@ -31,7 +31,7 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 
 - **docTR**: [Document Text Recognition](https://github.com/mindee/doctr) is a seamless, high-performing, and easily accessible library for OCR-related tasks powered by Deep Learning.
 
-## What Mindee offers
+## What Mindee Offers
 
 1. **Key information extraction**: This refers to extracting a set of specific information from documents. This is done by specifying the set of fields that you wish to extract from documents so that you may automate a process based on this data whenever a new document is created or updated.
 [block:image]
@@ -84,7 +84,7 @@ You can extract those different fields automatically using our [Invoice OCR API]
 [/block]
 
 
-## Key concepts
+## Key Concepts
 
 You will frequently encounter these concepts throughout this docs as Mindee is centred around them
 
