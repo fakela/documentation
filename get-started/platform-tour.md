@@ -5,7 +5,6 @@ next:
   pages:
     - build-your-first-document-parsing-api
     - invoice-ocr
-    - document-parsing-tutorials
   description: ''
 ---
 ## API Hub
