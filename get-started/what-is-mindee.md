@@ -11,26 +11,29 @@ next:
 
 ## What is Mindee?
 
-[Mindee](https://mindee.com) is an API first platform that helps developers automate applications' workflows by standardizing the documents processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports...), developers can easily build their own documents parsing API, thereby enabling any type of business to solve all document-based use cases quickly. 
+[Mindee](https://mindee.com) is an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly. 
+
 Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
 ## Who is Mindee for?
-Mindee have a developer first mindset – we build powerful document parsing APIs that developers can utilize to solve their problems. Also, Mindee can be used if: 
 
-- You are dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
-- You need high-quality data extracted.
-- You need data to be retrieved quickly. 
+Mindee has a developer-first mindset and aims to build powerful document parsing APIs that developers can utilize to solve their problems. Mindee can be used if you are:
+
+- dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
+- need high-quality data extracted.
+- need data to be retrieved quickly. 
 
 ## Mindee Products
 
-- **Off-the-shelf APIs**: With the Off-the-shelf APIs, you can integrate our data extraction APIs with no coding!. This can easily be used only in the browser for non technical people. Each of our off-the-shelf APIs (Passport OCR API, Receipt OCR API, Invoice OCR API etc) have been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
-- **API Builder**: Mindee APi builder is our battle-tested deep learning OCR algorithms that allows users to design and train an API  to extract the data you need. from any type of document
-- **docTR**: docTR which is also known as (Document Text Recognition) - is a seamless, high-performing & accessible library for OCR-related tasks powered by Deep Learning.
+- **Off-the-shelf APIs**: With off-the-shelf APIs, you don't have to write any code to use our data extraction APIs. This can easily be used only in the browser for non-technical users. Each of our off-the-shelf APIs (Passport OCR API, Receipt OCR API, Invoice OCR API, etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
+
+- **API Builder**: [Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
+
+- **docTR**: [Document Text Recognition](https://github.com/mindee/doctr) is a seamless, high-performing, and easily accessible library for OCR-related tasks powered by Deep Learning.
 
 ## What Mindee offers
 
-1. **Key information extraction**: Extracting a set of specific information from documents is also called **Key information extraction**. The goal is to define a list of fields you want to extract from documents, so you are able to automate a workflow based on this data when a new document comes up.
-
+1. **Key information extraction**: This refers to extracting a set of specific information from documents. The purpose is to specify a set of fields that you wish to extract from documents so that you may automate a process based on this data whenever a new document is created or updated.
 [block:image]
 {
   "images": [
@@ -48,8 +51,7 @@ Mindee have a developer first mindset – we build powerful document parsing API
 }
 [/block]
 
-Let's take a look at this example: **Invoice OCR example**. 
-For many accounting use cases such as accounts payable automation, you need to extract key information from invoices such as:
+Let's take a look at this example: **Invoice OCR example**. For many accounting use cases such as accounts payable automation, you need to extract key information from invoices such as:
  - Due date
  - Total amount
  - Invoice date
@@ -60,13 +62,10 @@ For many accounting use cases such as accounts payable automation, you need to e
 
 You can extract those different fields automatically using our [Invoice OCR API](doc:invoice-ocr). This API has been trained to provide you with a precise and accurate solution.
 
-2. **Extracting key information from your own document type**: If you need an API that has not yet been released in our catalog, you can build your own in minutes.
-Using our [API Builder](https://developers.mindee.com/docs/build-your-first-document-parsing-api), you can define your own list of key information and train an API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs, you can find a non-exhaustive list [here](https://developers.mindee.com/docs/use-cases).
+2. **Extracting key information from your own document type**: If you need an API that has not yet been released in our APIs Store, you can build your own in minutes. Using our [API Builder] (https://developers.mindee.com/docs/build-your-first-document-parsing-api), you can define your own list of key information and train an API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs. You can find a non-exhaustive list [here] (https://developers.mindee.com/docs/use-cases).
 
 
-3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason can be that your users upload several different types of documents at once, and you need to identify which is which. Perhaps they upload a single pdf including many different documents. It can be very tricky to automate this depending on your use case.
-
-
+3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason can be that your users upload several different types of documents at once, and you need to identify which is which. Perhaps they upload a single pdf including many different documents. It can be very tricky to automate this depending on your use case. [Using our API builder](doc:document-classification), you can train a powerful document classification API in minutes, using your own class definitions.
 [block:image]
 {
   "images": [
@@ -83,13 +82,13 @@ Using our [API Builder](https://developers.mindee.com/docs/build-your-first-docu
   ]
 }
 [/block]
-[Using our API builder](doc:document-classification), you can train a powerful document classification API in minutes, using your own class definitions.
+
 
 ## Key concepts
-Mindee is centered around the following key concepts which you will frequently encounter in these docs:
 
-- Models. A model is a machine learning model that can be trained to solve a specific document data extraction task, like capturing payment info from invoices.
-- Documents. A semi-structured document like an invoice, receipt, ID document, etc. in a PDF or image format. Any language and any layout.
-- Datasets. A dataset consists of many (typically thousands) of documents that are used to train a specific model.
-- Data bundles. A data bundle is a collection of one or more datasets that has been prepared for Model training.
-- Predictions. When your model has finished training using your Data Bundle it can start capturing data from new and previously unseen documents.
+You will frequently encounter in these docs as Mindee is centered around the following key concepts
+
+- **Models**. A model is a machine learning file that can be trained to carry out specific task such as extracting capturing total amount infp from invoices.
+- **Documents**. A semi-structured document like an invoice, receipt, ID document, W9-forms, train-ticket etc. in a PDF or image format.
+- **Annotation**. Annotation is the process of labeling data to show the outcome you want your machine learning model to predict.
+- **Predictions**. Prediction refers to the output of an algorithm after it has been trained on a dataset and applied to new data this occurs when your model has finished training your documenments
