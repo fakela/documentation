@@ -25,7 +25,7 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 
 ## Mindee Products
 
-- **Off-the-shelf APIs**: With off-the-shelf APIs, you don't have to write any code to use our data extraction APIs. This can easily be used only in the browser for non-technical users. Each of our off-the-shelf APIs (Passport OCR API, Receipt OCR API, Invoice OCR API, etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
+- **Off-the-shelf APIs**: With off-the-shelf APIs, you don't have to write any code to use our data extraction APIs. This can be used only in the browser. Each of our off-the-shelf APIs (Passport OCR API, Receipt OCR API, Invoice OCR API, etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
 
 - **API Builder**: [Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
 
@@ -33,7 +33,7 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 
 ## What Mindee offers
 
-1. **Key information extraction**: This refers to extracting a set of specific information from documents. The purpose is to specify a set of fields that you wish to extract from documents so that you may automate a process based on this data whenever a new document is created or updated.
+1. **Key information extraction**: This refers to extracting a set of specific information from documents. This is done by specifying the set of fields that you wish to extract from documents so that you may automate a process based on this data whenever a new document is created or updated.
 [block:image]
 {
   "images": [
@@ -86,9 +86,9 @@ You can extract those different fields automatically using our [Invoice OCR API]
 
 ## Key concepts
 
-You will frequently encounter in these docs as Mindee is centered around the following key concepts
+You will frequently encounter these concepts throughout this docs as Mindee is centred around them
 
-- **Models**. A model is a machine learning file that can be trained to carry out specific task such as extracting capturing total amount infp from invoices.
+- **Models**. A model is a machine learning file that can be trained to carry out specific tasks such as extracting capturing the total amount info from receipts.
 - **Documents**. A semi-structured document like an invoice, receipt, ID document, W9-forms, train-ticket etc. in a PDF or image format.
-- **Annotation**. Annotation is the process of labeling data to show the outcome you want your machine learning model to predict.
-- **Predictions**. Prediction refers to the output of an algorithm after it has been trained on a dataset and applied to new data this occurs when your model has finished training your documenments
+- **Annotation**. Annotation is the process of labelling data to show the outcome you want your machine learning model to predict.
+- **Predictions**. Prediction refers to the output of an algorithm after it has been trained on a dataset and applied to new data this occurs when your model has finished training your documents
