@@ -13,7 +13,7 @@ next:
 
 ## What does Mindee offer?
 
-## Who is Minder for?
+## Who is Mindee for?
 Mindee is a powerful document parsing API built for developers and performs best if:
 
 - You are dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
