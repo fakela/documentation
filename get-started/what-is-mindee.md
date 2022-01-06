@@ -8,11 +8,15 @@ next:
     - invoice-ocr
   description: ''
 ---
+## What is Mindee?
 [Mindee](https://mindee.com) is a developer platform that enables you to **extract key information from any type of document with your code**. Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
 
-
+##Products
+## What does Mindee offer?
+## Who is Minder for?
 ## Key information extraction
+## Key concepts
 
 Extracting a set of specific information from documents is also called **Key information extraction**. The goal is to define a list of fields you want to extract from documents, so you are able to automate a workflow based on this data when a new document comes up.
 
