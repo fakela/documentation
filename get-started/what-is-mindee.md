@@ -56,7 +56,7 @@ This is where our off-the-shelf APIs comes into play to make your life easier. Y
 
 ## Key Concepts
 
-You will frequently encounter these concepts throughout this docs as Mindee is centred around them
+You will frequently encounter these concepts throughout this docs as Mindee is centered around them
 
 - **Models**. A model is a machine learning file that can be trained to carry out specific tasks such as extracting the total amount info from receipts.
 - **Documents**. This includes a semi-structured document like an invoice, receipt, ID document, W9-forms, train-ticket etc in a PDF or image format.
