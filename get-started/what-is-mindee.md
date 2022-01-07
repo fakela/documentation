@@ -6,10 +6,10 @@ next:
     - setup-your-account
     - build-your-first-document-parsing-api
     - invoice-ocr
-  description: ''
+  description: 'Get started with Mindee'
 ---
 
-## What is Mindee?
+## About Mindee
 
 [Mindee](https://mindee.com) is an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly. 
 
@@ -23,7 +23,7 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 - need high-quality data extracted.
 - need data to be retrieved quickly. 
 
-## Mindee Products
+## Mindee's Products
 
 - **Off-the-shelf APIs**: With off-the-shelf APIs, you don't have to write any code to use our data extraction APIs. This can be used only in the browser. Each of our off-the-shelf APIs ([Passport OCR API](https://developers.mindee.com/docs/passport-ocr), [Receipt OCR API](https://developers.mindee.com/docs/receipt-ocr), [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr), etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
 
