@@ -6,7 +6,7 @@ next:
     - setup-your-account
     - build-your-first-document-parsing-api
     - invoice-ocr
-  description: 'Get started with Mindee'
+  description: 'Getting started with Mindee'
 ---
 
 ## About Mindee
@@ -25,7 +25,7 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 
 ## Mindee's Products
 
-- **Off-the-shelf APIs**: With [off-the-shelf APIs](), you don't have to write any code to use our data extraction APIs. This can be used only in the browser. Each of our off-the-shelf APIs ([Passport OCR API](https://developers.mindee.com/docs/passport-ocr), [Receipt OCR API](https://developers.mindee.com/docs/receipt-ocr), [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr), etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
+- **Off-the-shelf APIs**: With [off-the-shelf APIs](), you don't have to write any code to use our data extraction APIs. Although, this can be used only in the browser, each of our off-the-shelf APIs ([Passport OCR API](https://developers.mindee.com/docs/passport-ocr), [Receipt OCR API](https://developers.mindee.com/docs/receipt-ocr), [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr), etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
 
 - **API Builder**: [Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
 
@@ -37,7 +37,7 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 
 ![A LinkedIn receipt example on the left with the detected and extracted fields on the right, including their values](https://files.readme.io/09f8748-invoice_article2_bis.jpeg "Invoice OCR API key information extraction")
 
-Let's take a look at the **Invoice OCR example** above. For many accounting use cases such as accounts payable automation, you need to extract key information from invoices such as:
+Let's take a look at the **Invoice OCR example** above. For many accounting use cases such as accounts payable automation, you may need to extract key information from invoices such as:
  - Due date
  - Total amount
  - Invoice date
@@ -46,7 +46,7 @@ Let's take a look at the **Invoice OCR example** above. For many accounting use 
  - Taxes
  - Total amount
 
-You can extract those different fields automatically using our [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr). This API has been trained to provide you with a precise and accurate solution. This is where our off-the-shelf APIs comes into play to make you life easier.
+This is where our off-the-shelf APIs comes into play to make your life easier. You can extract those different fields automatically using our [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr). This API has been trained to provide you with a precise and accurate solution. 
 
 2. **Extracting key information from your own document type**: We frequently release new off-the-shelf APIs, but if you have an use case or documents that has not yet been released in our APIs store, you can build your own API in minutes. Using our [API Builder](https://developers.mindee.com/docs/build-your-first-document-parsing-api), you can define your own list of key information you need from your documents and train the API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs. The possibilities are infinite: here is a [non-exhaustive list](https://developers.mindee.com/docs/use-cases) of what we have seen so far.
 
