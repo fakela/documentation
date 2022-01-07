@@ -58,7 +58,7 @@ You can extract those different fields automatically using our [Invoice OCR API]
 
 You will frequently encounter these concepts throughout this docs as Mindee is centred around them
 
-- **Models**. A model is a machine learning file that can be trained to carry out specific tasks such as extracting capturing the total amount info from receipts.
-- **Documents**. A semi-structured document like an invoice, receipt, ID document, W9-forms, train-ticket etc. in a PDF or image format.
+- **Models**. A model is a machine learning file that can be trained to carry out specific tasks such as extracting the total amount info from receipts.
+- **Documents**. This includes a semi-structured document like an invoice, receipt, ID document, W9-forms, train-ticket etc in a PDF or image format.
 - **Annotation**. Annotation is the process of labelling data to show the outcome you want your machine learning model to predict.
 - **Predictions**. Prediction refers to the output of an algorithm after it has been trained on a dataset and applied to new data this occurs when your model has finished training your documents
