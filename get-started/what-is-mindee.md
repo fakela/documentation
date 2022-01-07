@@ -1,5 +1,5 @@
 ---
-title: Mindee Documentation
+title: Welcome to Mindee Documentation
 excerpt: ''
 next:
   pages:
