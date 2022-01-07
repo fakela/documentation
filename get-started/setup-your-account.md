@@ -6,6 +6,9 @@ next:
     - make-your-first-request
   description: 'setup your account on Mindee'
 ---
+
+The steps outlined below will guide you through the process of getting started with Mindee APIs and making your first API call.
+
 ## Sign up
 
 You can access Mindee API by creating an account or using a single sign-on.
@@ -19,22 +22,9 @@ To create an account
 4. Click on Sign Up.
 5. Check your email for confirmation and follow the instructions in the email to activate your account.
 
+![A screenshot of the signup page](https://files.readme.io/c4c9f92-signup.png "Create an account in Mindee")
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/262f29e-Screenshot_2021-11-22_at_23.47.20.png",
-        "Screenshot 2021-11-22 at 23.47.20.png",
-        1346,
-        1496,
-        "#f2f1f3"
-      ]
-    }
-  ]
-}
-[/block]
+
 ## Single sign-on
 
 Alternatively, you can use a single sign-on and sign in with your Github or Google account. 
@@ -42,21 +32,9 @@ Alternatively, you can use a single sign-on and sign in with your Github or Goog
 Select either Github or Google to use for authentication on the Mindee sign-up screen. You will be prompted to select your account if you have multiple Github or Google account.
 
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/c44333f-Screenshot_2021-11-22_at_23.49.32.png",
-        "Screenshot 2021-11-22 at 23.49.32.png",
-        1128,
-        252,
-        "#bebecf"
-      ]
-    }
-  ]
-}
-[/block]
+![A screenshot of the single sign-on in Mindee](https://files.readme.io/c44333f-Screenshot_2021-11-22_at_23.49.32.png", "Sign in with Github or Google")
+
+
 No credit card is required, all our APIs have free plans and you can start using them right away.
 
 ## Log in
@@ -67,22 +45,9 @@ No credit card is required, all our APIs have free plans and you can start using
 4. Click on Log in.
 5. Alternatively, log in with your Github or Google account.
 
+![A screenshot of the login page](https://files.readme.io/391d480-Screenshot_2021-11-22_at_19.49.34.png "Login to Mindee")
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/391d480-Screenshot_2021-11-22_at_19.49.34.png",
-        "Screenshot 2021-11-22 at 19.49.34.png",
-        1346,
-        1210,
-        "#f3f1f4"
-      ]
-    }
-  ]
-}
-[/block]
+
 ## Subscribe to an API
  
 
