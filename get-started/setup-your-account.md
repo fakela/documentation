@@ -1,12 +1,10 @@
 ---
 title: Setup your account
 excerpt: >-
-  Want to try Mindee APIs? You have already signed up and want to make your
-  first API calls? You're in the right place!
 next:
   pages:
     - make-your-first-request
-  description: ''
+  description: 'setup your account on Mindee'
 ---
 ## Sign up
 
