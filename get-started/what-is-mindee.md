@@ -1,5 +1,5 @@
 ---
-title: Welcome to our Developer Portal
+title: Mindee Documentation
 excerpt: ''
 next:
   pages:
