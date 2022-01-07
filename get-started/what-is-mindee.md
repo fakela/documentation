@@ -58,7 +58,7 @@ This is where our off-the-shelf APIs comes into play to make your life easier. Y
 
 You will frequently encounter these concepts throughout this docs as Mindee is centered around them
 
-- **Models**. A model is a machine learning file that can be trained to carry out specific tasks such as extracting the total amount info from receipts.
-- **Documents**. This includes a semi-structured document like an invoice, receipt, ID document, W9-forms, train-ticket etc in a PDF or image format.
-- **Annotation**. Annotation is the process of labelling data to show the outcome you want your machine learning model to predict.
-- **Predictions**. Prediction refers to the output of an algorithm after it has been trained on a dataset and applied to new data this occurs when your model has finished training your documents
+- **Models**: A model is a machine learning file that can be trained to carry out specific tasks such as extracting the total amount info from receipts etc.
+- **Documents**: This includes a semi-structured documents such as an invoice, receipt, ID document, W9-forms, train-ticket etc in a PDF or image format.
+- **Annotation**: These are the labels used to train created APIs; in other words, it refers to labels produced and provided to our API when the Training Interface is used.
+- **Predictions**: This refers to response or results that our APIs deliver on a given document.
