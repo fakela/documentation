@@ -32,7 +32,7 @@ Alternatively, you can use a single sign-on and sign in with your Github or Goog
 Select either Github or Google to use for authentication on the Mindee sign-up screen. You will be prompted to select your account if you have multiple Github or Google account.
 
 
-![A screenshot of the single sign-on in Mindee](https://files.readme.io/c44333f-Screenshot_2021-11-22_at_23.49.32.png", "Sign in with Github or Google")
+![A screenshot of the single sign-on in Mindee](https://files.readme.io/c44333f-Screenshot_2021-11-22_at_23.49.32.png "Sign in with Github or Google")
 
 
 No credit card is required, all our APIs have free plans and you can start using them right away.
