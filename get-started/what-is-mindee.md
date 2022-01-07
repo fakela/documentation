@@ -10,13 +10,11 @@ next:
 ---
 
 ## About Mindee
-
 [Mindee](https://mindee.com) is an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly and easily. 
 
 Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
 ## Who is Mindee For?
-
 Mindee has a developer-first mindset and aims to build powerful document parsing APIs that developers can utilize to solve their problems. Mindee can be used if you are:
 
 - dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
@@ -24,7 +22,6 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 - need data to be retrieved quickly. 
 
 ## Mindee's Products
-
 - **Off-the-shelf APIs**: With [off-the-shelf APIs](), you don't have to write any code to use our data extraction APIs. Although, this can be used only in the browser, each of our off-the-shelf APIs ([Passport OCR API](https://developers.mindee.com/docs/passport-ocr), [Receipt OCR API](https://developers.mindee.com/docs/receipt-ocr), [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr), etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
 
 - **API Builder**: [Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
@@ -32,7 +29,6 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 - **docTR**: [Document Text Recognition](https://github.com/mindee/doctr) is a seamless, high-performing, and easily accessible library for OCR-related tasks powered by Deep Learning.
 
 ## What Mindee Offers
-
 1. **Key information extraction**: This refers to extracting a set of specific information from documents. This is done by specifying the set of fields that you wish to extract from documents so that you may automate a process based on this data whenever a new document is created or updated.
 
 ![A LinkedIn receipt example on the left with the detected and extracted fields on the right, including their values](https://files.readme.io/09f8748-invoice_article2_bis.jpeg "Invoice OCR API key information extraction")
@@ -53,12 +49,3 @@ This is where our off-the-shelf APIs comes into play to make your life easier. Y
 3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason can be that you want to make your users' life easier, and let them upload several different types of documents at once which means you definitely need to identify which is which. Perhaps they upload a single pdf including many different document types in it. Based on our experience, it can be very tricky to automate this depending on your use case. Not anymore with the API builder [document classification](https://developers.mindee.com/docs/document-classification) you can train a powerful document classification API in minutes, using your own class definitions.
 
 ![](https://files.readme.io/c53e825-1.1.png "Document classification")
-
-## Key Concepts
-
-You will frequently encounter these concepts throughout this docs as Mindee is centered around them
-
-- **Models**: A model is a machine learning file that can be trained to carry out specific tasks such as extracting the total amount info from receipts etc.
-- **Documents**: This includes a semi-structured documents such as an invoice, receipt, ID document, W9-forms, train-ticket etc in a PDF or image format.
-- **Annotation**: These are the labels used to train created APIs; in other words, it refers to labels produced and provided to our API when the Training Interface is used.
-- **Predictions**: This refers to response or results that our APIs deliver on a given document.
