@@ -6,7 +6,7 @@ next:
     - setup-your-account
     - build-your-first-document-parsing-api
     - invoice-ocr
-  description: 'Getting started with Mindee'
+  description: ''
 ---
 
 ## About Mindee
