@@ -10,7 +10,7 @@ next:
 ---
 
 ## About Mindee
-[Mindee](https://mindee.com) is an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly and easily. 
+Mindee is an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly and easily. 
 
 Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
 
@@ -47,4 +47,4 @@ This is where our off-the-shelf APIs comes into play to make your life easier. Y
 
 3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason can be that you want to make your users' life easier, and let them upload several different types of documents at once which means you definitely need to identify which is which. Perhaps they upload a single pdf including many different document types in it. Based on our experience, it can be very tricky to automate this depending on your use case. Not anymore with the API builder [document classification](https://developers.mindee.com/docs/document-classification) you can train a powerful document classification API in minutes, using your own class definitions.
 
-![](https://files.readme.io/c53e825-1.1.png "Document classification")
+![Document classification](https://files.readme.io/c53e825-1.1.png "Document classification")
