@@ -57,8 +57,6 @@ The **use my camera** feature takes a picture of your documents. You'll need to 
 3. Select the files uploaded below to view the extracted fields. Once your document is shown on the live interface, it automatically extracts fields from the document and highlights them. 
 
 
-
-
 #### Expected fields
 You can examine the extracted fields using **Expected fields** column. 
 
