@@ -16,7 +16,7 @@ To create an account
 
 1. Go to the [Signup page](https://platform.mindee.com/signup). 
 2. Enter your desired username, email address, and password in the right fields.
-3. Once you read the terms and you agree to it, click on the first checkbox.
+3. Once you've read the terms and agree to it, click on the first checkbox.
  > Optional: You can click the second checkbox to subscribe to our monthly newsletter.
 4. Click on **Sign Up**.
 5. Check your email or spam box for confirmation and follow the instructions in the email to activate your account.
