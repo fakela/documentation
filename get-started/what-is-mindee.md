@@ -35,7 +35,6 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 
 Let's take a look at the **Invoice OCR example** above. For many accounting use cases such as accounts payable automation, you may need to extract key information from invoices such as:
  - Due date
- - Total amount
  - Invoice date
  - Invoice number
  - Merchant name
