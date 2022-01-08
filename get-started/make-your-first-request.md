@@ -17,7 +17,7 @@ Once you are logged in, you'll land on the APIs hub where you can see your APIs 
 ![Expense receipt API card](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "create an api key")
 
 2. You'll land on the Expense receipt API dashboard. On the left side of the screen, click on **API Keys**.
-![Expense receipt API Dashboard](https://files.readme.io/fba7946-Screenshot_2021-12-02_at_18.18.27.png "api keys")
+![Expense receipt API Dashboard](https://files.readme.io/fba7946-Screenshot_2021-12-02_at_18.18.27.png "api dashboard")
 
 3. Click on **Create a new API key** button.
 ![Expense receipt API Keys](https://files.readme.io/86f4f94-Screenshot_2021-12-02_at_18.19.19.png "api keys")
@@ -26,7 +26,7 @@ Once you are logged in, you'll land on the APIs hub where you can see your APIs 
 ![API key name](https://files.readme.io/71656fb-3.4.jpg "api keys")
 
 5. After creating your API key, you can now make your first request.
-![Created API Key](https://files.readme.io/dac9804-Screenshot_2021-12-02_at_18.21.47.png "created API keys")
+![Created API Key](https://files.readme.io/dac9804-Screenshot_2021-12-02_at_18.21.47.png "created api keys")
 
 
 # Get your sample code
@@ -45,7 +45,7 @@ Once you are logged in, you'll land on the APIs hub where you can see your APIs 
 # The Live Interface
 This is your home for no code testing. In our graphical user interface, you can view the file you've uploaded. You can also see all of the extracted information, as well as the raw API JSON response, in one location. To make use of this feature
 
-![Live interface](https://files.readme.io/2e3e774-Screenshot_2022-01-08_at_01.02.01.png "live interface")
+![Live interface section](https://files.readme.io/2e3e774-Screenshot_2022-01-08_at_01.02.01.png "live interface")
 
 
 1. On the left side of the screen, Click on  click on **Live interface** 
@@ -60,9 +60,9 @@ The **use my camera** feature takes a picture of your documents. You'll need to 
 #### Expected fields
 You can examine the extracted fields using **Expected fields** column. 
 
-![Expected fields](https://files.readme.io/8ce50ae-Screenshot_2021-12-03_at_17.20.56.png "extracted fields ")
+![Expected fields](https://files.readme.io/8ce50ae-Screenshot_2021-12-03_at_17.20.56.png "extracted fields")
 
 ### API response
 The API response gives a raw JSON of the extracted fields.
 
-![API response](https://files.readme.io/05246cd-Screenshot_2021-12-03_at_17.20.46.png "API response")
+![API response](https://files.readme.io/05246cd-Screenshot_2021-12-03_at_17.20.46.png "extracted fields")
