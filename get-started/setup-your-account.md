@@ -9,7 +9,7 @@ next:
 
 The steps outlined below will guide you through the process of setting up your account and getting started with Mindee APIs.
 
-## Sign Up
+## Sign Up in Mindee
 You can access Mindee API by creating an account or using a single sign-on.
  
 Follow these steps to create an account and sign-in.
@@ -35,7 +35,9 @@ If you have a GitHub account, follow these steps to use GitHub as a Single Sign-
 1. Go to the [Signup page](https://platform.mindee.com/signup). 
 2. Select **sign up with Github**. You'll be redirected to another tab.
 3. Click on **Authorize Mindee** to allow access to your Github account. You'll be redirected back to the application
-![Authorize Mindee to access Github accounnt](https://files.readme.io/0867dae-Screenshot_2022-01-10_at_19.18.25.png, "Authorize Mindee")
+
+![Authorize Mindee to access Github accounnt](https://files.readme.io/0867dae-Screenshot_2022-01-10_at_19.18.25.png "Authorize Mindee")
+
 4. Enter your desired username in the right field.
 5. Once you've read the terms and agree to it, click on the first checkbox.
  > Optional: You can click the second checkbox to subscribe to our monthly newsletter.
@@ -49,17 +51,17 @@ If you have a Google account, follow these steps to use GitHub as a Single Sign-
 2. Select **sign up with Google**. You'll be redirected to another tab.
 3. Select your the Google account you want linked to Mindee. You'll be redirected back to the application
 
-![Authorize Mindee to access Google accounnt](https://files.readme.io/d395fc9-Screenshot_2022-01-10_at_19.34.02.png, "Authorize Mindee")
+![Authorize Mindee to access Google accounnt](https://files.readme.io/d395fc9-Screenshot_2022-01-10_at_19.34.02.png "Authorize Mindee")
 
 4. Enter your desired username in the right field.
 5. Once you've read the terms and agree to it, click on the first checkbox.
  > Optional: You can click the second checkbox to subscribe to our monthly newsletter.
 6. Click on **Sign up with Google**.
 
-![Sign up with Google](https://files.readme.io/ee3fb32-Screenshot_2022-01-10_at_19.34.54.png, "Signup with Google")
+![Sign up with Google](https://files.readme.io/ee3fb32-Screenshot_2022-01-10_at_19.34.54.png "Signup with Google")
 
 
-## Log In
+## Log In to Mindee Account
 If you already have an account with Mindee, follow these steps to log in to your account.
 
 1. Go to the [Login](https://platform.mindee.com/login) page. 
@@ -86,5 +88,11 @@ If you already have an account with Mindee, follow these steps to use Google to 
 If you forgot your password, follow these steps to recover your account.
 
 1. Click the link "password forgotten".
+
+![password forgotten link](https://files.readme.io/24f134f-Screenshot_2022-01-10_at_20.35.01.png "recover Mindee account account")
+	
 2. Add your email address and click on send email. The password reset link will be set.
+
+![password reset link sent](https://files.readme.io/c84f039-Screenshot_2022-01-10_at_19.43.53.png "recover Mindee account account")
+
 3. Check your email or spam box for to verify the link and follow the instructions in the email to recover your account.
