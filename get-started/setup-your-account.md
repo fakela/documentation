@@ -9,10 +9,10 @@ next:
 
 The steps outlined below will guide you through the process of setting up your account and getting started with Mindee APIs.
 
-## Sign Up in Mindee
-You can access Mindee API by creating an account or using a single sign-on.
+## Sign Up for a New Mindee Account
+You can access Mindee API by creating an account or using a single sign-on(SSO) service.
  
-Follow these steps to create an account and sign-in.
+Follow these steps below to create an account in Mindee.
 
 1. Go to the [Signup page](https://platform.mindee.com/signup). 
 2. Enter your desired username, email address, and password in the right fields.
@@ -33,8 +33,8 @@ Alternatively, you can decide to use a single sign-on and sign in with your Gith
 If you have a GitHub account, follow these steps to use GitHub as a Single Sign-on (SSO) service for account creation.
 
 1. Go to the [Signup page](https://platform.mindee.com/signup). 
-2. Select **sign up with Github**. You'll be redirected to another tab.
-3. Click on **Authorize Mindee** to allow access to your Github account. You'll be redirected back to the application
+2. Select **Sign up with Github**. You'll be redirected to another tab.
+3. Click on **Authorize Mindee** to allow access to your GitHub account. You'll be redirected back to the application once this is done.
 
 ![Authorize Mindee to access Github accounnt](https://files.readme.io/0867dae-Screenshot_2022-01-10_at_19.18.25.png "Authorize Mindee")
 
@@ -45,11 +45,11 @@ If you have a GitHub account, follow these steps to use GitHub as a Single Sign-
 
 
 ### Google Sign-On
-If you have a Google account, follow these steps to use GitHub as a Single Sign-on (SSO) service for account creation.
+If you have a Google account, follow these steps to use Google as a Single Sign-on (SSO) service for account creation.
 
 1. Go to the [Signup page](https://platform.mindee.com/signup). 
-2. Select **sign up with Google**. You'll be redirected to another tab.
-3. Select your the Google account you want linked to Mindee. You'll be redirected back to the application
+2. Select **Sign up with Google**. You'll be redirected to another tab.
+3. Select the Google account you want linked to Mindee. You'll be redirected back to the application once this is done.
 
 ![Authorize Mindee to access Google accounnt](https://files.readme.io/d395fc9-Screenshot_2022-01-10_at_19.34.02.png "Authorize Mindee")
 
@@ -73,21 +73,21 @@ If you already have an account with Mindee, follow these steps to log in to your
 Alternatively, you can log in with your Github or Google account.
 
 ### Log In with GitHub
-If you already have an account with Mindee, follow these steps to log in to your account.
+If you previously signed up with GitHub, follow these steps to use GitHub to log in to your account.
 
 1. Go to the [Login](https://platform.mindee.com/login) page. 
-2. Select **login with github**. This would automatically log you in to your account
+2. Select **login with github**. This would automatically log you in to your account.
 
 ## Log In with Google
-If you already have an account with Mindee, follow these steps to use Google to log in to your account.
+If you previously signed up with Google, follow these steps to use Google to log in to your account.
 
 1. Go to the [Login](https://platform.mindee.com/login) page. 
-2. Select **login with Google**. This would automatically log you in to your account
+2. Select **login with Google**. This would automatically log you in to your account.
 
-## Recovering Account
-If you forgot your password, follow these steps to recover your account.
+## Recover Your Account
+If you have forgotten your password, follow these steps to recover your account.
 
-1. Click the link "password forgotten".
+1. Click the link **password forgotten**.
 
 ![password forgotten link](https://files.readme.io/24f134f-Screenshot_2022-01-10_at_20.35.01.png "recover Mindee account account")
 	
