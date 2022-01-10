@@ -9,17 +9,24 @@ next:
   description: ''
 ---
 
-## About Mindee
-Mindee is an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer using computer vision and machine learning. In addition to easily detecting and extracting information using pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly and easily. 
+## What is Mindee
+Mindee is a powerful OCR software and an API-first platform that helps developers automate applications' workflows by standardizing the document processing layer through data recognition for key information using computer vision and machine learning.
+In addition to easily detecting and extracting key information using our pre-trained data models for common documents (e.g., invoices, receipts, passports, etc.), developers can easily build their own document parsing API, thereby enabling any type of business to solve all document-based use cases quickly and easily.
 
-Our mission is to help developers automate paperwork in their applications in real-time, with human-level accuracy.
+Our mission is to provide real-time, human-level accuracy in data extraction from paper and digital documents for our customers.
 
 ## Who is Mindee For?
-Mindee has a developer-first mindset and aims to build powerful document parsing APIs that developers can utilize to solve their problems. Mindee can be used if you are:
+Mindee has a developer-first mindset and strives to provide robust document parsing APIs that developers may use to solve their issues. Mindee eliminates the need for human data entry. This results in:
+
+- increased efficiency
+- fewer errors during data extraction, and
+- it enables individuals to concentrate on more essential tasks.
+
+Mindee can be used if you are:
 
 - dealing with a lot of documents that aren't very organized, like invoices, receipts, forms, and so on.
 - need high-quality data extracted.
-- need data to be retrieved quickly. 
+- need data to be retrieved quickly.
 
 ## Mindee's Products
 
@@ -53,8 +60,8 @@ Let's take a look at the **Invoice OCR example** above. For many accounting use 
 
 This is where our off-the-shelf APIs comes into play to make your life easier. You can extract those different fields automatically using our [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr). This API has been trained to provide you with a precise and accurate solution. 
 
-2. **Extracting key information from your own document type**: We frequently release new off-the-shelf APIs, but if you have an use case or documents that has not yet been released in our APIs store, you can build your own API in minutes. Using our [API Builder](https://developers.mindee.com/docs/build-your-first-document-parsing-api), you can define your own list of key information you need from your documents and train the API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs. The possibilities are infinite: here is a [non-exhaustive list](https://developers.mindee.com/docs/use-cases) of what we have seen so far.
+2. **Extracting key information from your own document type**: We frequently release new off-the-shelf APIs, but if you have a use case or documents that have not yet been released in our APIs store, you can build your own API in minutes. Using our API Builder, you can define your own list of key information you need from your documents and train the API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs. The possibilities are infinite: here is a non-exhaustive list of what we have seen so far.
 
-3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason can be that you want to make your users' life easier, and let them upload several different types of documents at once which means you definitely need to identify which is which. Perhaps they upload a single pdf including many different document types in it. Based on our experience, it can be very tricky to automate this depending on your use case. Not anymore with the API builder [document classification](https://developers.mindee.com/docs/document-classification) you can train a powerful document classification API in minutes, using your own class definitions.
+3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason could be that you want to make your users' lives easier, and let them upload several different types of documents at once, which means you definitely need to identify which is which. Perhaps they upload a single pdf with many different document types in it. Based on our experience, it can be very tricky to automate this depending on your use case. Well not anymore, cause with our API builder [document classification](https://developers.mindee.com/docs/document-classification) you can train a powerful document classification API in minutes, using your own class definitions.
 
 ![Document classification](https://files.readme.io/c53e825-1.1.png "Document classification")
