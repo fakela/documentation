@@ -22,11 +22,21 @@ Mindee has a developer-first mindset and aims to build powerful document parsing
 - need data to be retrieved quickly. 
 
 ## Mindee's Products
-- **Off-the-shelf APIs**: With [off-the-shelf APIs](), you don't have to write any code to use our data extraction APIs. Although, this can be used only in the browser, each of our off-the-shelf APIs ([Passport OCR API](https://developers.mindee.com/docs/passport-ocr), [Receipt OCR API](https://developers.mindee.com/docs/receipt-ocr), [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr), etc.) has been trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution.
 
-- **API Builder**: [Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
+### Off-the-shelf APIs
+Our off-the-shelf APIs are ready-to-use data extraction solutions: it is an easy as calling the API for the specific document you want to get information from. We meticulously crafted the data model specific to each use cases. These are trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution. Here are the region specific off-the-shelf APIs currently available:
 
-- **docTR**: [Document Text Recognition](https://github.com/mindee/doctr) is a seamless, high-performing, and easily accessible library for OCR-related tasks powered by Deep Learning.
+#### Globally
+- [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr)
+- [Receipt OCR API](https://developers.mindee.com/docs/receipt-ocr)
+- [Passport OCR API](https://developers.mindee.com/docs/passport-ocr). Feel free to ask us about our roadmap to see what is coming next.
+
+#### Europe
+- [License Plates](https://blog.mindee.com/extending-license-plate-extraction/)
+
+ ### API Builder
+[Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
+
 
 ## What Mindee Offers
 1. **Key information extraction**: This refers to extracting a set of specific information from documents. This is done by specifying the set of fields that you wish to extract from documents so that you may automate a process based on this data whenever a new document is created or updated.
