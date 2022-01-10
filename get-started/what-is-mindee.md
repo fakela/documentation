@@ -31,7 +31,7 @@ Mindee can be used if you are:
 ## Mindee's Products
 
 ### Off-the-shelf APIs
-Our off-the-shelf APIs are ready-to-use data extraction solutions: it is an easy as calling the API for the specific document you want to get information from. We meticulously crafted the data model specific to each use cases. These are trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution. Here are the region specific off-the-shelf APIs currently available:
+Our off-the-shelf APIs are ready-to-use data extraction solutions: it is as easy as calling the API for the specific document you want to get information from. We meticulously crafted the data model specific to each use cases. These are trained using hundreds of thousands of documents to provide you with the most robust and accurate parsing solution. Here are the region specific off-the-shelf APIs currently available:
 
 #### Globally
 - [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr)
