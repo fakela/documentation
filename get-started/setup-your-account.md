@@ -93,6 +93,7 @@ If you have forgotten your password, follow these steps to recover your account.
 	
 2. Add your email address and click on send email. The password reset link will be set.
 
-![password reset link sent](https://files.readme.io/c84f039-Screenshot_2022-01-10_at_19.43.53.png "recover Mindee account account")
+![password reset link sent](https://files.readme.io/77d1ca3-Screenshot_2022-01-10_at_21.09.59.png "recover Mindee account account")
 
 3. Check your email or spam box for to verify the link and follow the instructions in the email to recover your account.
+4. ![password reset link sent](https://files.readme.io/c84f039-Screenshot_2022-01-10_at_19.43.53.png "recover Mindee account account")
