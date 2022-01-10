@@ -42,7 +42,7 @@ If you have a GitHub account, follow these steps to use GitHub as a Single Sign-
 5. Once you've read the terms and agree to it, click on the first checkbox.
  > Optional: You can click the second checkbox to subscribe to our monthly newsletter.
 6. Click on **Sign up with github**.
-
+7. Check your email or spam box for confirmation and follow the instructions in the email to activate your account.
 
 ### Google Sign-On
 If you have a Google account, follow these steps to use Google as a Single Sign-on (SSO) service for account creation.
@@ -57,9 +57,10 @@ If you have a Google account, follow these steps to use Google as a Single Sign-
 5. Once you've read the terms and agree to it, click on the first checkbox.
  > Optional: You can click the second checkbox to subscribe to our monthly newsletter.
 6. Click on **Sign up with Google**.
+7. Check your email or spam box for confirmation and follow the instructions in the email to activate your account.
 
 ![Sign up with Google](https://files.readme.io/ee3fb32-Screenshot_2022-01-10_at_19.34.54.png "Signup with Google")
-
+[COMMENT]:<> (I couldn't reproduce this screenshot for GitHub. Sign up with my GitHub was having issues)
 
 ## Log In to Mindee Account
 If you already have an account with Mindee, follow these steps to log in to your account.
