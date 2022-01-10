@@ -16,7 +16,7 @@ In addition to easily detecting and extracting key information using our pre-tra
 Our mission is to provide real-time, human-level accuracy in data extraction from paper and digital documents for our customers.
 
 ## Who is Mindee For?
-Mindee has a developer-first mindset and strives to provide robust document parsing APIs that developers may use to solve their issues. Mindee eliminates the need for human data entry. This results in:
+Mindee has a developer-first mindset and strives to provide robust document parsing APIs that developers may use to solve their issues. Mindee eliminates the need for manual data entry. This results in:
 
 - increased efficiency
 - fewer errors during data extraction, and
