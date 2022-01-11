@@ -41,7 +41,14 @@ Our off-the-shelf APIs are ready-to-use data extraction solutions: it is as easy
 #### Europe
 - [License Plates](https://blog.mindee.com/extending-license-plate-extraction/)
 
- ### API Builder
+#### France
+*These are not documented yet (working on it), but if you use any other off-the-shelf API, you should be able to use them without any issues. If you need any help, feel free to ask on our [Slack community](https://slack.mindee.com)*
+- Carte Nationale d'Identité
+- Carte Vitale
+
+**Note**: You can use all these available off-the-shelf API no matter your location.
+
+### API Builder
 [Mindee API Builder](https://mindee.com/lp/ocr-document-learning) is our battle-tested deep learning OCR algorithm that allows users to design and train an API to extract the data they need from any type of document.
 
 
@@ -60,7 +67,7 @@ Let's take a look at the **Invoice OCR example** above. For many accounting use 
 
 This is where our off-the-shelf APIs comes into play to make your life easier. You can extract those different fields automatically using our [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr). This API has been trained to provide you with a precise and accurate solution. 
 
-2. **Extracting key information from your own document type**: We frequently release new off-the-shelf APIs, but if you have a use case or documents that have not yet been released in our APIs store, you can build your own API in minutes. Using our API Builder, you can define your own list of key information you need from your documents and train the API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs. The possibilities are infinite: here is a non-exhaustive list of what we have seen so far.
+2. **Extracting key information from your own document type**: We frequently release new off-the-shelf APIs, but if you have a use case or documents that have not yet been released in our APIs store, you can build your own API in minutes. Using our API Builder, you can define your own list of key information you need from your documents and train the API to extract those fields by annotating a few dozen example files. Our users have already built and deployed into production many different document parsing APIs. The possibilities are infinite: here is a [non-exhaustive list](https://developers.mindee.com/docs/use-cases) of what we have seen so far.
 
 3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason could be that you want to make your users' lives easier, and let them upload several different types of documents at once, which means you definitely need to identify which is which. Perhaps they upload a single pdf with many different document types in it. Based on our experience, it can be very tricky to automate this depending on your use case. Well not anymore, cause with our API builder [document classification](https://developers.mindee.com/docs/document-classification) you can train a powerful document classification API in minutes, using your own class definitions.
 
