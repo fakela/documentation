@@ -64,4 +64,4 @@ This is where our off-the-shelf APIs comes into play to make your life easier. Y
 
 3. **Document classification**: Sometimes, you need to classify documents automatically in your code. One reason could be that you want to make your users' lives easier, and let them upload several different types of documents at once, which means you definitely need to identify which is which. Perhaps they upload a single pdf with many different document types in it. Based on our experience, it can be very tricky to automate this depending on your use case. Well not anymore, cause with our API builder [document classification](https://developers.mindee.com/docs/document-classification) you can train a powerful document classification API in minutes, using your own class definitions.
 
-![Document classification](https://files.readme.io/c53e825-1.1.png "Document classification")
+![Document classification in Mindee classifying the different documents to their various types](https://files.readme.io/c53e825-1.1.png "Document classification")
