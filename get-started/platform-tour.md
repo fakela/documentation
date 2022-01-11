@@ -7,10 +7,11 @@ next:
     - invoice-ocr
   description: ''
 ---
+This section provides an insight into the basics of Mindee UI. It describes all the features and its function.
+
 ## API Hub
 
-When you [sign in](https://platform.mindee.com) to your account, you'll land on the APIs Hub page. Where you can find here off-the-shelf APIs in the APIs store as well as the APIs you have created yourself.
-
+When you [sign up](https://platform.mindee.com/signup) for an account at Mindee, you'll land on the APIs Hub page. In this page, you will find the off-the-shelf APIs in the **APIs store** as well as the **Your APIs** which includes APIs you have created yourself and APIs you are currently using.
 
 [block:image]
 {
