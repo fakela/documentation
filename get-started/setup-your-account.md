@@ -21,7 +21,7 @@ Follow these steps below to create an account in Mindee.
 4. Click on **Sign Up**.
 5. Check your email or spam box for confirmation and follow the instructions in the email to activate your account.
 
-![signup page with fields to fill to create an account](https://files.readme.io/f46f85b-Screenshot_2022-01-10_at_20.13.52.png "Create an account in Mindee")
+![Signup page with fields to fill to create an account](https://files.readme.io/f46f85b-Screenshot_2022-01-10_at_20.13.52.png "Create an account in Mindee")
 
 
 ## Single Sign-On
@@ -61,9 +61,9 @@ If you have a Google account, follow these steps to use Google as a Single Sign-
 6. Click on **Sign up with Google**.
 7. Check your email or spam box for confirmation and follow the instructions in the email to activate your account.
 
-![Sign up with Google and add the desired field](https://files.readme.io/ee3fb32-Screenshot_2022-01-10_at_19.34.54.png "Signup with Google")
-
 [COMMENT]:<> (I couldn't reproduce this screenshot for GitHub as Signing up with my GitHub was having issues)
+
+![Sign up with Google and add the desired field](https://files.readme.io/ee3fb32-Screenshot_2022-01-10_at_19.34.54.png "Signup with Google")
 
 ## Log In to Mindee Account
 If you already have an account with Mindee, follow these steps to log in to your account.
@@ -72,7 +72,7 @@ If you already have an account with Mindee, follow these steps to log in to your
 2. Enter your email address and password.
 3. Click on **Log in**.
 
-![login page with fields to fill to create an account](https://files.readme.io/391d480-Screenshot_2021-11-22_at_19.49.34.png "Login to Mindee")
+![Login page with fields to fill to create an account](https://files.readme.io/5508163-Screenshot_2022-01-11_at_10.47.42.png "Login to Mindee")
 
 Alternatively, you can log in with your Github or Google account.
 
@@ -93,12 +93,12 @@ If you have forgotten your password, follow these steps to recover your account.
 
 1. Click the link **password forgotten**.
 
-![password forgotten link](https://files.readme.io/24f134f-Screenshot_2022-01-10_at_20.35.01.png "recover Mindee account account")
+![Password forgotten link](https://files.readme.io/24f134f-Screenshot_2022-01-10_at_20.35.01.png "recover Mindee account")
 	
 2. Add your email address that you used to create an account in Mindee and click on send email.
 
-![password reset field](https://files.readme.io/77d1ca3-Screenshot_2022-01-10_at_21.09.59.png "recover Mindee account account")
+![Password reset field](https://files.readme.io/77d1ca3-Screenshot_2022-01-10_at_21.09.59.png "recover Mindee account")
 
 3. The password reset link will be sent. Check your email or spam box to verify the link and follow the instructions in the email to recover your account.
 
-![password reset link sent](https://files.readme.io/c84f039-Screenshot_2022-01-10_at_19.43.53.png "recover Mindee account account")
+![Password reset link sent](https://files.readme.io/c84f039-Screenshot_2022-01-10_at_19.43.53.png "recover Mindee account")
