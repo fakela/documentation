@@ -193,7 +193,7 @@ The extracted data appears in two different elements of the list.
 
 Each predicted field contains a **confidence_score** as well as a polygon when the information is located in the image. 
 
-#### Category
+### Category
  
 [block:code]
 {
@@ -210,7 +210,7 @@ The API makes a prediction on the type of purchase.  In this case, it is 99% sur
 
  
 
-#### Date
+### Date
  
 Identified from the text on the receipt and converted into ISO format. This purchase was made on February 26, 2016, and the model is 99% confident in that choice.  The segmentation bounding box provides 4 (x,y) coordinates indicating where the data was pulled from the receipt [(0,0) is the upper left corner, (1,1) is the bottom right corner].
 
@@ -226,7 +226,7 @@ Identified from the text on the receipt and converted into ISO format. This purc
 [/block]
  
 
-#### Locale
+### Locale
  
 
 Using data from the receipt, the API can predict where the purchase was made, the language, and the currency. Check the documentation for the latest support. At the time of writing, support is centered on Europe and North America.
@@ -245,7 +245,7 @@ In the case of my receipt, it is 82% confident that the purchase is in GB, and i
 
  
 
-#### Merchant
+### Merchant
 [block:code]
 {
   "codes": [
@@ -260,7 +260,7 @@ The API correctly predicted (it was 71% sure) that it was a CLACHAN store. Again
 
  
 
-#### Orientation
+### Orientation
 [block:callout]
 {
   "type": "warning",
@@ -283,7 +283,7 @@ Did the document require rotation before parsing?  Measured in 90 degree increme
 
  
 
-#### Taxes
+### Taxes
  
 [block:code]
 {
@@ -303,7 +303,7 @@ The API detects taxes from line items. It's then returned as an array of items. 
 - **code**: (optional) the tax code (HST, GST... for Canadian; City Tax, State tax for US, etc..)
 
  
-#### Time
+### Time
  
 
 [block:code]
@@ -320,7 +320,7 @@ The API detects taxes from line items. It's then returned as an array of items. 
 Time the receipt was printed in HH:mm format.
 
  
-#### Total
+### Total
  
 
 Perhaps the most important part of the receipt, the total spent including taxes, along with confidence and the box indicating the location on the receipt.
