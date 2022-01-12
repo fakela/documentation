@@ -159,6 +159,8 @@ Here is the full JSON response you get when you call the API:
 
 Each predicted field contains a confidence_score as well as a polygon when the information is located in the image.
 
+### Extracted fields
+
 ### country
 Passport's country ISO 3166-1 alpha-3 code (3 letters format)
 [block:code]
