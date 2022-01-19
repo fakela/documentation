@@ -2,75 +2,48 @@
 title: Technical limitations
 excerpt: ''
 ---
+
+A set of limits are enforced to ensure the safety of Mindee's parsing document APIs. A project may have additional limits depending on its plan. An API call that causes any of these limits to be exceeded will be rejected with an error. If you have needs beyond these limits then get in touch with the support team and we'll work something out. You can find these limits in the documentation tab of your API. 
+
+![Rate limits part of Mindee's platform documentation tab](https://files.readme.io/56777aa-ratelimits.png)
+
+The rate limits are entirely customizable but here are the default values for self-serve:
+
+## Document
+- Maximum file size(image and PDF): 10 MB.
+- Maximum number of pages for PDF: 
+    - Off-the-shelves: 5-10 pages(depending on the product) .
+    - API builder: 5 pages.
+    
+## API Calls
+- **Free Plan**: Maximum number of API calls: 
+    - Off-the-shelves: 250 calls. 
+    - API builder: 500 calls.
+- **Unlimited Plan**: No limits.
+
+**Note**: 250 free calls refers to the number of pages/documents i.e a single call, with a 2 pages pdf, will decrease your quota by two times.
+
 ## Request
-
-A set of limits are enforced to ensure the safety of Mindee's parsing document APIs. Among others:
-* a maximum file size
-* a maximum number of pages for PDF
-* a maximum request throughput per second
-* a maximum request throughput per minute
-
-Inside Mindee Platform, you can find these limits in the documentation tab of your API.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/56777aa-ratelimits.png",
-        "ratelimits.png",
-        767,
-        330,
-        "#fcfcfc"
-      ],
-      "caption": "\"Rate limits\" part of Mindee's platform documentation tab."
-    }
-  ]
-}
-[/block]
-
-
-If you need to raise those limitations, feel free to ask the support team.
+- Maximum request throughput per second: 4 requests
+- Maximum request throughput per minute: 75 requests
 
 ## Payload
-#### Accepted document files
-[block:parameters]
-{
-  "data": {
-    "h-0": "Type",
-    "h-1": "MIME Type",
-    "0-0": "Image JPEG",
-    "0-1": "image/jpeg",
-    "h-2": "Extensions",
-    "0-2": "jpeg, jpg",
-    "1-0": "Image Portable Network Graphics",
-    "1-1": "image/png",
-    "1-2": "png",
-    "2-0": "Image WEBP",
-    "2-1": "image/webp",
-    "2-2": "webp",
-    "3-0": "Adobe Portable Document Format",
-    "3-1": "application/pdf",
-    "3-2": "pdf"
-  },
-  "cols": 3,
-  "rows": 4
-}
-[/block]
-Will be supported soon:
-[block:parameters]
-{
-  "data": {
-    "h-0": "Type",
-    "h-1": "MIME Type",
-    "h-2": "Extensions",
-    "0-0": "High Efficiency Image File Format",
-    "0-2": "heic, heif",
-    "0-1": "image/heif",
-    "1-0": "Tagged Image File Format",
-    "1-1": "image/tiff",
-    "1-2": "tiff, tif"
-  },
-  "cols": 3,
-  "rows": 2
-}
-[/block]
+Payload in Mindee refers to the data that you send to the server when you make an API request .
+
+## Accepted document files
+
+| Type    | MIME Type       | Extensions  |
+| ------------- |:-------------:| -----:|
+| Image JPEG     | image/jpeg |jpeg, jpg |
+| Image Portable Network Graphics     | image/png     |   png|
+| Image WEBP |  image/webp     |    webp |
+| Adobe Portable Document Format | 	application/pdf | pdf|
+
+Document types that will be supported soon:
+
+
+| Type    | MIME Type       | Extensions  |
+| ------------- |:-------------:| -----:|
+| High Efficiency Image File Format     | image/heif  | heic, heif |
+|Tagged Image File Format     | image/tiff     |   tiff, tif |
+
