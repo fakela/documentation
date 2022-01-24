@@ -6,7 +6,14 @@ excerpt: ''
  
 
  
-[block:callout] { "type": "info", "body": "This section describes the training cycle of your deep learning algorithm." } [/block] 
+[block:callout]
+{
+  "type": "info",
+  "body": "This section describes the training cycle of your deep learning algorithm.",
+  "title": ""
+}
+[/block]
+ 
 
 ### Create a dummy API 
  
@@ -53,7 +60,8 @@ First, we’re going to create a dummy API that illustrates the main phases of t
 
 4. Click on **Next**. We'll use the JSON upload to create the API. 
 
- [block:image]
+ 
+[block:image]
 {
   "images": [
     {
