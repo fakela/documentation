@@ -18,11 +18,7 @@ Mindee's REST API endpoint are specific points of entry used to make requests.
 Mindee provides off-the-shelf and custom APIs. To make a prediction or train an API, we use the REST interface where you can make requests over HTTPS protocol. Each URL starts with the same pattern: `https://api.mindee.net/v1/products/_<account_name>_/_<api_name>_/` where,
 
 - **__<account_name>__**: refers to your username or organization name with which you signed up with. This can be found at the top right of the page.
-![username/account_name](https://files.readme.io/b2b7222-account_name.png)
-- **__<api_name>__**: refers to the name of the API your are using. Your API name can be found at the top left of that page 
-![API name at the top left of the page](https://files.readme.io/f92f2bf-api_name.png)
-or on the API list in the APIs hub page.
-![API name in the API hub page](https://files.readme.io/ee3f7e9-api_name2.png)
+- **__<api_name>__**: refers to the name of the API your are using. Your API name can be found at the top left of that page or on the API list in the APIs hub page.
 
 ## Authentication
 Each request made to the Mindee REST API must be authenticated with an API key generated through Mindee. The API key is specific to the document parsing API you are working with. See [Authenticate your API calls](https://developers.mindee.com/docs/authentication#authenticate-your-api-calls) to understand how Mindee's document parsing API authentication works.
