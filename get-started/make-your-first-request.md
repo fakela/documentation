@@ -15,7 +15,7 @@ Once you are logged in, you'll land on the APIs hub page where you can see **You
 
 To create an API key: 
 
-1. Click on any of the API card on the APIs Store, for this example, we will click on the **Expense Receipts** card. 
+1. Click on any of the API cards on the APIs Store, for this example, we will click on the **Expense Receipts** card. 
 
 ![Expense receipts API card on the right](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "create an api key")
 
@@ -38,24 +38,24 @@ To create an API key:
 ## Get Your Sample Code
 ![Mindee Sample code located under the API reference tab on the right](https://files.readme.io/424a9f3-expense-reciept-sample-code.png "sample code")
 
-Sample codes in several languages and command line tool are provided by Mindee, and they are ready to use by simply copying and pasting them into your coding environment, application, or command line tool. To make use of this:
+Sample code in several languages and command line tools are provided by Mindee, and they are ready to use by simply copying and pasting them into your coding environments, applications, or command line tools. To make use of this:
 
 1. On the left side of the screen, click on **Documentation**.
 2. Under the **API Reference** tab, you'll find the **Sample code** section in a number of popular languages or command line tool. Select according to your desired needs.
 3. Select the API key you wish to use.
-4. Copy and paste the code below into your application, coding environment or command line interface. You're ready to go!
+4. Copy and paste the code below into your applications, coding environments or command line interface. You're ready to go!
 
 ## Live Interface
 ![Live interface section located on the right with extracted fields](https://files.readme.io/2e3e774-Screenshot_2022-01-08_at_01.02.01.png "live interface")
 
 This is your home for no code testing. It is a graphical user interface that allows you to view the file you've uploaded as well as see all of the extracted information including the raw API JSON response in one location. To make use of this feature, on the left side menu, Click on **Live Interface**. There are two approaches to use the Live Interface feature:
-- Using new document
-- Using Use my camera
+- Uploading a **New document**, or
+- Making use of the **Use my camera** feature
 
-### Using New Document
+### Uploading A New Document
 With the **New document** feature located at the bottom of the live Interface, you can upload the documents that you want to the Live Interface and this will appear below. To do this, click on the **New document button** and select on the image document you want. You can only upload one document at a time. However, to make uploads faster, you can drag and drop an image document in the image frame.
 
-### Using Use my Camera 
+### Making Use Of The Use My Camera Feature
 With the **Use my camera** feature located at the bottom of the live Interface, you can take pictures of your documents. You'll need to allow your browser or web cam to use your camera, otherwise, you won't be able to take a picture of your document. 
 
 ### Extracted Fields
@@ -69,8 +69,7 @@ You can examine the extracted fields using the **Expected fields** column. This 
 ![Expected fields column with extracted fields](https://files.readme.io/8a451d6-expected-field.png "extracted fields")
 
 #### API Response
-The API response gives a raw JSON of the extracted fields. It is the same response you will get from using the API in your application. There are more detailed information about the extracted data here than the expected fields. You can easily download it with the down arrow button at the top
+The API response gives a raw JSON of the extracted fields. It is the same response you will get from using the API in your application. There is more detailed information about the extracted data here than in the expected fields. You can easily download it with the arrow button at the top
 
-![API response column with extracted fields](https://files.readme.io/6efcfd8-api-response-field.png "extracted fields")
+![API response column with extracted fields](https://files.readme.io/5891586-api-response.png "extracted fields")
 
-[Comment]:<the last two images have refused to comply, I wonder how big the image is>
