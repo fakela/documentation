@@ -1,6 +1,10 @@
-title: Off-The-s=Shelf APIs
+---
+title: Off-The-Shelf-APIs
 excerpt: ''
 next:
+  pages:
+    - receipr-ocr
+    - invoice-ocr
   description: ''
 ---
 
