@@ -8,52 +8,47 @@ next:
     - annotation
   description: ''
 ---
-## URL
-To make a prediction on a specific document extraction API, you must select your API version **__<api_version>__** and use this endpoint:
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict",
-      "language": "http",
-      "name": "POST"
-    }
-  ]
-}
-[/block]
-## Account Name
-The name of the account that created the API. For the off-the-shelf APIs, this will read 'mindee.'
+## What is Prediction
+Prediction refers to the response or results that our APIs deliver on a given document. All our APIs offer a prediction endpoint.
+ 
+## Preditction URL
+To make a prediction on your API, you must select your API version **__<api_version>__** and use the endpoint `predict`:
 
-## Versioning
-A document extraction API is defined by a major or a minor version.
+```
+https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict
+```
+- **account_name**: refers to the username or organization name of the account that created the API. For the off-the-shelf APIs, this will read as 'mindee'.
+- **api_name**: refers to the name of your document parsing API
+- **api_version**: Mindee APIs are defined by both major or minor version.
 
-**Major versions**
-Major version changes are not backward-compatible, with possibly a different output format.
+### Major Versions
+Major version changes are not backward-compatible and they have different output format.
 Example of major versions: **v1**, **v2**
 
-**Minor versions**
-For each major version, a minor version is backward-compatible with the previous. They may contain performance updates or new extracted features with no changes with preexisting minor versions.
-Example of minor versions: **v1.1**, **v1.2**
-[block:callout]
-{
-  "type": "warning",
-  "title": "Minor versions are only available through the API builder",
-  "body": "* Off-the-shelf APIs do not have minor versions available.\n\n* When using the API builder, each training will create a new minor version of your document extraction API. You can simply use the major version **v1** to select the most up-to-date minor version."
-}
-[/block]
-## Payload
+### Minor Versions
+A minor version is always backward-compatible with the previous ones within the same major version. They may contain performance updates or new extracted features with no changes with preexisting minor versions. Example of minor versions: **v1.1**, **v1.2**.
 
-### Send a binary file
-Use multipart/form-data encoding to send your document
-`document :  my_file`
+> 📘 Info
+> 
+> Minor versions are only available for custom APIs built using the API builder while major versions are available for both off-the-shelf and custom APIs. When using the API builder, each training will create a new minor version of your document extraction API. You can simply use the major version v1 to select the most up-to-date minor version.
+
+## Payload
+A payload refers to the data that you submit to the Mindee server when you are making an API request. There are three main forms of data that you can send:
+- a binary file
+- a base64 encoded File
+- a public https url
+
+### Send a Binary File
+Use a `multipart/form-data` encoding to send your document
 
 Example:
+
 [block:code]
 {
   "codes": [
     {
-      "code": "curl -X POST \\\n  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \\\n  -H 'Authorization: Token my-token' \\\n  -H 'content-type: multipart/form-data' \\\n  -F document=@my_file.png",
+      "code": "curl -X POST \\\n  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \\\n  -H 'Authorization: Token my-token' \\\n  -H 'content-type: multipart/form-data' \\\n  -F document=@/path/to/your/file.png",
       "language": "curl"
     },
     {
@@ -68,7 +63,12 @@ Example:
   ]
 }
 [/block]
-### Send a base64 encoded file
+
+> 📘 Info
+>
+> The `@` in the `curl` command is very importanat as it tells curl that you aren’t passing a data, but a file. 
+
+### Send a Base64 Encoded File
 Prepare a JSON payload with application/json encoding:
 ```
 {
@@ -76,114 +76,214 @@ Prepare a JSON payload with application/json encoding:
 }
 ```
 Send your request:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl -X POST \\\n  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \\\n  -H 'Authorization: Token my-api-key-here' \\\n  -H 'content-type: application/json' \\\n  -d '{\"document\": \"/9j...\"}'",
-      "language": "curl"
-    }
-  ]
-}
-[/block]
+
+```
+curl -X POST \
+  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \
+  -H 'Authorization: Token my-api-key-here' \
+  -H 'Content-Type: application/json' \
+  -d 'document="/9j..."'
+```
+
 ### Send a URL
 Only public HTTPS URL accepted.
 
 Prepare a JSON payload with application/json encoding:
 ```
 {
-  "document": "https://my_file.pdf
+  "document": "https://my_file.pdf"
 }
 ```
 Send your request:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "curl -X POST \\\n  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \\\n  -H 'Authorization: Token my-token' \\\n  -H 'content-type: application/json' \\\n  -d '{\"document\": \"https://my_file.pdf\"}'",
-      "language": "curl"
-    }
-  ]
-}
-[/block]
-## JSON response
-As stated in [Endpoints JSON Response](doc:endpoints#json-response), Mindee's REST API response format always contains an **api_request** key with general information about your request. When calling the prediction endpoint, the parsed information from your documents can be found in the **document** key.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n  \"api_request\": {... }, \n  \"document\": {\n    \"id\": \"ac668055-e7db-48f2-b81f-e5ba9a6a6b8f\",\n    \"inference\": {\n      \"extras\": {},\n      \"finished_at\": \"\",\n      \"pages\": [\n        {\n          \"id\": 0,\n          \"prediction\": {}\n        },\n        {\n          \"id\": 1,\n          \"prediction\": {}\n        }\n      ],\n      \"prediction\": {},\n      \"processing_time\": 0.44,\n      \"product\": {},\n      \"started_at\": \"\",\n    },\n    \"n_pages\": 2,\n    \"name\": \"myfile.pdf\",\n  }\n}",
-      "language": "json",
-      "name": null
-    }
-  ]
-}
-[/block]
-In the *document* values, you'll find some  basic information about your document,  including the number of pages **n_pages**, its filename **name** and an unique 36 characters long identifier **id**.
-The most important part of this response is the **inference** key you can find nested inside the **document** key.
-This **inference** key contains information about Mindee's processing of your document: **started_at**, **finished_at** and **processing_time**. It also contains a **product** key giving insights about the document parsing API you used, and an **extras** key that can contains additional information.
 
-If you want to retrieve your document prediction, you can choose whether you want a prediction per page or a single prediction for your whole document:
-- document level predictions can be found in the **prediction** key: `document > inference > prediction`
-- predictions per page can be found in the **pages** key. **pages** is a list of JSON objects containing both an **id** and a **prediction** key: `document > inference > pages[] > prediction`
-[block:callout]
-{
-  "type": "success",
-  "body": "To know more about your document parsing API response, especially the **prediction** object's structure, you can access the Documentation part of your API on Mindee's platform.",
-  "title": "Prediction structure"
-}
-[/block]
-## Get candidates for annotation
+```
+curl -X POST \
+  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \
+  -H 'Authorization: Token my-token' \
+  -H 'Content-Type: application/json' \
+  -d 'document="https://my_file.pdf"'
+```
 
-When training via API, you must flag your document as a document for training using the `training=true` parameter. This will make sure we save the document in order to use it later for training.
-However, even for non-training requests, you can add the `candidates=true` query parameters to retrieve the candidates of your document.
-[block:code]
+## JSON Response
+As stated in [Endpoints JSON response](https://developers.mindee.com/docs/endpoints#json-response), Mindee's REST API response format always contain an **api_request** key with general information about your request. When calling the prediction endpoint, the parsed information from your documents can be found in the **document** key.
+```
 {
-  "codes": [
-    {
-      "code": "https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict?training=true&candidates=true",
-      "language": "http",
-      "name": "POST"
-    }
-  ]
+  "api_request": {... }, 
+  "document": {
+    "id": "ac668055-e7db-48f2-b81f-e5ba9a6a6b8f",
+    "inference": {
+      "extras": {},
+      "finished_at": "",
+      "pages": [
+        {
+          "id": 0,
+          "prediction": {}
+        },
+        {
+          "id": 1,
+          "prediction": {}
+        }
+      ],
+      "prediction": {},
+      "processing_time": 0.44,
+      "product": {},
+      "started_at": "",
+    },
+    "n_pages": 2,
+    "name": "myfile.pdf",
+  }
 }
-[/block]
-When doing so, you'll get in the **extras** key of your **document**'s **inference** object a new **candidates** key.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "...\n  \"extras\": {\n    \"candidates\": {\n      \"extraction\": {\"pages\": [...]},\n      \"classification\": {}\n    }\n  }\n...",
-      "language": "json",
-      "name": "Example extras key"
-    }
-  ]
-}
-[/block]
-In this candidates key, you can find both the `extraction` and `classification` candidates.
-For **extraction**, there is a **pages** list. For each page of your uploaded document, you will get all of your candidates for each extraction field of your API.
-For classification feature, since classification is done as the document level, there is no page dimension.
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n \"pages\": [\n   {\n     \"my_first_field\": [\n       {\n         \"content\": \"xxx\",\n         \"key\": \"abcdefgh\",\n         \"polygon\": [],\n       }\n     ],\n     \"my_second_field\": [...]\n   }\n ] \n}",
-      "language": "json",
-      "name": "Example extraction candidates"
-    }
-  ]
-}
-[/block]
+```
+In the document values, you'll find some  basic information about your document which includes
+- the number of pages **n_pages**,
+- its filename **name** and,
+- an unique 36 characters long identifier **id**.
 
-[block:code]
+The most important part of this response is the **inference** key you can find nested inside the **document** key. The **inference** key contains information about the processing of your document which includes:
+- **started_at**,
+- **finished_at** and,
+- **processing_time**. 
+
+It also contains a **product** key giving insights about the document parsing API you used, and an **extras** key that contains additional information. 
+
+## Prediction Level
+To retrieve your document prediction, you can choose whether you want a prediction per page or a single prediction for your whole document. 
+
+```
 {
-  "codes": [
-    {
-      "code": "{\n  \"my_first_classification_field\": [\"class1\", \"class2\"],\n  \"my_second_classification_field\": [...]\n}",
-      "language": "json",
-      "name": "Example classification candidates"
-    }
-  ]
+ "document": {
+   "n_pages": 2,
+   "inference": {
+     "prediction": {
+       ...
+     },
+     "extras": {
+       "candidates": {
+         "classification": {
+           ...
+         }
+       }
+     },
+     "pages": [
+       {
+         "id": 0,
+         "prediction": {
+           ...
+         },
+         "extras": {
+           "candidates": {
+             "extraction": {
+               ...
+             }
+           }
+         }
+       },
+       {
+         "id": 1,
+         "prediction": {
+           ...
+         },
+         "extras": {
+           "candidates": {
+             "extraction": {
+               ...
+             }
+           }
+         }
+       }
+     ]
+   }
+ }
 }
-[/block]
-Each **extraction** candidate is represented by a **content** a **key** and a **polygon**. You will use the **key** when annotating your document, while the **content** is the text our models found in the box and **polygon** is a list of absolute coordinates to find your box on your original document.
+
+```
+
+- **Document level predictions**: To get a single prediction for each field on your whole document, the JSON response returns `response> document > inference > prediction`. At the document level, we have `inference.extras.candidates`. The `extra.candidates` key contains only classification candidates.
+
+```
+{
+ "document": {
+   "n_pages": 2,
+   "inference": {
+     "prediction": {
+       ...
+     },
+     "extras": {
+       "candidates": {
+         "classification": {
+           ...
+         }
+       }
+     },
+
+````
+
+- **Predictions per page**: To get a prediction for each field among all your document pages, the JSON response returns `response > document > inference > pages[] > prediction`. Pages which is a list of JSON objects contains both **id** and a **prediction** key. At the page level, each `inference.pages` object will contain an `extras.candidates` key, containing the extraction candidates. 
+
+```
+"pages": [
+       {
+         "id": 0,
+         "prediction": {
+           ...
+         },
+         "extras": {
+           "candidates": {
+             "extraction": {
+               ...
+             }
+           }
+         }
+       }
+     ]
+```   
+
+> 👍 Success
+> 
+> To know more about your document parsing API response, especially the prediction object's structure, you can access the [Documentation part of your API](https://developers.mindee.com/docs/platform-tour#api---documentation) on Mindee's platform.
+
+## Get Candidates for Annotation
+When training your API, you must flag your document as a document for training using the `training=true` parameter. This will make sure we save the document in order to use it later for training. However, even for non-training requests, you can add the `with_candidates=true` query parameters to retrieve the candidates of your document.
+
+```
+https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict?training=true&with_candidates=true
+```
+While doing so, in the **extras** key of your **document**'s **inference** object you'll get a new **candidates** key. In the document level you'll get a classification candidate and in the page level, you'll get an extraction candidate.
+
+
+- **Extraction candidate**: In extraction candidate, for each page of your uploaded document, you will get all of your candidates for each extraction field of your API. Below is an example of extraction output (page level) with two extraction fields `my_text_field` and `my_number_field`
+
+```
+{
+ "extraction": {
+   "my_text_field": [
+     {
+       "content": "Bob",
+       "key": "d3fb58c1",
+       "polygon": [[0.518, 0.077], [0.415, 0.075], [0.416, 0.067], [0.518, 0.062]]
+     },
+     ...
+   ],
+   "my_number_field": [
+     {
+       "content": 105.87,
+       "key": "c7ba79d2",
+       "polygon": [[0.241, 0.063], [0.334, 0.064], [0.334, 0.073], [0.242, 0.072]]
+     },
+     ...
+   ],
+   ...
+ }
+}
+```
+
+Each **extraction** candidate is represented by a **content**, a **key** and a **polygon**. You will use the **key** when annotating your document, while the **content** is the text our models found in the box and **polygon** is a list of absolute coordinates to find your box on your original document.
+
+- **Classification candidate**: For classification candidate, since classification is done at the document level, there is no page dimension. Below is an example of classification output (document level) with two classification fields color and size
+
+```
+{
+ "color": ["red", "green", "blue"],
+ "size": ["short", "medium", "large"]
+}
+```
