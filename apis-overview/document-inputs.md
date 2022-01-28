@@ -6,39 +6,42 @@ next:
     - limitations
   description: ''
 ---
-## Documents
+## Documents in Mindee
+Documents used in Mindee include semi-structured files such as an invoice, receipt, ID document, W9-forms, train-ticket etc.
 
-**File types**
-Our APIs support different types of documents like images (JPG, PNG, WEBP), scanned PDF or native PDF. When using PDF files, a maximum number of pages is enforced depending on the document parsing API used. See [Technical limitations](doc:limitations) for more information.
+## File Types
+Our APIs support different types of documents in different format ranging from images (JPG, PNG, WEBP) to scanned PDF or native PDF. When using PDF files or images, a maximum number of pages and file size is enforced depending on the document parsing API used. See [Technical limitations](https://developers.mindee.com/docs/limitations) for more information.
 
-**Payload formats**
+## Payload Formats
 We currently support three different payload formats when sending your document to our APIs:
-* a **binary file** via multipart/form-data encoding
-* a **base64** encoded document via application/json encoding
-* a **public URL** (via HTTPS) where the document is hosted
+- a **binary file**: via `multipart/form-data` encoding
+- a **base64**: encoded document via `application/json` encoding
+- a **public URL**: via `HTTPS` 
 
-See [Prediction](doc:prediction) for more information.
+See [Prediction](https://developers.mindee.com/docs/prediction#payload) for more information.
 
+## Working with Images
+When it comes to images, our APIs have a quicker upload and processing time. If you are dealing with large and heavy images, downscale your input images for faster processing.
 
-## Working with images
- 
-**Supported filetypes**
+### Supported Filetypes
+We currently support JPG, PNG and WEBP format. 
+> 📘 Info
+>
+> Always choose JPG over PDF for scans and photos (as images are processed faster).
 
-We support JPG, PNG and WEBP format. Note that our APIs have a maximum file size limitation, think about downsizing your input images if you manipulate heavy files. Always prefer JPG over PDF for scans and photos (as images are processed faster).
+### Tips for Working With Images
+- **Reduce heavy or big images**: Downscale your image to have a faster upload time and processing time. However, resizing the image too much will make it impossible to read, as the text will get very small. The rule of thumb is that big images should be resized close to 3 megapixels.
+- **Do not upscale**: Never upscale a low-resolution image on your side! This will decrease the algorithm accuracy. It is best to avoid very low-resolution images, if possible.
+- **Keep the aspect ratio**: Never change the original aspect ratio.
+- **Do not preprocess images**: It is not necessary to transform your image in black and white or change brightness/contrast if the image looks fine.
+- **Limitations**: There is a maximum number of images you can send, check the [Documentation page](https://developers.mindee.com/docs/platform-tour#api---documentation) of your selected API and see [Technical limitations](https://developers.mindee.com/docs/limitations) for more information.
+- **Ask the support**: If you have any questions related to your image input data, feel free to use the chat to talk to an expert or ask your question in our [slack community](https://slack.mindee.com/)
 
-
-**Tips for images** 
-- **Reduce heavy or big images**: downscale your image to have a faster upload time and processing time. Because the text can be very small sometimes, resizing the image too much will make it impossible to read. The rule of thumb is that big images should be resized close to 3 megapixels.
-- **Do not upscale**: never upscale a low-resolution image on your side! This will decrease the algorithm accuracy. It is best to avoid very low-resolution images, if possible.
-- **Keep the aspect ratio**: never change the original aspect ratio.
-- **Do not preprocess images**: it is not necessary to transform your image in black and white or change brightness/contrast if the image looks fine.
-- **Ask the chat!**: If you have any questions related to your image input data, feel free to ask the chat to talk to an expert.
 
 ## Working with PDFs
+Our APIs support multi-page PDF files. However, the processing time may be longer compared to image processing, because we need to convert the PDF to image first.
 
-Our APIs support multi-page PDF files as well. Because we need to convert the PDF pages to actual images, the processing time may be longer compared to image processing.
-
-**Tips for PDFs** 
->- **Best with digital documents**: PDF documents should be reserved for digital documents only for maximum performance.
->- **Working with several pages**:  your PDF may contain several pages. In this scenario, you will receive both predictions at the page level and at the document level. See [JSON response scheme](doc:prediction#json-response) documentation for more details.
->- **Limitations**: there is a maximum number of pages you can send, check the Documentation page of your selected API.
+### Tips for Working With PDFs
+- **Best with digital documents**: PDF documents should be in form of digital documents for maximum performance.
+- **Working with several pages**:  Your PDF may contain several pages. In this scenario, you will receive both predictions at the page level and at the document level. See [JSON response scheme](https://developers.mindee.com/docs/prediction#json-responsep) documentation for more details.
+- **Limitations**: There is a maximum number of pages you can send, check the [Documentation page](https://developers.mindee.com/docs/platform-tour#api---documentation) of your selected API and see [Technical limitations](https://developers.mindee.com/docs/limitations) for more information.
