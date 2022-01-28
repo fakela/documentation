@@ -15,7 +15,7 @@ Prediction refers to the response or results that our APIs deliver on a given do
 ## Preditction URL
 To make a prediction on your API, you must select your API version **__<api_version>__** and use the endpoint `predict`:
 
-```
+```HTTP
 https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict
 ```
 - **account_name**: refers to the username or organization name of the account that created the API. For the off-the-shelf APIs, this will read as 'mindee'.
@@ -29,7 +29,7 @@ Example of major versions: **v1**, **v2**
 ### Minor Versions
 A minor version is always backward-compatible with the previous ones within the same major version. They may contain performance updates or new extracted features with no changes with preexisting minor versions. Example of minor versions: **v1.1**, **v1.2**.
 
-> 📘 Info
+> 📘 **Info**
 > 
 > Minor versions are only available for custom APIs built using the API builder while major versions are available for both off-the-shelf and custom APIs. When using the API builder, each training will create a new minor version of your document extraction API. You can simply use the major version v1 to select the most up-to-date minor version.
 
@@ -64,20 +64,20 @@ Example:
 }
 [/block]
 
-> 📘 Info
+> 📘 **Info**
 >
 > The `@` in the `curl` command is very importanat as it tells curl that you aren’t passing a data, but a file. 
 
 ### Send a Base64 Encoded File
 Prepare a JSON payload with application/json encoding:
-```
+``` JSON
 {
   "document": "/9j......"
 }
 ```
 Send your request:
 
-```
+``` SHELL
 curl -X POST \
   https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \
   -H 'Authorization: Token my-api-key-here' \
@@ -89,14 +89,14 @@ curl -X POST \
 Only public HTTPS URL accepted.
 
 Prepare a JSON payload with application/json encoding:
-```
+``` JSON
 {
   "document": "https://my_file.pdf"
 }
 ```
 Send your request:
 
-```
+``` SHELL
 curl -X POST \
   https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \
   -H 'Authorization: Token my-token' \
@@ -106,7 +106,7 @@ curl -X POST \
 
 ## JSON Response
 As stated in [Endpoints JSON response](https://developers.mindee.com/docs/endpoints#json-response), Mindee's REST API response format always contain an **api_request** key with general information about your request. When calling the prediction endpoint, the parsed information from your documents can be found in the **document** key.
-```
+``` JSON
 {
   "api_request": {... }, 
   "document": {
@@ -149,7 +149,7 @@ It also contains a **product** key giving insights about the document parsing AP
 ## Prediction Level
 To retrieve your document prediction, you can choose whether you want a prediction per page or a single prediction for your whole document. 
 
-```
+``` JSON
 {
  "document": {
    "n_pages": 2,
@@ -195,12 +195,11 @@ To retrieve your document prediction, you can choose whether you want a predicti
    }
  }
 }
-
 ```
 
 - **Document level predictions**: To get a single prediction for each field on your whole document, the JSON response returns `response> document > inference > prediction`. At the document level, we have `inference.extras.candidates`. The `extra.candidates` key contains only classification candidates.
 
-```
+``` JSON
 {
  "document": {
    "n_pages": 2,
@@ -215,12 +214,11 @@ To retrieve your document prediction, you can choose whether you want a predicti
          }
        }
      },
-
-````
+```
 
 - **Predictions per page**: To get a prediction for each field among all your document pages, the JSON response returns `response > document > inference > pages[] > prediction`. Pages which is a list of JSON objects contains both **id** and a **prediction** key. At the page level, each `inference.pages` object will contain an `extras.candidates` key, containing the extraction candidates. 
 
-```
+``` JSON
 "pages": [
        {
          "id": 0,
@@ -238,14 +236,14 @@ To retrieve your document prediction, you can choose whether you want a predicti
      ]
 ```   
 
-> 👍 Success
+> 👍 **Success**
 > 
 > To know more about your document parsing API response, especially the prediction object's structure, you can access the [Documentation part of your API](https://developers.mindee.com/docs/platform-tour#api---documentation) on Mindee's platform.
 
 ## Get Candidates for Annotation
 When training your API, you must flag your document as a document for training using the `training=true` parameter. This will make sure we save the document in order to use it later for training. However, even for non-training requests, you can add the `with_candidates=true` query parameters to retrieve the candidates of your document.
 
-```
+``` HTML
 https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict?training=true&with_candidates=true
 ```
 While doing so, in the **extras** key of your **document**'s **inference** object you'll get a new **candidates** key. In the document level you'll get a classification candidate and in the page level, you'll get an extraction candidate.
@@ -253,7 +251,7 @@ While doing so, in the **extras** key of your **document**'s **inference** objec
 
 - **Extraction candidate**: In extraction candidate, for each page of your uploaded document, you will get all of your candidates for each extraction field of your API. Below is an example of extraction output (page level) with two extraction fields `my_text_field` and `my_number_field`
 
-```
+``` JSON
 {
  "extraction": {
    "my_text_field": [
@@ -281,7 +279,7 @@ Each **extraction** candidate is represented by a **content**, a **key** and a *
 
 - **Classification candidate**: For classification candidate, since classification is done at the document level, there is no page dimension. Below is an example of classification output (document level) with two classification fields color and size
 
-```
+``` JSON
 {
  "color": ["red", "green", "blue"],
  "size": ["short", "medium", "large"]
