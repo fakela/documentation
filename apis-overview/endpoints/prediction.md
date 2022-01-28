@@ -12,7 +12,7 @@ next:
 ## What is Prediction
 Prediction refers to the response or results that our APIs deliver on a given document. All our APIs offer a prediction endpoint.
  
-## Preditction URL
+## Prediction URL
 To make a prediction on your API, you must select your API version **__<api_version>__** and use the endpoint `predict`:
 
 ```http
