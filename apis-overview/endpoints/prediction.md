@@ -11,19 +11,19 @@ next:
 
 ## What is Prediction
 Prediction refers to the response or results that our APIs deliver on a given document. All our APIs offer a prediction endpoint.
- 
-## Prediction URL
-To make a prediction on your API, you must select your API version **__<api_version>__** and use the endpoint `predict`:
+
+## Preditction URL
+To make a prediction on your API, you must select your API version **__<api_version>__** and use the endpoint `predict`, you'll find this in _Documentation > API Reference_:
 
 ```http
 https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict
 ```
-- **account_name**: refers to the username or organization name of the account that created the API. For the off-the-shelf APIs, this will read as 'mindee'.
-- **api_name**: refers to the name of your document parsing API
+- **account_name**: refers to the username or organization name of the account that created the API. For the off-the-shelf APIs, this will read as 'mindee'. 
+- **api_name**: refers to the name of your document parsing API. 
 - **api_version**: Mindee APIs are defined by both major or minor version.
 
 ### Major Versions
-Major version changes are not backward-compatible and they have different output format.
+Major version changes are not backward-compatible and they have different output format. 
 Example of major versions: **v1**, **v2**
 
 ### Minor Versions
