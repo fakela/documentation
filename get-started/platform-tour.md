@@ -11,10 +11,9 @@ next:
 This section provides an insight into the basics of Mindee UI. It describes all the features and its function.
 
 ## API Hub
-![Mindee API Store on the left and Your APIs on the right](	https://files.readme.io/6345e3a-api-hub-page.png "API hub")
+![Mindee API Store on the left and Your APIs on the right](https://files.readme.io/6345e3a-api-hub-page.png "API hub")
 
-When you [sign up](https://platform.mindee.com/signup) for an account at Mindee, you'll land on the APIs Hub page. In this page, you will find the off-the-shelf APIs in the **APIs store** as well as the **Your APIs** which includes custom built APIs which are APIs you created and APIs you are currently using.
-
+When you create an account at Mindee, you'll land on the APIs Hub. There are two sections on this page: The [**Off-the-shelf APIs**](https://developers.mindee.com/docs/what-is-off-the-shelf-api) in the APIs store and **Your APIs** which are off-the-shelf APIs currently in use and custom generated APIs.
 
 To use an API, click on the corresponding API card you want from the API store. If you can't find what you're looking for in the off-the-shelf API Store, you can build it yourself by clicking on the **Create a new API** button. [Follow this tutorial to guide you through the process of creating your own API.](https://developers.mindee.com/docs/build-your-first-document-parsing-api)
 
