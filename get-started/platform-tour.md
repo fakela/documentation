@@ -41,12 +41,12 @@ Some of the APIs listed are relevant only to a certain location, for example, th
 ## API - Dashboard
 ![Mindee API dashboard with the different section](https://files.readme.io/24d3e27-2.1.jpg "dashboard")
  
-From the dashboard section, you can monitor and manage your usage and your plan. The dashboard has two main sections: 
+From the dashboard, you can monitor and manage your usage and your plan. The dashboard has two main sections: 
 - API usage section
 - API metrics section
 
 ### API Usage
-You can view your current monthly plan and usage under the API usage section. Your default subscription is a free plan that renews automatically each month. To customize your subscription, click on the **Go unlimited** button. If your plan is active, it will be automatically renewed each month.
+You can view your current monthly plan and usage under the API usage. The default subscription is a free plan that renews automatically each month. To customize your subscription, click on the **Go unlimited** button. If your plan is active, it will be automatically renewed each month.
 
 ### API Metrics
 In the API Metrics section you can view your:
@@ -57,7 +57,7 @@ In the API Metrics section you can view your:
 ## API - Documentation
 ![Mindee APIs documentation with the different section](https://files.readme.io/fae4a9a-2.2.jpg "documentation")
 
-Whether it's an off-the-shelf API from the API Store or a custom-built API, you can access the specific documentation to help you test and integrate easily. The documentation has different sections which are: 
+Whether it's an [off-the-shelf](https://developers.mindee.com/docs/what-is-off-the-shelf-api) API from the API Store or a custom-built API, you can access the specific documentation to help you test and integrate easily. The documentation has different sections which are: 
 - API Reference
 - Response scheme
 - Limitations
@@ -87,39 +87,39 @@ From the limitations section you can view:
 ### Open API
 ![Open API swagger-like interface section](https://files.readme.io/fc315f7-2.6.jpg "open api")
 
-The Open API section is a swagger-like user interface that allows you to navigate through your API technical information. You can also download the Open API configuration of your API.
+The OpenAPI section is a swagger-like user interface that allows you to navigate through your API technical information. You can also download the OpenAPI definition of your API.
 
 ## API -  API Keys
 ![Mindee API Keys](https://files.readme.io/706254b-2.7.jpg "api keys")
 
-With the API keys section, you can create, retrieve, and delete your API keys. You can also create multipe API keys according to your needs. Follow these [steps listed here](https://developers.mindee.com/docs/make-your-first-request#create-an-api-key) to create an API key. 
+With the API keys section, you can create numerous API keys according to your needs, retrieve, and delete your API keys. Follow these [steps listed here](https://developers.mindee.com/docs/make-your-first-request#create-an-api-key) to create an API key. 
 
 To delete an API key:
-- Click on the trash icon located on the left.
-![](https://files.readme.io/7a51fcd-created-api.png)
-- A dialog box will pop out, type the name of your API key and click on the **Delete API** button.
+1. Click on the trash icon located on the left.
+![API key with trash icon on the left](https://files.readme.io/7a51fcd-created-api.png)
+2. A dialog box will pop out, type the name of your API key and click on the **Delete API** button.
 
 ![Mindee Delete API Keys](https://files.readme.io/0499e65-delete-api-key.png "api keys")
 
 **Note**: It is important to note that if you delete your API keys, it cannot be revoked. 
 
 ## API - Live interface
-![Mindee API live interface](https://files.readme.io/7595d34-liveInterface.png "api key")
+![Mindee API live interface section](https://files.readme.io/7595d34-liveInterface.png "live interface")
 
 This is your home for no code testing. In our graphical user interface, you can drag and drop your documents to see the API in action. You can also see all of the extracted information, as well as the raw API JSON response in one location. For custom-built APIs, a trained model is required before the live interface can be used.
 
 ## API - Models
-![Mindee API Models](https://files.readme.io/602f837-unnamed_1.png "api key")
+![Mindee API Models section](https://files.readme.io/602f837-unnamed_1.png "api model")
     
 This section is only available for custom APIs built using the API Builder. You can monitor the status of your training in real time, informing you when it is in progress, deployed, or canceled.
 
 ## API - Training
-![Mindee API Keys](https://files.readme.io/1e9120c-2.9.jpg "api key")
+![Mindee API Training section](https://files.readme.io/1e9120c-2.9.jpg "api training")
 
 This section is only available for custom APIs built using the API Builder. In this section, you can train your custom-built API by annotating data. The left part of the Training interface is the viewer. You can drag and drop single documents or archives you want to annotate.  The right part of the screen is your data model. Each field you've set up in your data model appears here.
 
 ## API - Settings
-![Mindee API Keys](https://files.readme.io/fd7eec6-2.10.jpg "api key")
+![Mindee API settings section](https://files.readme.io/fd7eec6-2.10.jpg "api setting")
 
 This section is only available for custom APIs built using the API Builder. In this section, you can modify the metadata about your API. In the **Actions** section, you can also:
 
