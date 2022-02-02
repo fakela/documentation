@@ -28,7 +28,7 @@ We currently support `.jpg`,`.png` and `.webp` format.
 
 > 📘 **Info**
 >
-> If you want faster processing, then images is a better option compared to PDFs. However, using PDF works just as fine and will give accurate results as well.
+> If you want faster processing, then images is a better option compared to PDFs. However, using PDFs works just as fine and will give accurate results as well.
 
 ### Tips for Working With Images
 - **Reduce very heavy or big images**: For faster upload and processing, downscale heavy and large images. However, resizing the image too much will make it impossible to read, as the text will get very small. The rule of thumb is that big images should be resized close to 3 megapixels.
@@ -43,5 +43,5 @@ Our APIs support multi-page PDF files. However, the processing time may be longe
 ### Tips for Working With PDFs
 - **Use native pdf**: Native PDFs are easier to process and has a higher performance and accuracy rate than scanned PDF.
 - **Working with several pages**: Your PDF may contain several pages. In this scenario, you will receive both predictions at the page level and at the document level. See [JSON response scheme](https://developers.mindee.com/docs/prediction#json-responsep) documentation for more details.
-- **Using the cutPdf option**: cutPDF is available when using the SDK. This option is used when sending multi pages pdf of more than 5 pages.
+- **Using the cutPdf option**: cutPDF is available when using the SDKs. This option is used when sending multi pages pdf of more than 5 pages.
 - **Limitations**: There is a maximum number of pages you can send, check the [Documentation page](https://developers.mindee.com/docs/platform-tour#api---documentation) of your selected API and see [Technical limitations](https://developers.mindee.com/docs/limitations) for more information.
