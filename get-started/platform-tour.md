@@ -17,11 +17,14 @@ When you create an account at Mindee, you'll land on the APIs Hub. There are two
 
 To use an API, click on the corresponding API card you want from the API store. If you can't find what you're looking for in the off-the-shelf API Store, you can build it yourself by clicking on the **Create a new API** button. [Follow this tutorial to guide you through the process of creating your own API.](https://developers.mindee.com/docs/build-your-first-document-parsing-api)
 
-## API Filtering by Locale
+## API Filtering by Location
 ![API filtering by location showing the different country](https://files.readme.io/72a17c0-Screenshot_2021-11-22_at_23.54.56.png "API filter")
 
-In the APIs store, you can filter your off-the-shelf APIs based on locations which makes it easier to sort the APIs you want to use. 
-Some of the APIs listed are relevant only to a certain location, for example, the French ID card API won't be that relevant to someone in the United States unless there is a specific need for it. Here are the region specific off-the-shelf APIs currently available:
+You can filter your off-the-shelf APIs in the APIs store by location; this makes it easier to find the APIs you wish to use. However, regardless of your location, you will be able have access to all available off-the-shelf APIs.
+
+Some of the APIs listed are relevant only to a certain location; for example, the French ID card API won't be that relevant to someone in the United States unless there is a specific need for it.
+
+Here are the region specific off-the-shelf APIs currently available:
 
 #### Globally
 - [Invoice OCR API](https://developers.mindee.com/docs/invoice-ocr).
