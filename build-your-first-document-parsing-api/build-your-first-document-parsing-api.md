@@ -11,7 +11,7 @@ In this walkthrough, we'll walk through the steps to create your own document pa
 
 ## Prerequisites
 
-> - You will need a free account. [Sign up](https://platform.mindee.net) and confirm your email address before proceeding
+> - You will need a free account. [Sign up](https://platform.mindee.com) and confirm your email address before proceeding
 > - Download this [sample training set](https://mindee-public-website-staging.s3.amazonaws.com/blog/2021/04/18/w9s.zip).
  
 
@@ -35,7 +35,7 @@ Let’s see how to build and deploy your first document data extraction REST API
 ## Set up your API
  
 
-Once you have signed up and logged in at [https://platform.mindee.net](https://platform.mindee.net), press the Create a new API button, as shown below:
+Once you have signed up and logged in at [https://platform.mindee.com](https://platform.mindee.com), press the Create a new API button, as shown below:
 [block:image]
 {
   "images": [

@@ -17,7 +17,7 @@ In under a second, the API extracts a set of data from your pdfs or photos of re
 
 API Prerequisites
 
->1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.net/signup) and confirm your email to log in.
+>1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.com/signup) and confirm your email to log in.
 >2. A receipt.  Look in your bag/wallet for a recent one, or do a [Google Image search](https://www.google.com/search?q=cafe+receipt) for a receipt and download a few to test with.
 [block:image]
 {

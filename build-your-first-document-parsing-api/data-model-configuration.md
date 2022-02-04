@@ -16,7 +16,7 @@ For further information on specific data types, see arborescence on the left.
 
 ### Prerequisites
 
-You’ll need a free Mindee account. [Sign up](https://platform.mindee.net/) and confirm your email to login.
+You’ll need a free Mindee account. [Sign up](https://platform.mindee.com/) and confirm your email to login.
  
 
 

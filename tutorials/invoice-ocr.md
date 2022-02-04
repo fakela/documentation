@@ -21,7 +21,7 @@ It takes the API a few seconds to extract data from your PDFs or photos of invoi
 
 ## API Prerequisites
 
-1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.net/signup) and confirm your email to log in.
+1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.com/signup) and confirm your email to log in.
 2. An invoice. Use a recently received invoice, or do a [Google Image search](https://www.google.com/search?q=invoice) for an invoice and download a few to test with.
 
 Below is a sample of an invoice we will be using for this example.

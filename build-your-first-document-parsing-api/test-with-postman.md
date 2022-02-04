@@ -12,7 +12,7 @@ In this article, we'll learn how to test a Mindee document parsing API using Po
 ### Prerequisites
 
 
-1. You must have set up a custom document parsing API at https://platform.mindee.net. If you don’t have one ready, set up the demo API using the US tax form W-9 described in [Build your document parsing API](doc:build-your-first-document-parsing-api) .
+1. You must have set up a custom document parsing API at https://platform.mindee.com. If you don’t have one ready, set up the demo API using the US tax form W-9 described in [Build your document parsing API](doc:build-your-first-document-parsing-api) .
 
 2. For a better developer experience, we recommend that you train your API model with at least 20 documents (as done in the tutorial mentioned above).
 
