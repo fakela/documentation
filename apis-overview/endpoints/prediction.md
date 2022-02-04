@@ -12,7 +12,7 @@ next:
 ## What is Prediction
 Prediction refers to the response or results that our APIs deliver on a given document. All our APIs offer a prediction endpoint.
 
-## Preditction URL
+## Prediction URL
 To make a prediction on your API, you must select your API version **__<api_version>__** and use the endpoint `predict`, you'll find this in _Documentation > API Reference_:
 
 ```http
@@ -66,7 +66,7 @@ Example:
 
 > 📘 **Info**
 >
-> The `@` in the `curl` command is very importanat as it tells curl that you aren’t passing a data, but a file. 
+> The `@` in the `curl` command is very important as it tells curl that you aren’t passing a data but a file. 
 
 ### Send a Base64 Encoded File
 Prepare a JSON payload with application/json encoding:
@@ -197,7 +197,7 @@ To retrieve your document prediction, you can choose whether you want a predicti
 }
 ```
 
-- **Document level predictions**: To get a single prediction for each field on your whole document, the JSON response returns `response> document > inference > prediction`. At the document level, we have `inference.extras.candidates`. The `extra.candidates` key contains only classification candidates.
+- **Document level predictions**: To get a single prediction for each field on your whole document, the JSON response returns `response> document > inference > prediction`. At the document level, we have `inference.extras.candidates`. The `extras.candidates` key contains only classification candidates.
 
 ```json
 {
