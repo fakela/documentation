@@ -4,112 +4,42 @@ excerpt: Automatically extracts data from passports
 ---
 Many on-boarding processes in mobile or web apps require to extract some data from ID documents. Using Mindee's Passport API, you can automatically extract data from passports to offer to your users the best on-boarding experience.
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/4a16b1d-passport_pic.jpg",
-        "passport_pic.jpg",
-        401,
-        560,
-        "#ccd1c9"
-      ]
-    }
-  ]
-}
-[/block]
+![sample passport](https://files.readme.io/4a16b1d-passport_pic.jpg)
+
 The API extracts: 
 
-> **country**: Passport's country of issuance
-> **id_number**: Passport's number
-> **given_names**: Holder's given names
-> **surname**: Holder's surname
-> **birth_date**: Holder's date of birth
-> **birth_place**: Holder's birth place
-> **gender**: Holder's gender
-> **issuance_date**: ISO formatted passport's date of issuance
-> **expiry_date**: ISO formatted passport's expiry date
-> **mrz1**: Passport's machine readable zone line 1
-> **mrz2**: Passport's machine readable zone line 2
+- **birth_date**: Holder's date of birth
+- **birth_place**: Holder's birth place
+- **country**: Passport's country of issuance
+- **expiry_date**: ISO formatted passport's expiry date
+- **gender**: Holder's gender
+- **given_names**: Holder's given names
+- **id_number**: Passport's number
+- **issuance_date**: ISO formatted passport's date of issuance
+- **mrz1**: Passport's machine readable zone line 1
+-  **mrz2**: Passport's machine readable zone line 2
+- **surname**: Holder's surname
 
 **API Prerequisites**
+1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.com/signup) and confirm your email to log in.
+2. A picture of a passport. You can download this fake one below.
 
-1. You’ll need a free Mindee account. Sign up and confirm your email to log in.
-2. A picture of a passport.  You can use yours safely as data protection is one of our priority and we won't send your images to any third party application. You can also download the following fake one:
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/f100914-fake_passport.jpeg",
-        "fake_passport.jpeg",
-        800,
-        1113,
-        "#d0d4ca"
-      ]
-    }
-  ]
-}
-[/block]
+![Sample fake_passport](https://files.readme.io/f100914-fake_passport.jpeg "api prerequisite")
+
 ## Set up the API
+1. Log into your Mindee account and access your Passport API environment by clicking the **International Passport** card.
+![International Passports API card on the right](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "set up api")
 
-Log into your Mindee account and access your International Passport API environment by clicking the Passport API card:
+2. You'll land on the dashboard page - where you can quickly see your API usage (you have none right now, but that will change). 
+![API passport dashbboard](https://files.readme.io/f47295e-api-passport-dashboard.png "set up api")
 
+3. On the left navigation, click on **API Keys** to create an API key.
+![API key on the left nav](https://files.readme.io/7ada39c-api-passport-api-key.png "set up api")
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/68c04be-image_7.png",
-        "image (7).png",
-        428,
-        304,
-        "#817c86"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
-When clicking this card, you land on the dashboard page - where you can quickly see API usage (you have none right now, but that will change). 
+4. Click on the **Create API key** button and name your API key.
+![create a new API key button](https://files.readme.io/33cf503-image_9.png "set up api")
 
-On the left navigation, there are links to “Documentation”, “API Keys” and “Live Interface”. The docs tab has all of the technical details you’ll need to build for the invoice API.
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/7a87c4d-image_8.png",
-        "image (8).png",
-        1920,
-        894,
-        "#f8f8f8"
-      ]
-    }
-  ]
-}
-[/block]
-Click on the Create a **new API key** button and name your API key:
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/33cf503-image_9.png",
-        "image (9).png",
-        1920,
-        894,
-        "#c5c9cf"
-      ]
-    }
-  ]
-}
-[/block]
-Now, we are ready to make an API call. You can find sample codes for the most popular languages in the "Documentation" tab:
-
+5. On the left navigation, go to Documentation > API reference, you'll find sample code in popular languages and command line. Copy and paste the sample code of your desired choice in your application, code environment, terminal etc
 
 [block:code]
 {
@@ -139,166 +69,1008 @@ Now, we are ready to make an API call. You can find sample codes for the most po
   ]
 }
 [/block]
-Replace {my-api-key-here} with your new API key, and /path/to/your/file/png with the path to your passport image or pdf.
 
-Paste the cURL sample into your terminal, hit enter, and about a second later, you will receive a JSON response with the passport details. Since the response is quite verbose, we will walk through the fields section by section.
+6. Replace **{my-api-key-here}** with your new API key, and **/path/to/your/file/png** with the path to your passport.
+
+7. Run your code. You will receive a JSON response with the passport details. 
 
 ## API Response
-Here is the full JSON response you get when you call the API:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n  \"api_request\": {\n    \"error\": {},\n    \"resources\": [\n      \"document\"\n    ],\n    \"status\": \"success\",\n    \"status_code\": 201,\n    \"url\": \"https://api.mindee.net/v1/products/mindee/passport/v1/predict\"\n  },\n  \"document\": {\n    \"annotations\": {\n      \"labels\": []\n    },\n    \"id\": \"c2651887-85f0-4890-88a1-55d1acbe1263\",\n    \"inference\": {\n      \"finished_at\": \"2021-06-01T10:27:52+00:00\",\n      \"pages\": [\n        {\n          \"id\": 0,\n          \"prediction\": {\n            \"birth_date\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.5172,\n                  0.081\n                ],\n                [\n                  0.9155,\n                  0.7614\n                ],\n                [\n                  0.5103,\n                  0.3545\n                ],\n                [\n                  0.0073,\n                  0.6564\n                ]\n              ],\n              \"value\": \"2001-08-25\"\n            },\n            \"birth_place\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.7475,\n                  0.7026\n                ],\n                [\n                  0.0837,\n                  0.6433\n                ],\n                [\n                  0.772,\n                  0.8915\n                ],\n                [\n                  0.2545,\n                  0.1172\n                ]\n              ],\n              \"value\": \"string\"\n            },\n            \"country\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.3263,\n                  0.6623\n                ],\n                [\n                  0.4642,\n                  0.4185\n                ],\n                [\n                  0.3179,\n                  0.8991\n                ],\n                [\n                  0.4653,\n                  0.9794\n                ]\n              ],\n              \"value\": \"string\"\n            },\n            \"expiry_date\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.0719,\n                  0.7544\n                ],\n                [\n                  0.0987,\n                  0.3772\n                ],\n                [\n                  0.8204,\n                  0.3824\n                ],\n                [\n                  0.6437,\n                  0.7535\n                ]\n              ],\n              \"value\": \"2023-04-12\"\n            },\n            \"gender\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.4187,\n                  0.6225\n                ],\n                [\n                  0.7608,\n                  0.3195\n                ],\n                [\n                  0.2222,\n                  0.8163\n                ],\n                [\n                  0.5484,\n                  0.586\n                ]\n              ],\n              \"value\": \"string\"\n            },\n            \"given_names\": [\n              {\n                \"confidence\": 0.99,\n                \"polygon\": [\n                  [\n                    0.892,\n                    0.1198\n                  ],\n                  [\n                    0.8429,\n                    0.3504\n                  ],\n                  [\n                    0.4408,\n                    0.4322\n                  ],\n                  [\n                    0.2926,\n                    0.2348\n                  ]\n                ],\n                \"value\": \"string\"\n              }\n            ],\n            \"id_number\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.8481,\n                  0.0496\n                ],\n                [\n                  0.5729,\n                  0.4031\n                ],\n                [\n                  0.4119,\n                  0.0891\n                ],\n                [\n                  0.0492,\n                  0.3859\n                ]\n              ],\n              \"value\": \"string\"\n            },\n            \"issuance_date\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.708,\n                  0.5445\n                ],\n                [\n                  0.8973,\n                  0.375\n                ],\n                [\n                  0.9134,\n                  0.8104\n                ],\n                [\n                  0.827,\n                  0.3991\n                ]\n              ],\n              \"value\": \"2019-08-03\"\n            },\n            \"mrz1\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.5703,\n                  0.3335\n                ],\n                [\n                  0.4427,\n                  0.1992\n                ],\n                [\n                  0.0419,\n                  0.3303\n                ],\n                [\n                  0.0059,\n                  0.65\n                ]\n              ],\n              \"value\": \"string\"\n            },\n            \"mrz2\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.3573,\n                  0.7532\n                ],\n                [\n                  0.9437,\n                  0.9827\n                ],\n                [\n                  0.5973,\n                  0.1705\n                ],\n                [\n                  0.538,\n                  0.8355\n                ]\n              ],\n              \"value\": \"string\"\n            },\n            \"orientation\": {\n              \"confidence\": 0.99,\n              \"degrees\": 270\n            },\n            \"surname\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.5189,\n                  0.9896\n                ],\n                [\n                  0.3264,\n                  0.3849\n                ],\n                [\n                  0.9078,\n                  0.1242\n                ],\n                [\n                  0.8757,\n                  0.085\n                ]\n              ],\n              \"value\": \"string\"\n            }\n          }\n        }\n      ],\n      \"prediction\": {\n        \"birth_date\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.246,\n              0.2646\n            ],\n            [\n              0.9535,\n              0.65\n            ],\n            [\n              0.1072,\n              0.5242\n            ],\n            [\n              0.201,\n              0.7183\n            ]\n          ],\n          \"value\": \"2001-08-25\"\n        },\n        \"birth_place\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.263,\n              0.6665\n            ],\n            [\n              0.1728,\n              0.9879\n            ],\n            [\n              0.7359,\n              0.16\n            ],\n            [\n              0.6487,\n              0.9166\n            ]\n          ],\n          \"value\": \"string\"\n        },\n        \"country\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.5038,\n              0.3721\n            ],\n            [\n              0.8746,\n              0.9776\n            ],\n            [\n              0.3966,\n              0.9076\n            ],\n            [\n              0.2861,\n              0.1554\n            ]\n          ],\n          \"value\": \"string\"\n        },\n        \"expiry_date\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.3412,\n              0.7005\n            ],\n            [\n              0.4965,\n              0.6171\n            ],\n            [\n              0.1555,\n              0.7132\n            ],\n            [\n              0.7421,\n              0.6633\n            ]\n          ],\n          \"value\": \"2023-04-12\"\n        },\n        \"gender\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.5592,\n              0.5758\n            ],\n            [\n              0.2672,\n              0.0716\n            ],\n            [\n              0.9684,\n              0.6278\n            ],\n            [\n              0.2855,\n              0.1543\n            ]\n          ],\n          \"value\": \"string\"\n        },\n        \"given_names\": [\n          {\n            \"confidence\": 0.99,\n            \"page_id\": 0,\n            \"polygon\": [\n              [\n                0.5765,\n                0.6945\n              ],\n              [\n                0.1599,\n                0.7222\n              ],\n              [\n                0.3402,\n                0.1705\n              ],\n              [\n                0.755,\n                0.371\n              ]\n            ],\n            \"value\": \"string\"\n          }\n        ],\n        \"id_number\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.4431,\n              0.1359\n            ],\n            [\n              0.339,\n              0.6333\n            ],\n            [\n              0.9366,\n              0.5534\n            ],\n            [\n              0.3192,\n              0.9519\n            ]\n          ],\n          \"value\": \"string\"\n        },\n        \"issuance_date\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.6635,\n              0.6699\n            ],\n            [\n              0.0262,\n              0.938\n            ],\n            [\n              0.6887,\n              0.7021\n            ],\n            [\n              0.2226,\n              0.7361\n            ]\n          ],\n          \"value\": \"2019-08-03\"\n        },\n        \"mrz1\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.2724,\n              0.1524\n            ],\n            [\n              0.6602,\n              0.949\n            ],\n            [\n              0.6035,\n              0.8488\n            ],\n            [\n              0.8763,\n              0.5025\n            ]\n          ],\n          \"value\": \"string\"\n        },\n        \"mrz2\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.7596,\n              0.8019\n            ],\n            [\n              0.4068,\n              0.5756\n            ],\n            [\n              0.0751,\n              0.086\n            ],\n            [\n              0.5724,\n              0.5922\n            ]\n          ],\n          \"value\": \"string\"\n        },\n        \"surname\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.0798,\n              0.3528\n            ],\n            [\n              0.4076,\n              0.5601\n            ],\n            [\n              0.9134,\n              0.0295\n            ],\n            [\n              0.9604,\n              0.5395\n            ]\n          ],\n          \"value\": \"string\"\n        }\n      },\n      \"processing_time\": 0.52,\n      \"product\": {\n        \"features\": [\n          \"country\",\n          \"id_number\",\n          \"given_names\",\n          \"surname\",\n          \"birth_date\",\n          \"birth_place\",\n          \"gender\",\n          \"issuance_date\",\n          \"expiry_date\",\n          \"orientation\",\n          \"mrz1\",\n          \"mrz2\"\n        ],\n        \"name\": \"mindee/International Passports\",\n        \"version\": \"1.0\"\n      },\n      \"started_at\": \"2021-06-01T10:27:52+00:00\"\n    },\n    \"n_pages\": 1,\n    \"name\": \"myfile.jpg\",\n    \"ocr\": {}\n  }\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-**To access the page-level prediction:** document > inference > pages[] > prediction is an array, containing the extracted data from each page. For images, there is only one element on this array, but for pdfs, you can find the extracted data for each pdf page.
+Below is the full sample JSON response you get when you call the API. Since the response is quite verbose, we will walk through the fields section by section.
 
-Each predicted field contains a confidence_score as well as a polygon when the information is located in the image.
+```json
+{
+  "api_request": {
+    "error": {},
+    "resources": [
+      "document"
+    ],
+    "status": "success",
+    "status_code": 201,
+    "url": "https://api.mindee.net/v1/products/mindee/passport/v1/predict"
+  },
+  "document": {
+    "annotations": {
+      "labels": []
+    },
+    "id": "c2651887-85f0-4890-88a1-55d1acbe1263",
+    "inference": {
+      "finished_at": "2021-06-01T10:27:52+00:00",
+      "pages": [
+        {
+          "id": 0,
+          "prediction": {
+            "birth_date": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.5172,
+                  0.081
+                ],
+                [
+                  0.9155,
+                  0.7614
+                ],
+                [
+                  0.5103,
+                  0.3545
+                ],
+                [
+                  0.0073,
+                  0.6564
+                ]
+              ],
+              "value": "2001-08-25"
+            },
+            "birth_place": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.7475,
+                  0.7026
+                ],
+                [
+                  0.0837,
+                  0.6433
+                ],
+                [
+                  0.772,
+                  0.8915
+                ],
+                [
+                  0.2545,
+                  0.1172
+                ]
+              ],
+              "value": "string"
+            },
+            "country": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.3263,
+                  0.6623
+                ],
+                [
+                  0.4642,
+                  0.4185
+                ],
+                [
+                  0.3179,
+                  0.8991
+                ],
+                [
+                  0.4653,
+                  0.9794
+                ]
+              ],
+              "value": "string"
+            },
+            "expiry_date": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.0719,
+                  0.7544
+                ],
+                [
+                  0.0987,
+                  0.3772
+                ],
+                [
+                  0.8204,
+                  0.3824
+                ],
+                [
+                  0.6437,
+                  0.7535
+                ]
+              ],
+              "value": "2023-04-12"
+            },
+            "gender": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.4187,
+                  0.6225
+                ],
+                [
+                  0.7608,
+                  0.3195
+                ],
+                [
+                  0.2222,
+                  0.8163
+                ],
+                [
+                  0.5484,
+                  0.586
+                ]
+              ],
+              "value": "string"
+            },
+            "given_names": [
+              {
+                "confidence": 0.99,
+                "polygon": [
+                  [
+                    0.892,
+                    0.1198
+                  ],
+                  [
+                    0.8429,
+                    0.3504
+                  ],
+                  [
+                    0.4408,
+                    0.4322
+                  ],
+                  [
+                    0.2926,
+                    0.2348
+                  ]
+                ],
+                "value": "string"
+              }
+            ],
+            "id_number": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.8481,
+                  0.0496
+                ],
+                [
+                  0.5729,
+                  0.4031
+                ],
+                [
+                  0.4119,
+                  0.0891
+                ],
+                [
+                  0.0492,
+                  0.3859
+                ]
+              ],
+              "value": "string"
+            },
+            "issuance_date": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.708,
+                  0.5445
+                ],
+                [
+                  0.8973,
+                  0.375
+                ],
+                [
+                  0.9134,
+                  0.8104
+                ],
+                [
+                  0.827,
+                  0.3991
+                ]
+              ],
+              "value": "2019-08-03"
+            },
+            "mrz1": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.5703,
+                  0.3335
+                ],
+                [
+                  0.4427,
+                  0.1992
+                ],
+                [
+                  0.0419,
+                  0.3303
+                ],
+                [
+                  0.0059,
+                  0.65
+                ]
+              ],
+              "value": "string"
+            },
+            "mrz2": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.3573,
+                  0.7532
+                ],
+                [
+                  0.9437,
+                  0.9827
+                ],
+                [
+                  0.5973,
+                  0.1705
+                ],
+                [
+                  0.538,
+                  0.8355
+                ]
+              ],
+              "value": "string"
+            },
+            "orientation": {
+              "confidence": 0.99,
+              "degrees": 270
+            },
+            "surname": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.5189,
+                  0.9896
+                ],
+                [
+                  0.3264,
+                  0.3849
+                ],
+                [
+                  0.9078,
+                  0.1242
+                ],
+                [
+                  0.8757,
+                  0.085
+                ]
+              ],
+              "value": "string"
+            }
+          }
+        }
+      ],
+      "prediction": {
+        "birth_date": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.246,
+              0.2646
+            ],
+            [
+              0.9535,
+              0.65
+            ],
+            [
+              0.1072,
+              0.5242
+            ],
+            [
+              0.201,
+              0.7183
+            ]
+          ],
+          "value": "2001-08-25"
+        },
+        "birth_place": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.263,
+              0.6665
+            ],
+            [
+              0.1728,
+              0.9879
+            ],
+            [
+              0.7359,
+              0.16
+            ],
+            [
+              0.6487,
+              0.9166
+            ]
+          ],
+          "value": "string"
+        },
+        "country": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.5038,
+              0.3721
+            ],
+            [
+              0.8746,
+              0.9776
+            ],
+            [
+              0.3966,
+              0.9076
+            ],
+            [
+              0.2861,
+              0.1554
+            ]
+          ],
+          "value": "string"
+        },
+        "expiry_date": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.3412,
+              0.7005
+            ],
+            [
+              0.4965,
+              0.6171
+            ],
+            [
+              0.1555,
+              0.7132
+            ],
+            [
+              0.7421,
+              0.6633
+            ]
+          ],
+          "value": "2023-04-12"
+        },
+        "gender": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.5592,
+              0.5758
+            ],
+            [
+              0.2672,
+              0.0716
+            ],
+            [
+              0.9684,
+              0.6278
+            ],
+            [
+              0.2855,
+              0.1543
+            ]
+          ],
+          "value": "string"
+        },
+        "given_names": [
+          {
+            "confidence": 0.99,
+            "page_id": 0,
+            "polygon": [
+              [
+                0.5765,
+                0.6945
+              ],
+              [
+                0.1599,
+                0.7222
+              ],
+              [
+                0.3402,
+                0.1705
+              ],
+              [
+                0.755,
+                0.371
+              ]
+            ],
+            "value": "string"
+          }
+        ],
+        "id_number": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.4431,
+              0.1359
+            ],
+            [
+              0.339,
+              0.6333
+            ],
+            [
+              0.9366,
+              0.5534
+            ],
+            [
+              0.3192,
+              0.9519
+            ]
+          ],
+          "value": "string"
+        },
+        "issuance_date": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.6635,
+              0.6699
+            ],
+            [
+              0.0262,
+              0.938
+            ],
+            [
+              0.6887,
+              0.7021
+            ],
+            [
+              0.2226,
+              0.7361
+            ]
+          ],
+          "value": "2019-08-03"
+        },
+        "mrz1": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.2724,
+              0.1524
+            ],
+            [
+              0.6602,
+              0.949
+            ],
+            [
+              0.6035,
+              0.8488
+            ],
+            [
+              0.8763,
+              0.5025
+            ]
+          ],
+          "value": "string"
+        },
+        "mrz2": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.7596,
+              0.8019
+            ],
+            [
+              0.4068,
+              0.5756
+            ],
+            [
+              0.0751,
+              0.086
+            ],
+            [
+              0.5724,
+              0.5922
+            ]
+          ],
+          "value": "string"
+        },
+        "surname": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.0798,
+              0.3528
+            ],
+            [
+              0.4076,
+              0.5601
+            ],
+            [
+              0.9134,
+              0.0295
+            ],
+            [
+              0.9604,
+              0.5395
+            ]
+          ],
+          "value": "string"
+        }
+      },
+      "processing_time": 0.52,
+      "product": {
+        "features": [
+          "country",
+          "id_number",
+          "given_names",
+          "surname",
+          "birth_date",
+          "birth_place",
+          "gender",
+          "issuance_date",
+          "expiry_date",
+          "orientation",
+          "mrz1",
+          "mrz2"
+        ],
+        "name": "mindee/International Passports",
+        "version": "1.0"
+      },
+      "started_at": "2021-06-01T10:27:52+00:00"
+    },
+    "n_pages": 1,
+    "name": "myfile.jpg",
+    "ocr": {}
+  }
+}
+```
 
 ### Extracted fields
+Under the `api_request` key of the JSON response, you can find some metadata about the request. 
+
+What is probably most important to you is the extracted data. Under the `document` key, you can find a structure like this:
+
+```json
+  "document": {
+    "annotations": {
+      "labels": []
+    },
+    "id": "c2651887-85f0-4890-88a1-55d1acbe1263",
+    "inference": {
+      "finished_at": "2021-06-01T10:27:52+00:00",
+      "pages": [
+        {
+          "id": 0,
+          "prediction": {
+            "birth_date": {},
+            "birth_place": {},
+            "country": {},
+            "expiry_date": {},
+            "gender": {},
+            "given_names": [],
+            "id_number": {},
+            "issuance_date": {},
+            "mrz1": {},
+            "mrz2": {},
+            "orientation": {},
+            "surname": {}
+          }
+        }
+      ],
+      "prediction": {
+        "birth_date": {},
+        "birth_place": {},
+        "country": {},
+        "expiry_date": {},
+        "gender": {},
+        "given_names": [],
+        "id_number": {},
+        "issuance_date": {},
+        "mrz1": {},
+        "mrz2": {},
+        "surname": {},
+      "processing_time": 0.52,
+      "product": {
+        "features": [
+          "country",
+          "id_number",
+          "given_names",
+          "surname",
+          "birth_date",
+          "birth_place",
+          "gender",
+          "issuance_date",
+          "expiry_date",
+          "orientation",
+          "mrz1",
+          "mrz2"
+        ],
+        "name": "mindee/International Passports",
+        "version": "1.0"
+      },
+      "started_at": "2021-06-01T10:27:52+00:00"
+    },
+    "n_pages": 1,
+    "name": "myfile.jpg",
+    "ocr": {}
+  }
+}
+```
+The extracted data appears in two different elements on the list.
+
+- **Document-level prediction**: The JSON response returns `document > inference > prediction`. This contains the different fields extracted at the document level, this implies that for multi-page pdfs, we reconstruct a single invoice object using all the pages.
+
+- **Page-level prediction**: The JSON response returns `document > inference > pages[] > prediction`. Pages which is an array contains the extracted data from each page. For images, there is only one element on this array, but for multi-page pdfs, you can find the extracted data for each pdf page.
+
+
+#### Confidence Score and Polygon
+Each predicted field contains a confidence_score and a polygon that shows the level of accuracy of the extracted data.
+
+```json
+ {
+  "birth_date": {
+    "confidence": 0.99,
+    "polygon": [
+      [
+        0.5172,
+        0.081
+      ],
+      [
+        0.9155,
+        0.7614
+      ],
+      [
+        0.5103,
+        0.3545
+      ],
+      [
+        0.0073,
+        0.6564
+      ]
+    ],
+    "value": "2001-08-25"
+  }
+} 
+```
 
 ### country
-Passport's country ISO 3166-1 alpha-3 code (3 letters format)
-[block:code]
+In the JSON response below, we have the value of the passport's country in ISO 3166-1 alpha-3 code format (three-letter country codes).
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"country\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.508,\n        0.547\n      ],\n      [\n        0.559,\n        0.547\n      ],\n      [\n        0.559,\n        0.568\n      ],\n      [\n        0.508,\n        0.568\n      ]\n    ],\n    \"value\": \"GBR\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "country": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.508,
+        0.547
+      ],
+      [
+        0.559,
+        0.547
+      ],
+      [
+        0.559,
+        0.568
+      ],
+      [
+        0.508,
+        0.568
+      ]
+    ],
+    "value": "GBR"
+  }
 }
-[/block]
+```
 
 ### id_number
-Passport's number
-[block:code]
+In the JSON respone below, the value ID number is the passport's number.
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"id_number\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.723,\n        0.547\n      ],\n      [\n        0.899,\n        0.547\n      ],\n      [\n        0.899,\n        0.569\n      ],\n      [\n        0.723,\n        0.569\n      ]\n    ],\n    \"value\": \"707797979\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "id_number": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.723,
+        0.547
+      ],
+      [
+        0.899,
+        0.547
+      ],
+      [
+        0.899,
+        0.569
+      ],
+      [
+        0.723,
+        0.569
+      ]
+    ],
+    "value": "707797979"
+  }
 }
-[/block]
+```
+
 ### given_names
-List of holder's given names
+In the JSON response below, we have the value of holder's given names.
 
-[block:code]
+```json
 {
-  "codes": [
+  "given_names": [
     {
-      "code": "{\n  \"given_names\": [\n    {\n      \"confidence\": 0.99,\n      \"polygon\": [\n        [\n          0.341,\n          0.617\n        ],\n        [\n          0.435,\n          0.617\n        ],\n        [\n          0.435,\n          0.638\n        ],\n        [\n          0.341,\n          0.638\n        ]\n      ],\n      \"value\": \"HENERT\"\n    }\n  ]\n}",
-      "language": "json"
+      "confidence": 0.99,
+      "polygon": [
+        [
+          0.341,
+          0.617
+        ],
+        [
+          0.435,
+          0.617
+        ],
+        [
+          0.435,
+          0.638
+        ],
+        [
+          0.341,
+          0.638
+        ]
+      ],
+      "value": "HENERT"
     }
   ]
 }
-[/block]
+```
+
 ### surname
-Holder's surname
+In the JSON response below, we have the value of the holder's surname.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"surname\": {\n    \"confidence\": 0.99,\n    \"polygon\": [\n      [\n        0.34,\n        0.581\n      ],\n      [\n        0.473,\n        0.581\n      ],\n      [\n        0.473,\n        0.604\n      ],\n      [\n        0.34,\n        0.604\n      ]\n    ],\n    \"value\": \"PUDARSAN\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "surname": {
+    "confidence": 0.99,
+    "polygon": [
+      [
+        0.34,
+        0.581
+      ],
+      [
+        0.473,
+        0.581
+      ],
+      [
+        0.473,
+        0.604
+      ],
+      [
+        0.34,
+        0.604
+      ]
+    ],
+    "value": "PUDARSAN"
+  }
 }
-[/block]
+```
+
 ### birth_date
-ISO formatted holder's date of birth
+In the JSON response below, we have the value of the holder's birth date in ISO format(yyyy-mm-dd).
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"birth_date\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.341,\n        0.689\n      ],\n      [\n        0.571,\n        0.689\n      ],\n      [\n        0.571,\n        0.714\n      ],\n      [\n        0.341,\n        0.714\n      ]\n    ],\n    \"value\": \"1995-05-20\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "birth_date": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.341,
+        0.689
+      ],
+      [
+        0.571,
+        0.689
+      ],
+      [
+        0.571,
+        0.714
+      ],
+      [
+        0.341,
+        0.714
+      ]
+    ],
+    "value": "1995-05-20"
+  }
 }
-[/block]
+```
+
 ### birth_place
-Holder's birth place
+In the JSON response below, we have the value of the holder's birth place.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"birth_place\": {\n    \"confidence\": 0.9,\n    \"polygon\": [\n      [\n        0.441,\n        0.724\n      ],\n      [\n        0.556,\n        0.724\n      ],\n      [\n        0.556,\n        0.744\n      ],\n      [\n        0.441,\n        0.744\n      ]\n    ],\n    \"value\": \"CAMTETH\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "birth_place": {
+    "confidence": 0.9,
+    "polygon": [
+      [
+        0.441,
+        0.724
+      ],
+      [
+        0.556,
+        0.724
+      ],
+      [
+        0.556,
+        0.744
+      ],
+      [
+        0.441,
+        0.744
+      ]
+    ],
+    "value": "CAMTETH"
+  }
 }
-[/block]
+```
+
 ### gender
-Holder's gender
+In the JSON response below, we have the value of the holder's gender.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"gender\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.054,\n        0.919\n      ],\n      [\n        0.928,\n        0.919\n      ],\n      [\n        0.928,\n        0.945\n      ],\n      [\n        0.054,\n        0.945\n      ]\n    ],\n    \"value\": \"M\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "gender": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.054,
+        0.919
+      ],
+      [
+        0.928,
+        0.919
+      ],
+      [
+        0.928,
+        0.945
+      ],
+      [
+        0.054,
+        0.945
+      ]
+    ],
+    "value": "M"
+  }
 }
-[/block]
+```
+
 ### issuance_date
-ISO formatted passport's date of issuance
+In the JSON response below, we have the value of the passport's date of issuance in ISO format(yyyy-mm-dd).
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"issuance_date\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.34,\n        0.763\n      ],\n      [\n        0.565,\n        0.763\n      ],\n      [\n        0.565,\n        0.788\n      ],\n      [\n        0.34,\n        0.788\n      ]\n    ],\n    \"value\": \"2012-04-23\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "issuance_date": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.34,
+        0.763
+      ],
+      [
+        0.565,
+        0.763
+      ],
+      [
+        0.565,
+        0.788
+      ],
+      [
+        0.34,
+        0.788
+      ]
+    ],
+    "value": "2012-04-23"
+  }
 }
-[/block]
+```
+
 ### expiry_date
-ISO formatted passport's expiry date
+In the JSON response below, we have the value of the passport's expiry date in ISO format(yyyy-mm-dd).
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"expiry_date\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.34,\n        0.796\n      ],\n      [\n        0.576,\n        0.796\n      ],\n      [\n        0.576,\n        0.82\n      ],\n      [\n        0.34,\n        0.82\n      ]\n    ],\n    \"value\": \"2017-04-22\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "expiry_date": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.34,
+        0.796
+      ],
+      [
+        0.576,
+        0.796
+      ],
+      [
+        0.576,
+        0.82
+      ],
+      [
+        0.34,
+        0.82
+      ]
+    ],
+    "value": "2017-04-22"
+  }
 }
-[/block]
+```
+
 ### mrz1
-Passport's machine readable zone line 1
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n  \"mrz1\": {\n    \"confidence\": 0.99,\n    \"polygon\": [\n      [\n        0.055,\n        0.882\n      ],\n      [\n        0.926,\n        0.882\n      ],\n      [\n        0.926,\n        0.911\n      ],\n      [\n        0.055,\n        0.911\n      ]\n    ],\n    \"value\": \"P<GBRPUDARSAN<<HENERT<<<<<<<<<<<<<<<<<<<<<<<\"\n  }\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-### mrz2
-Passport's machine readable zone line 2
+In the JSON response below, we have the value of the passport's machine readable zone line 1.
 
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"mrz2\": {\n    \"confidence\": 1,\n    \"polygon\": [\n      [\n        0.054,\n        0.919\n      ],\n      [\n        0.928,\n        0.919\n      ],\n      [\n        0.928,\n        0.945\n      ],\n      [\n        0.054,\n        0.945\n      ]\n    ],\n    \"value\": \"7077979792GBR9505209M1704224<<<<<<<<<<<<<<00\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "mrz1": {
+    "confidence": 0.99,
+    "polygon": [
+      [
+        0.055,
+        0.882
+      ],
+      [
+        0.926,
+        0.882
+      ],
+      [
+        0.926,
+        0.911
+      ],
+      [
+        0.055,
+        0.911
+      ]
+    ],
+    "value": "P<GBRPUDARSAN<<HENERT<<<<<<<<<<<<<<<<<<<<<<<"
+  }
 }
-[/block]
+```
+
+### mrz2
+In the JSON response below, we have the value of the passport's machine readable zone line 2.
+
+```json
+{
+  "mrz2": {
+    "confidence": 1,
+    "polygon": [
+      [
+        0.054,
+        0.919
+      ],
+      [
+        0.928,
+        0.919
+      ],
+      [
+        0.928,
+        0.945
+      ],
+      [
+        0.054,
+        0.945
+      ]
+    ],
+    "value": "7077979792GBR9505209M1704224<<<<<<<<<<<<<<00"
+  }
+}
+```
