@@ -2,111 +2,33 @@
 title: Invoice OCR
 excerpt: Automatically extract data from unstructured invoices
 ---
-Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and instantaneously parse invoices in your applications.
-
-It takes the API a few seconds to extract data from your PDFs or photos of invoices. The API extracts data such as:
+Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and instantaneously parse invoices in your applications. It takes the API a few seconds to extract data from your PDFs or photos of invoices. The API extracts data such as:
 
 - Due date
 - Invoice date
 - Invoice number 
 - Locale & currency
-- Payment details (IBAN, Swift, Bic, Account number...) etc 
+- Payment details (IBAN, Swift, Bic, Account number...) 
 - Supplier identification number (SIRET, EIN, VAT number...)
 - Supplier name
 - Taxes details
-- Total amount including taxes
-
-
-
-
-## API Prerequisites
-
-1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.com/signup) and confirm your email to log in.
-2. An invoice. Use a recently received invoice, or do a [Google Image search](https://www.google.com/search?q=invoice) for an invoice and download a few to test with.
-
-Below is a sample of an invoice we will be using for this example.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a74eaa5-c8e283b-sample_invoice.jpeg",
-        "sample_invoice.jpeg",
-        504,
-        660,
-        "#fafafa"
-      ]
-    }
-  ]
-}
-[/block]
-
-
-
+- Total amount including taxes etc
 
 ## Set up the API
+1. You'll need to get an invoice. This can be a recently received invoice or you can google for [free invoice samples](https://www.google.com/search?q=invoice) that you can download to test with. Alternatively, you can use the sample invoice provided below.
+![sample invoice](https://files.readme.io/a74eaa5-c8e283b-sample_invoice.jpeg)
 
-1. Log into your Mindee account and access your Invoice API dashboard by clicking the **Invoice API card**:
+2. Log into your Mindee account and access your Invoice API dashboard by clicking the **Invoice API** card.
+![invoice receipts API card on the right](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "set up api")
 
+3. On the left navigation, click on **API Keys** to create an API key.
+![API key on the left nav](https://files.readme.io/e3f871c-image_5.png "set up api")
 
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/a007748-Screenshot_2022-01-03_at_15.20.07.png",
-        "Screenshot_2022-01-03_at_15.20.07.png",
-        705,
-        631,
-        "#fbfcfb"
-      ],
-      "sizing": "smart"
-    }
-  ]
-}
-[/block]
+4. Click on the **Create API key** button and name your API key:
+![create a new API key button](https://files.readme.io/13d2cca-image_6.png "set up api")
 
-2. You'll land on the dashboard page - where you can quickly see API usage (you have none right now, but that will change). On the left navigation, there are links to “Documentation”, “API Keys” and “Live Interface”. The documentation tab has all of the technical details you’ll need to build the invoice API. Rather than try out the Live Interface, we will make an API call manually.
-
-Click on **API Keys** to create an API key.
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/e3f871c-image_5.png",
-        "image (5).png",
-        2880,
-        1316,
-        "#f9f9fa"
-      ]
-    }
-  ]
-}
-[/block]
-
-3. Click on the **Create a new API key** button and name your API key:
-
-[block:image]
-{
-  "images": [
-    {
-      "image": [
-        "https://files.readme.io/13d2cca-image_6.png",
-        "image (6).png",
-        2880,
-        1420,
-        "#c2c6ce"
-      ]
-    }
-  ]
-}
-[/block]
-
-4. Now, we are ready to make an API call. You can find sample codes for the most popular languages in the "Documentation" tab:
-
+5. On the left navigation, go to Documentation > API reference, you'll find sample code in popular languages and command line. Copy and paste the sample code of your desired choice in your application, code environment, terminal etc.
+![invoice api sample code in the api reference section](https://files.readme.io/c1a00b6-invoice-sample-code.png "set up api")
 
 [block:code]
 {
@@ -137,196 +59,770 @@ Click on **API Keys** to create an API key.
 }
 [/block]
 
-5. Replace **{my-api-key-here}** with your new API key, and **/path/to/your/file/png** with the path to your invoice.
+- Replace **my-api-key-here** with your new API key, or use the "select an API key" feature and it will be filled automatically.
+- Replace **/path/to/your/file/png** with the path to your invoice.
 
-6. Paste the CURL sample into your terminal, hit enter, and about a second later, you will receive a JSON response with the invoice details. Since the response is quite verbose, we will walk through the fields section by section.
-
+6. Run your code. You will receive a JSON response with the invoice details. 
 
 ## API Response
+Below is the full sample JSON response you get when you call the API. Since the response is quite verbose, we will walk through the fields section by section.
 
-Here is the full JSON response you get when you call the API:
-
-
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"api_request\": {\n    \"error\": {},\n    \"resources\": [\n      \"document\"\n    ],\n    \"status\": \"success\",\n    \"status_code\": 201,\n    \"url\": \"http://api.mindee.net/v1/products/mindee/invoices/v2/predict\"\n  },\n  \"document\": {\n    \"annotations\": {\n      \"labels\": []\n    },\n    \"id\": \"cbf37732-9570-4c77-a81f-82cb023aba7b\",\n    \"inference\": {\n      \"finished_at\": \"2021-05-26T12:18:50+00:00\",\n      \"pages\": [\n        {\n          \"id\": 0,\n          \"prediction\": {\n            \"company_registration\": [],\n            \"date\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.84,\n                  0.305\n                ],\n                [\n                  0.932,\n                  0.305\n                ],\n                [\n                  0.932,\n                  0.318\n                ],\n                [\n                  0.84,\n                  0.318\n                ]\n              ],\n              \"value\": \"2018-09-25\"\n            },\n            \"document_type\": {\n              \"value\": \"INVOICE\"\n            },\n            \"due_date\": {\n              \"confidence\": 0.86,\n              \"polygon\": [\n                [\n                  0.841,\n                  0.323\n                ],\n                [\n                  0.941,\n                  0.323\n                ],\n                [\n                  0.941,\n                  0.338\n                ],\n                [\n                  0.841,\n                  0.338\n                ]\n              ],\n              \"raw\": \"Upon receipt\",\n              \"value\": \"2018-09-25\"\n            },\n            \"invoice_number\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.841,\n                  0.264\n                ],\n                [\n                  0.864,\n                  0.264\n                ],\n                [\n                  0.864,\n                  0.279\n                ],\n                [\n                  0.841,\n                  0.279\n                ]\n              ],\n              \"value\": \"14\"\n            },\n            \"locale\": {\n              \"confidence\": 0.94,\n              \"currency\": \"CAD\",\n              \"language\": \"en\"\n            },\n            \"orientation\": {\n              \"confidence\": 0.99,\n              \"degrees\": 0\n            },\n            \"payment_details\": [],\n            \"supplier\": {\n              \"confidence\": 0.11,\n              \"polygon\": [\n                [\n                  0.165,\n                  0.089\n                ],\n                [\n                  0.385,\n                  0.089\n                ],\n                [\n                  0.385,\n                  0.145\n                ],\n                [\n                  0.165,\n                  0.145\n                ]\n              ],\n              \"value\": \"DESIGNS TURNPIKE CO\"\n            },\n            \"taxes\": [\n              {\n                \"confidence\": 0.76,\n                \"polygon\": [\n                  [\n                    0.784,\n                    0.744\n                  ],\n                  [\n                    0.965,\n                    0.744\n                  ],\n                  [\n                    0.965,\n                    0.758\n                  ],\n                  [\n                    0.784,\n                    0.758\n                  ]\n                ],\n                \"rate\": 8.0,\n                \"value\": 193.2\n              }\n            ],\n            \"total_excl\": {\n              \"confidence\": 0.0,\n              \"polygon\": [],\n              \"value\": null\n            },\n            \"total_incl\": {\n              \"confidence\": 0.99,\n              \"polygon\": [\n                [\n                  0.886,\n                  0.839\n                ],\n                [\n                  0.971,\n                  0.839\n                ],\n                [\n                  0.971,\n                  0.858\n                ],\n                [\n                  0.886,\n                  0.858\n                ]\n              ],\n              \"value\": 2608.2\n            }\n          }\n        }\n      ],\n      \"prediction\": {\n        \"company_registration\": [],\n        \"date\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.84,\n              0.305\n            ],\n            [\n              0.932,\n              0.305\n            ],\n            [\n              0.932,\n              0.318\n            ],\n            [\n              0.84,\n              0.318\n            ]\n          ],\n          \"value\": \"2018-09-25\"\n        },\n        \"document_type\": {\n          \"value\": \"INVOICE\"\n        },\n        \"due_date\": {\n          \"confidence\": 0.86,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.841,\n              0.323\n            ],\n            [\n              0.941,\n              0.323\n            ],\n            [\n              0.941,\n              0.338\n            ],\n            [\n              0.841,\n              0.338\n            ]\n          ],\n          \"raw\": \"Upon receipt\",\n          \"value\": \"2018-09-25\"\n        },\n        \"invoice_number\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.841,\n              0.264\n            ],\n            [\n              0.864,\n              0.264\n            ],\n            [\n              0.864,\n              0.279\n            ],\n            [\n              0.841,\n              0.279\n            ]\n          ],\n          \"value\": \"14\"\n        },\n        \"locale\": {\n          \"confidence\": 0.94,\n          \"currency\": \"CAD\",\n          \"language\": \"en\"\n        },\n        \"payment_details\": [],\n        \"supplier\": {\n          \"confidence\": 0.11,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.165,\n              0.089\n            ],\n            [\n              0.385,\n              0.089\n            ],\n            [\n              0.385,\n              0.145\n            ],\n            [\n              0.165,\n              0.145\n            ]\n          ],\n          \"value\": \"DESIGNS TURNPIKE CO\"\n        },\n        \"taxes\": [\n          {\n            \"confidence\": 0.76,\n            \"page_id\": 0,\n            \"polygon\": [\n              [\n                0.784,\n                0.744\n              ],\n              [\n                0.965,\n                0.744\n              ],\n              [\n                0.965,\n                0.758\n              ],\n              [\n                0.784,\n                0.758\n              ]\n            ],\n            \"rate\": 8.0,\n            \"value\": 193.2\n          }\n        ],\n        \"total_excl\": {\n          \"confidence\": 0.0,\n          \"page_id\": null,\n          \"polygon\": [],\n          \"value\": null\n        },\n        \"total_incl\": {\n          \"confidence\": 0.99,\n          \"page_id\": 0,\n          \"polygon\": [\n            [\n              0.886,\n              0.839\n            ],\n            [\n              0.971,\n              0.839\n            ],\n            [\n              0.971,\n              0.858\n            ],\n            [\n              0.886,\n              0.858\n            ]\n          ],\n          \"value\": 2608.2\n        }\n      },\n      \"processing_time\": 1.114,\n      \"product\": {\n        \"features\": [\n          \"locale\",\n          \"invoice_number\",\n          \"date\",\n          \"due_date\",\n          \"total_incl\",\n          \"total_excl\",\n          \"taxes\",\n          \"document_type\",\n          \"payment_details\",\n          \"company_registration\",\n          \"supplier\",\n          \"orientation\"\n        ],\n        \"name\": \"Mindee-Demo/invoices\",\n        \"type\": \"standard\",\n        \"version\": \"2.0\"\n      },\n      \"started_at\": \"2021-05-26T12:18:49+00:00\"\n    },\n    \"n_pages\": 1,\n    \"name\": \"sample_invoice.jpg\",\n    \"ocr\": {}\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "api_request": {
+    "error": {},
+    "resources": [
+      "document"
+    ],
+    "status": "success",
+    "status_code": 201,
+    "url": "http://api.mindee.net/v1/products/mindee/invoices/v2/predict"
+  },
+  "document": {
+    "annotations": {
+      "labels": []
+    },
+    "id": "cbf37732-9570-4c77-a81f-82cb023aba7b",
+    "inference": {
+      "finished_at": "2021-05-26T12:18:50+00:00",
+      "pages": [
+        {
+          "id": 0,
+          "prediction": {
+            "company_registration": [],
+            "date": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.84,
+                  0.305
+                ],
+                [
+                  0.932,
+                  0.305
+                ],
+                [
+                  0.932,
+                  0.318
+                ],
+                [
+                  0.84,
+                  0.318
+                ]
+              ],
+              "value": "2018-09-25"
+            },
+            "document_type": {
+              "value": "INVOICE"
+            },
+            "due_date": {
+              "confidence": 0.86,
+              "polygon": [
+                [
+                  0.841,
+                  0.323
+                ],
+                [
+                  0.941,
+                  0.323
+                ],
+                [
+                  0.941,
+                  0.338
+                ],
+                [
+                  0.841,
+                  0.338
+                ]
+              ],
+              "raw": "Upon receipt",
+              "value": "2018-09-25"
+            },
+            "invoice_number": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.841,
+                  0.264
+                ],
+                [
+                  0.864,
+                  0.264
+                ],
+                [
+                  0.864,
+                  0.279
+                ],
+                [
+                  0.841,
+                  0.279
+                ]
+              ],
+              "value": "14"
+            },
+            "locale": {
+              "confidence": 0.94,
+              "currency": "CAD",
+              "language": "en"
+            },
+            "orientation": {
+              "confidence": 0.99,
+              "degrees": 0
+            },
+            "payment_details": [],
+            "supplier": {
+              "confidence": 0.11,
+              "polygon": [
+                [
+                  0.165,
+                  0.089
+                ],
+                [
+                  0.385,
+                  0.089
+                ],
+                [
+                  0.385,
+                  0.145
+                ],
+                [
+                  0.165,
+                  0.145
+                ]
+              ],
+              "value": "DESIGNS TURNPIKE CO"
+            },
+            "taxes": [
+              {
+                "confidence": 0.76,
+                "polygon": [
+                  [
+                    0.784,
+                    0.744
+                  ],
+                  [
+                    0.965,
+                    0.744
+                  ],
+                  [
+                    0.965,
+                    0.758
+                  ],
+                  [
+                    0.784,
+                    0.758
+                  ]
+                ],
+                "rate": 8.0,
+                "value": 193.2
+              }
+            ],
+            "total_excl": {
+              "confidence": 0.0,
+              "polygon": [],
+              "value": null
+            },
+            "total_incl": {
+              "confidence": 0.99,
+              "polygon": [
+                [
+                  0.886,
+                  0.839
+                ],
+                [
+                  0.971,
+                  0.839
+                ],
+                [
+                  0.971,
+                  0.858
+                ],
+                [
+                  0.886,
+                  0.858
+                ]
+              ],
+              "value": 2608.2
+            }
+          }
+        }
+      ],
+      "prediction": {
+        "company_registration": [],
+        "date": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.84,
+              0.305
+            ],
+            [
+              0.932,
+              0.305
+            ],
+            [
+              0.932,
+              0.318
+            ],
+            [
+              0.84,
+              0.318
+            ]
+          ],
+          "value": "2018-09-25"
+        },
+        "document_type": {
+          "value": "INVOICE"
+        },
+        "due_date": {
+          "confidence": 0.86,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.841,
+              0.323
+            ],
+            [
+              0.941,
+              0.323
+            ],
+            [
+              0.941,
+              0.338
+            ],
+            [
+              0.841,
+              0.338
+            ]
+          ],
+          "raw": "Upon receipt",
+          "value": "2018-09-25"
+        },
+        "invoice_number": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.841,
+              0.264
+            ],
+            [
+              0.864,
+              0.264
+            ],
+            [
+              0.864,
+              0.279
+            ],
+            [
+              0.841,
+              0.279
+            ]
+          ],
+          "value": "14"
+        },
+        "locale": {
+          "confidence": 0.94,
+          "currency": "CAD",
+          "language": "en"
+        },
+        "payment_details": [],
+        "supplier": {
+          "confidence": 0.11,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.165,
+              0.089
+            ],
+            [
+              0.385,
+              0.089
+            ],
+            [
+              0.385,
+              0.145
+            ],
+            [
+              0.165,
+              0.145
+            ]
+          ],
+          "value": "DESIGNS TURNPIKE CO"
+        },
+        "taxes": [
+          {
+            "confidence": 0.76,
+            "page_id": 0,
+            "polygon": [
+              [
+                0.784,
+                0.744
+              ],
+              [
+                0.965,
+                0.744
+              ],
+              [
+                0.965,
+                0.758
+              ],
+              [
+                0.784,
+                0.758
+              ]
+            ],
+            "rate": 8.0,
+            "value": 193.2
+          }
+        ],
+        "total_excl": {
+          "confidence": 0.0,
+          "page_id": null,
+          "polygon": [],
+          "value": null
+        },
+        "total_incl": {
+          "confidence": 0.99,
+          "page_id": 0,
+          "polygon": [
+            [
+              0.886,
+              0.839
+            ],
+            [
+              0.971,
+              0.839
+            ],
+            [
+              0.971,
+              0.858
+            ],
+            [
+              0.886,
+              0.858
+            ]
+          ],
+          "value": 2608.2
+        }
+      },
+      "processing_time": 1.114,
+      "product": {
+        "features": [
+          "locale",
+          "invoice_number",
+          "date",
+          "due_date",
+          "total_incl",
+          "total_excl",
+          "taxes",
+          "document_type",
+          "payment_details",
+          "company_registration",
+          "supplier",
+          "orientation"
+        ],
+        "name": "Mindee-Demo/invoices",
+        "type": "standard",
+        "version": "2.0"
+      },
+      "started_at": "2021-05-26T12:18:49+00:00"
+    },
+    "n_pages": 1,
+    "name": "sample_invoice.jpg",
+    "ocr": {}
+  }
 }
-[/block]
+```
 
 ### Extracted fields
 
-Under the ```api_request``` key of the JSON response, you can find some metadata about the request.
+Under the `api_request` key of the JSON response, you can find some metadata about the request.
 
-What is probably most important to you is the extracted data. Under the ```document``` key, you can find a structure like this:
+What is probably most important to you is the extracted data. Under the `document` key, you can find a structure like this:
 
-
-[block:code]
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"document\": {\n    \"annotations\": {\n      \"labels\": []\n    },\n    \"id\": \"cbf37732-9570-4c77-a81f-82cb023aba7b\",\n    \"inference\": {\n      \"finished_at\": \"2021-05-26T12:18:50+00:00\",\n      \"pages\": [\n        {\n          \"id\": 0,\n          \"prediction\": {\n            \"company_registration\": [],\n            \"date\": {},\n            \"document_type\": {},\n            \"due_date\": {},\n            \"invoice_number\": {},\n            \"locale\": {},\n            \"orientation\": {},\n            \"payment_details\": [],\n            \"supplier\": {},\n            \"taxes\": [],\n            \"total_excl\": {},\n            \"total_incl\": {}\n          }\n        }\n      ],\n      \"prediction\": {\n        \"company_registration\": [],\n        \"date\": {},\n        \"document_type\": {},\n        \"due_date\": {},\n        \"invoice_number\": {},\n        \"locale\": {},\n        \"payment_details\": [],\n        \"supplier\": {},\n        \"taxes\": [],\n        \"total_excl\": {},\n        \"total_incl\": {}\n      },\n      \"processing_time\": 1.114,\n      \"product\": {\n        \"features\": [\n          \"locale\",\n          \"invoice_number\",\n          \"date\",\n          \"due_date\",\n          \"total_incl\",\n          \"total_excl\",\n          \"taxes\",\n          \"document_type\",\n          \"payment_details\",\n          \"company_registration\",\n          \"supplier\",\n          \"orientation\"\n        ],\n        \"name\": \"Mindee-Demo/invoices\",\n        \"type\": \"standard\",\n        \"version\": \"2.0\"\n      },\n      \"started_at\": \"2021-05-26T12:18:49+00:00\"\n    },\n    \"n_pages\": 1,\n    \"name\": \"sample_invoice.jpg\",\n    \"ocr\": {}\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "document": {
+    "annotations": {
+      "labels": []
+    },
+    "id": "cbf37732-9570-4c77-a81f-82cb023aba7b",
+    "inference": {
+      "finished_at": "2021-05-26T12:18:50+00:00",
+      "pages": [
+        {
+          "id": 0,
+          "prediction": {
+            "company_registration": [],
+            "date": {},
+            "document_type": {},
+            "due_date": {},
+            "invoice_number": {},
+            "locale": {},
+            "orientation": {},
+            "payment_details": [],
+            "supplier": {},
+            "taxes": [],
+            "total_excl": {},
+            "total_incl": {}
+          }
+        }
+      ],
+      "prediction": {
+        "company_registration": [],
+        "date": {},
+        "document_type": {},
+        "due_date": {},
+        "invoice_number": {},
+        "locale": {},
+        "payment_details": [],
+        "supplier": {},
+        "taxes": [],
+        "total_excl": {},
+        "total_incl": {}
+      },
+      "processing_time": 1.114,
+      "product": {
+        "features": [
+          "locale",
+          "invoice_number",
+          "date",
+          "due_date",
+          "total_incl",
+          "total_excl",
+          "taxes",
+          "document_type",
+          "payment_details",
+          "company_registration",
+          "supplier",
+          "orientation"
+        ],
+        "name": "Mindee-Demo/invoices",
+        "type": "standard",
+        "version": "2.0"
+      },
+      "started_at": "2021-05-26T12:18:49+00:00"
+    },
+    "n_pages": 1
+    "name": "sample_invoice.jpg",
+    "ocr": {}
+  }
 }
-[/block]
+```
 
 The extracted data appears in two different elements on the list.
 
-- **Document-level prediction**: ```document > inference > prediction``` is the document level prediction. It contains the different fields extracted at the document level, meaning that for multi-pages pdfs, we reconstruct a single invoice object using all the pages.
+- **Document-level prediction**: The JSON response returns `document > inference > prediction`. This contains the different fields extracted at the document level, this implies that for multi-page pdfs, we reconstruct a single invoice object using all the pages.
 
-- **Page-level prediction**: ```document > inference > pages[] > prediction``` is an array, containing the extracted data from each page. For images, there is only one element on this array, but for pdfs, you can find the extracted data for each pdf page.
+- **Page-level prediction**: The JSON response returns `document > inference > pages[] > prediction`. Pages which is an array contains the extracted data from each page. For images, there is only one element on this array, but for multi-page pdfs, you can find the extracted data for each pdf page
 
-Each predicted field contains a **confidence_score** as well as a polygon when the information is located in the image. 
 
-### invoice_number
-[block:code]
+#### Confidence Score and Polygon
+Each predicted field contains a **confidence_score** and a **polygon** which is the box enclosing the properties extracted.
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"invoice_number\": {\n    \"confidence\": 0.99,\n    \"page_id\": 0,\n    \"polygon\": [\n      [\n        0.841,\n        0.264\n      ],\n      [\n        0.864,\n        0.264\n      ],\n      [\n        0.864,\n        0.279\n      ],\n      [\n        0.841,\n        0.279\n      ]\n    ],\n    \"value\": \"14\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "invoice_number": {
+    "confidence": 0.99,
+    "page_id": 0,
+    "polygon": [
+      [
+        0.841,
+        0.264
+      ],
+      [
+        0.864,
+        0.264
+      ],
+      [
+        0.864,
+        0.279
+      ],
+      [
+        0.841,
+        0.279
+      ]
+    ],
+    "value": "14"
+  }
 }
-[/block]
+```
 
 ### date
-ISO formatted invoicing date.
-[block:code]
+In the JSON response below, we have the value of the invoice date in an ISO format(yyyy-mm-dd).
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"date\": {\n    \"confidence\": 0.99,\n    \"page_id\": 0,\n    \"polygon\": [\n      [\n        0.84,\n        0.305\n      ],\n      [\n        0.932,\n        0.305\n      ],\n      [\n        0.932,\n        0.318\n      ],\n      [\n        0.84,\n        0.318\n      ]\n    ],\n    \"value\": \"2018-09-25\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "date": {
+    "confidence": 0.99,
+    "page_id": 0,
+    "polygon": [
+      [
+        0.84,
+        0.305
+      ],
+      [
+        0.932,
+        0.305
+      ],
+      [
+        0.932,
+        0.318
+      ],
+      [
+        0.84,
+        0.318
+      ]
+    ],
+    "value": "2018-09-25"
+  }
 }
-[/block]
+```
+
 ### due_date
-ISO formatted invoice due date
-[block:code]
+In the JSON response below, we have the value of the invoice due_ date in an ISO format(yyyy-mm-dd).
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"due_date\": {\n    \"confidence\": 0.86,\n    \"page_id\": 0,\n    \"polygon\": [\n      [\n        0.841,\n        0.323\n      ],\n      [\n        0.941,\n        0.323\n      ],\n      [\n        0.941,\n        0.338\n      ],\n      [\n        0.841,\n        0.338\n      ]\n    ],\n    \"raw\": \"Upon receipt\",\n    \"value\": \"2018-09-25\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "due_date": {
+    "confidence": 0.86,
+    "page_id": 0,
+    "polygon": [
+      [
+        0.841,
+        0.323
+      ],
+      [
+        0.941,
+        0.323
+      ],
+      [
+        0.941,
+        0.338
+      ],
+      [
+        0.841,
+        0.338
+      ]
+    ],
+    "raw": "Upon receipt",
+    "value": "2018-09-25"
+  }
 }
-[/block]
+```
+
 ### total_incl
-Total amount including taxes.
-[block:code]
+In the JSON response below, we have the value of the total amount including taxes.
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"total_incl\": {\n    \"confidence\": 0.99,\n    \"page_id\": 0,\n    \"polygon\": [\n      [\n        0.886,\n        0.839\n      ],\n      [\n        0.971,\n        0.839\n      ],\n      [\n        0.971,\n        0.858\n      ],\n      [\n        0.886,\n        0.858\n      ]\n    ],\n    \"value\": 2608.2\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "total_incl": {
+    "confidence": 0.99,
+    "page_id": 0,
+    "polygon": [
+      [
+        0.886,
+        0.839
+      ],
+      [
+        0.971,
+        0.839
+      ],
+      [
+        0.971,
+        0.858
+      ],
+      [
+        0.886,
+        0.858
+      ]
+    ],
+    "value": 2608.2
+  }
 }
-[/block]
+```
+
 ### total_excl
-Total amount excluding taxes.
-[block:code]
+In the JSON response below, we have the value of the total amount excluding taxes.
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"total_excl\": {\n    \"confidence\": 0.4,\n    \"page_id\": 0,\n    \"polygon\": [\n      [\n        0.886,\n        0.839\n      ],\n      [\n        0.971,\n        0.839\n      ],\n      [\n        0.971,\n        0.858\n      ],\n      [\n        0.886,\n        0.858\n      ]\n    ],\n    \"value\": 2608.2\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "total_excl": {
+    "confidence": 0.4,
+    "page_id": 0,
+    "polygon": [
+      [
+        0.886,
+        0.839
+      ],
+      [
+        0.971,
+        0.839
+      ],
+      [
+        0.971,
+        0.858
+      ],
+      [
+        0.886,
+        0.858
+      ]
+    ],
+    "value": 2608.2
+  }
 }
-[/block]
+```
 
 ### taxes
+In the JSON response below, we have the list of taxes detected in the invoice. Each tax item includes:
+- **value**: the tax item amount in the invoice currency
+- **rate**: the tax rate associated to the amount
 
-List of taxes detected in the invoice. Each tax item includes:
-- **value**: tax item amount in the invoice currency
-- **rate**:  tax rate associated to the amount
-[block:code]
+```json
 {
-  "codes": [
+  "taxes": [
     {
-      "code": "{\n  \"taxes\": [\n    {\n      \"confidence\": 0.76,\n      \"page_id\": 0,\n      \"polygon\": [\n        [\n          0.784,\n          0.744\n        ],\n        [\n          0.965,\n          0.744\n        ],\n        [\n          0.965,\n          0.758\n        ],\n        [\n          0.784,\n          0.758\n        ]\n      ],\n      \"rate\": 8.0,\n      \"value\": 193.2\n    }\n  ]\n}",
-      "language": "json"
+      "confidence": 0.76,
+      "page_id": 0,
+      "polygon": [
+        [
+          0.784,
+          0.744
+        ],
+        [
+          0.965,
+          0.744
+        ],
+        [
+          0.965,
+          0.758
+        ],
+        [
+          0.784,
+          0.758
+        ]
+      ],
+      "rate": 8.0,
+      "value": 193.2
     }
   ]
 }
-[/block]
+```
+
 ### payment_details
-List of supplier's payment details. Supports IBAN, BIC and routing numbers.
-[block:callout]
-{
-  "type": "info",
-  "title": "Why a list?",
-  "body": "On some invoices, there are many payment details written. Our Invoice OCR extracts all of them."
-}
-[/block]
-Each item contains different fields, set to null or filled with the right value depending on the invoice:
-> **account_number**
-> **iban**
-> **routing_number**
-> **bic** 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "{\n  \"payment_details\": [\n    {\n      \"account_number\": \"XXXX\",\n      \"confidence\": 0.95,\n      \"iban\": \"XXXX\",\n      \"page_id\": 0,\n      \"polygon\": [\n        [ 0.075, 0.539 ],\n        [ 0.312, 0.539 ],\n        [ 0.312, 0.564 ],\n        [ 0.075, 0.564 ]\n      ],\n      \"routing_number\": \"XXX\",\n      \"swift\": \"XXX\"\n    }\n  ]\n}",
-      "language": "json"
-    }
-  ]
-}
-[/block]
-### company_registration
-List of company identifier. Each item contains:
-- **value**: The company registration number value.
-- **type**: This is generic and can include: VAT NUMBER, TAX ID, COMPANY REGISTRATION NUMBER or country specific: TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), RFC (Mexico), GSTIN (India) ...etc
-[block:callout]
-{
-  "type": "info",
-  "title": "Why a list?",
-  "body": "The API extract all the supplier identifiers in the invoice, along with the corresponding type."
-}
-[/block]
+In the JSON response below, we have the value of all the suppliers' payment details.
 
-[block:code]
+> **Info** 📘 
+>
+> On some invoices, there are many payment details written such as account number, IBAN, routing number, BIC etc. Our Invoice OCR extracts all of them.
+
+In the JSON response below, each item contains different fields and they are set to null or filled with the right value depending on the invoice:
+
+```json
 {
-  "codes": [
+  "payment_details": [
     {
-      "code": "{\n  \"company_registration\": [\n    {\n      \"confidence\": 0.99,\n      \"page_id\": 0,\n      \"polygon\": [\n        [ 0.515, 0.962 ],\n        [ 0.59, 0.962 ],\n        [ 0.59, 0.973 ],\n        [ 0.515, 0.973 ]\n      ],\n      \"type\": \"SIRET\",\n      \"value\": \"XXX81125600010\"\n    },\n    {\n      \"confidence\": 0.99,\n      \"page_id\": 0,\n      \"polygon\": [\n        [ 0.658, 0.963 ],\n        [ 0.729, 0.963 ],\n        [ 0.729, 0.973 ],\n        [ 0.658, 0.973 ]\n      ],\n      \"type\": \"VAT NUMBER\",\n      \"value\": \"FR44837811XXX\"\n    }\n  ]\n}",
-      "language": "json"
+      "account_number": "XXXX",
+      "confidence": 0.95,
+      "iban": "XXXX",
+      "page_id": 0,
+      "polygon": [
+        [ 0.075, 0.539 ],
+        [ 0.312, 0.539 ],
+        [ 0.312, 0.564 ],
+        [ 0.075, 0.564 ]
+      ],
+      "routing_number": "XXX",
+      "swift": "XXX"
     }
   ]
 }
-[/block]
+```
+
+### company_registration
+In the JSON response below, we have the list all of the company identifiers. Each item contains:
+
+- **value**: The company registration number value.
+- **type**: This is generic and can include: 
+    - COMPANY REGISTRATION NUMBER or country specific: TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), RFC (Mexico), GSTIN (India) ...etc
+    -  TAX ID 
+    - VAT NUMBER etc
+   
+ 
+```json
+{
+  "company_registration": [
+    {
+      "confidence": 0.99,
+      "page_id": 0,
+      "polygon": [
+        [ 0.515, 0.962 ],
+        [ 0.59, 0.962 ],
+        [ 0.59, 0.973 ],
+        [ 0.515, 0.973 ]
+      ],
+      "type": "SIRET",
+      "value": "XXX81125600010"
+    },
+    {
+      "confidence": 0.99,
+      "page_id": 0,
+      "polygon": [
+        [ 0.658, 0.963 ],
+        [ 0.729, 0.963 ],
+        [ 0.729, 0.973 ],
+        [ 0.658, 0.973 ]
+      ],
+      "type": "VAT NUMBER",
+      "value": "FR44837811XXX"
+    }
+  ]
+}
+```
+
+
 ### supplier
-Supplier name as written in the invoice.
-[block:code]
+In the JSON response below, we have the value of the supplier name as written in the invoice.
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"supplier\": {\n    \"confidence\": 0.11,\n    \"page_id\": 0,\n    \"polygon\": [\n      [\n        0.165,\n        0.089\n      ],\n      [\n        0.385,\n        0.089\n      ],\n      [\n        0.385,\n        0.145\n      ],\n      [\n        0.165,\n        0.145\n      ]\n    ],\n    \"value\": \"DESIGNS TURNPIKE CO\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "supplier": {
+    "confidence": 0.11,
+    "page_id": 0,
+    "polygon": [
+      [
+        0.165,
+        0.089
+      ],
+      [
+        0.385,
+        0.089
+      ],
+      [
+        0.385,
+        0.145
+      ],
+      [
+        0.165,
+        0.145
+      ]
+    ],
+    "value": "DESIGNS TURNPIKE CO"
+  }
 }
-[/block]
+```
+
 ### locale
-Currency and language of the invoice.
-[block:code]
+In the JSON response, we have the value of the currency and language of the invoice.
+
+```json
 {
-  "codes": [
-    {
-      "code": "{\n  \"locale\": {\n    \"confidence\": 0.94,\n    \"currency\": \"CAD\",\n    \"language\": \"en\"\n  }\n}",
-      "language": "json"
-    }
-  ]
+  "locale": {
+    "confidence": 0.94,
+    "currency": "CAD",
+    "language": "en"
+  }
 }
-[/block]
+```
