@@ -48,7 +48,7 @@ Example:
 {
   "codes": [
     {
-      "code": "curl -X POST \\\n  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \\\n  -H 'Authorization: Token my-token' \\\n  -H 'content-type: multipart/form-data' \\\n  -F document=@/path/to/your/file.png",
+      "code": "curl -X POST \n  https://api.mindee.net/v1/products/<account_name>/<api_name>/<api_version>/predict \n  -H 'Authorization: Token my-token' \n  -F document=@/path/to/your/file.png",
       "language": "curl"
     },
     {
