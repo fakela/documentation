@@ -48,9 +48,13 @@ From the dashboard, you can monitor and manage your usage and your plan. The das
 - API metrics section
 
 ### API Usage
+![Dashboard API usage](https://files.readme.io/e4efcf0-api_usage.jpg "api usage")
+
 You can view your current monthly plan and usage under the API usage. The default subscription is a free plan that renews automatically each month. To customize your subscription, click on the **Go unlimited** button. If your plan is active, it will be automatically renewed each month.
 
 ### API Metrics
+![Dashboard API metrics](https://files.readme.io/ee66585-api_metric.jpg "api metrics")
+
 In the API Metrics section you can view your:
 - **Traffic**: Number of inputs processed (images and pdf pages).
 - **Errors**: Number of HTTP errors.
