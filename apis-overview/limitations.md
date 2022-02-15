@@ -46,12 +46,3 @@ Payload in Mindee refers to the data that you send to the server when you make a
 | Image Portable Network Graphics     | image/png     |   png|
 | Image WEBP |  image/webp     |    webp |
 | Adobe Portable Document Format | 	application/pdf | pdf|
-
-Document types that will be supported soon:
-
-
-| Type    | MIME Type       | Extensions  |
-| ------------- |:-------------:| -----:|
-| High Efficiency Image File Format     | image/heif  | heic, heif |
-|Tagged Image File Format     | image/tiff     |   tiff, tif |
-
