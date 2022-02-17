@@ -19,136 +19,154 @@ Get started with Mindee's python SDK.
 [/block]
  
 
-## Install the mindee python helper library
+## Installation
+
+### Requirements
+This library is officially supported on Python 3.7 to 3.10.
+
+### Normal Installation
+The preferred installation method is via `pip`:
+```shell script
+pip install mindee
+```
+
+### Development Installation
+If you'll be modifying the source code, you'll need to install the development requirements as well.
+
+First clone the repo:
+```shell script
+git clone git@github.com:mindee/mindee-api-python.git
+```
+
+Then navigate to the cloned directory and install all development requirements:
+```shell script
+cd mindee-api-python
+pip install .[dev,test]
+```
 
  
+## The Client
+The client centralizes document configurations in a single object.
 
-Install from PyPi using pip, a package manager for Python.
- 
+Documents are added to the `Client` using a *config_xxx* method.
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "pip install mindee",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
- 
+Since each *config_xxx* method returns the current `Client` object, you can simply chain all the calls together.
 
-Don't have pip installed? Try installing it, by running this from the command line:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "$ curl https://bootstrap.pypa.io/get-pip.py | python",
-      "language": "shell"
-    }
-  ]
-}
-[/block]
- 
+You only need to specify the API keys for the document endpoints you'll be using.
 
-Getting started with the Mindee API couldn't be easier. Create a Client and you're ready to go.
+```python
+from mindee import Client
 
- 
+mindee_client = (
+    Client()
+        .config_receipt("receipt-api-key")
+        .config_invoice("invoice-api-key")
+        .config_financial_doc("receipt-api-key", "invoice-api-key")
+        .config_passport("passport-api-key")
+        .config_custom_doc(
+          document_type="pokemon-card",
+          singular_name="card",
+          plural_name="cards",
+          account_name="pikachu",
+          api_key="pokemon-card-api-key"
+    )
+)
+```
 
-## Instantiate your Client
- 
+### Environment Variables
+We highly suggest to use environment variables for the API keys, especially for production.
 
-The mindee.Client needs your API credentials. You can either pass these directly to the constructor (see the code below) or via environment variables.
+For Off-The-Shelf APIs, here are the keys you can set:
 
- 
+* `MINDEE_RECEIPT_API_KEY`
+* `MINDEE_INVOICE_API_KEY`
+* `MINDEE_PASSPORT_API_KEY`
 
-Depending on what type of document you want to parse, you need to add specifics auth token for each endpoint.
-
- 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "from mindee import Client\n\nmindee_client = Client(\n    expense_receipt_token=\"your_expense_receipts_api_token_here\",\n    invoice_token=\"your_invoice_api_token_here\",\n    passport_token=\"your_passport_api_token_here\",\n    raise_on_error=True\n)",
-      "language": "python"
-    }
-  ]
-}
-[/block]
-
-[block:parameters]
-{
-  "data": {
-    "h-0": "Parameters",
-    "h-1": "Details",
-    "0-0": "expense_receipt_token",
-    "1-0": "invoice_token",
-    "2-0": "passport_token",
-    "3-0": "raise_on_error",
-    "3-1": "**(boolean, default True) **Specify whether or not to raise an Exception when HTTP errors occur.",
-    "0-1": "(string) API key for [Receipt OCR API](doc:receipt-ocr)",
-    "1-1": "(string) API key for [Invoice OCR API](doc:invoice-ocr)",
-    "2-1": "(string) API key for [Passport OCR API](doc:passport-ocr)"
-  },
-  "cols": 2,
-  "rows": 4
-}
-[/block]
-We suggest storing your credentials as environment variables. Why? You'll never have to worry about committing your credentials and accidentally posting them somewhere public.
-
- 
-
-## Parse a document
-[block:code]
-{
-  "codes": [
-    {
-      "code": "from mindee import Client\n\nmindee_client = Client(\n    expense_receipt_token=\"your_expense_receipts_api_token_here\",\n    invoice_token=\"your_invoice_api_token_here\",\n    passport_token=\"your_passport_api_token_here\",\n    raise_on_error=True\n)\n\n# Parse a receipt\nreceipt_data = mindee_client.parse_receipt(\"/path/to/file\")\n\n# Parse an invoice\ninvoice_data = mindee_client.parse_invoice(\"/path/to/file\")\n\n# Parse a passport\npassport_data = mindee_client.parse_passport(\"/path/to/file\")\n",
-      "language": "python"
-    }
-  ]
-}
-[/block]
-## Input types
- 
-
-You can pass your input file in three ways:
-
-**From file path**
-
- 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "receipt_data = mindee_client.parse_receipt('/path/to/file', input_type=\"path\")",
-      "language": "python"
-    }
-  ]
-}
-[/block]
-** From a file object**
+Custom documents can be set as well, in keeping with the example above:
+* `MINDEE_PIKACHU_POKEMON_CARD_API_KEY`
 
 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "with open('/path/to/file', 'rb') as fp:\n     receipt_data = mindee_client.parse_receipt(fp, input_type=\"file\")\n ",
-      "language": "python"
-    }
-  ]
-}
-[/block]
-**From a base64**
- 
-[block:code]
-{
-  "codes": [
-    {
-      "code": "receipt_data = mindee_client.parse_receipt(base64_string, input_type=\"base64\")",
-      "language": "python"
-    }
-  ]
-}
-[/block]
+## Handling Documents
+
+### Loading Documents
+You can load your document in several ways.
+
+The various methods are called from the `Client` and return an object you can
+then serialize to the API.
+
+#### Path
+An absolute path, as a string.
+```python
+loaded_doc = mindee_client.doc_from_path('/path/to/invoice.pdf')
+```
+
+#### File Object
+A normal Python file object/handle. Must be in binary mode!
+```python
+with open('/path/to/receipt.jpg', 'rb') as fo:
+     loaded_doc = mindee_client.doc_from_file(fo)
+```
+
+#### Base64
+A base64 encoded string.
+
+**Note:** the original filename of the encoded file is required when calling the method.
+```python
+b64_string = "/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLD...."
+loaded_doc = mindee_client.doc_from_b64string(b64_string, "receipt.jpg")
+```
+
+#### Bytes
+Raw bytes.
+
+**Note:** the original filename is required when calling the method.
+```python
+raw_bytes = b"%PDF-1.3\n%\xbf\xf7\xa2\xfe\n1 0 ob..."
+loaded_doc = mindee_client.doc_from_bytes(raw_bytes, "invoice.pdf")
+```
+
+Loading from bytes is useful when using FastAPI `UploadFile` objects:
+```python
+@app.post("/invoice")
+async def upload(upload: UploadFile):
+    invoice_data = mindee_client.doc_from_bytes(
+        upload.file.read(),
+        filename=upload.filename
+    ).parse(
+        "invoice"
+    )
+```
+
+### Document Parsing
+Once a document is loaded, you can send it to the API endpoint(s).
+
+The document parse type must be specified when calling the `parse` method.
+
+The object containing the parsed data will be an attribute of the response object.
+
+#### Receipts
+```python
+api_response = loaded_doc.parse("receipt")
+print(api_response.receipt)
+```
+
+#### Invoices
+```python
+api_response = loaded_doc.parse("invoice")
+print(api_response.invoice)
+```
+
+#### Passports
+```python
+api_response = loaded_doc.parse("passport")
+print(api_response.passport)
+```
+
+#### Financial
+Mixed data flow of invoices and receipts.
+
+**Note:** You'll need an API key for _both_ invoice and receipts endpoints.
+```python
+api_response = loaded_doc.parse("financial_doc")
+print(api_response.financial_doc)
+```
