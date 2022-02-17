@@ -12,13 +12,13 @@ Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and 
 - Supplier identification number (SIRET, EIN, VAT number...)
 - Supplier name
 - Taxes details
-- Total amount including taxes etc
+- Total amount including taxes
 
 ## Set up the API
 1. You'll need to get an invoice. This can be a recently received invoice or you can google for [free invoice samples](https://www.google.com/search?q=invoice) that you can download to test with. Alternatively, you can use the sample invoice provided below.
 ![sample invoice](https://files.readme.io/a74eaa5-c8e283b-sample_invoice.jpeg)
 
-2. Log into your Mindee account and access your Invoice API dashboard by clicking the **Invoice API** card.
+2. Log into your [Mindee account](https://platform.mindee.com/login) and access your Invoice API dashboard by clicking the **Invoice API** card.
 ![invoice receipts API card on the right](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "set up api")
 
 3. On the left navigation, click on **API Keys** to create an API key.
@@ -27,7 +27,7 @@ Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and 
 4. Click on the **Create API key** button and name your API key:
 ![create a new API key button](https://files.readme.io/13d2cca-image_6.png "set up api")
 
-5. On the left navigation, go to Documentation > API reference, you'll find sample code in popular languages and command line. Copy and paste the sample code of your desired choice in your application, code environment, terminal etc.
+5. From the left navigation, go to **Documentation > API reference**, you'll find sample code in popular languages and command line. Copy and paste the sample code of your desired choice in your application, code environment, terminal etc.
 ![invoice api sample code in the api reference section](https://files.readme.io/c1a00b6-invoice-sample-code.png "set up api")
 
 [block:code]
@@ -59,7 +59,7 @@ Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and 
 }
 [/block]
 
-- Replace **my-api-key-here** with your new API key, or use the "select an API key" feature and it will be filled automatically.
+- Replace **my-api-key-here** with your new API key, or use the _"select an API key"_ feature and it will be filled automatically.
 - Replace **/path/to/your/file/png** with the path to your invoice.
 
 6. Run your code. You will receive a JSON response with the invoice details. 
@@ -437,7 +437,6 @@ Below is the full sample JSON response you get when you call the API. Since the 
 ```
 
 ### Extracted fields
-
 Under the `api_request` key of the JSON response, you can find some metadata about the request.
 
 What is probably most important to you is the extracted data. Under the `document` key, you can find a structure like this:
@@ -520,7 +519,7 @@ The extracted data appears in two different elements on the list.
 
 
 #### Confidence Score and Polygon
-Each predicted field contains a **confidence_score** and a **polygon** which is the box enclosing the properties extracted.
+Each predicted field contains a **confidence_score** and a **polygon** which is the box indicating the location of the properties extracted on the document.
 
 ```json
 {
@@ -712,7 +711,7 @@ In the JSON response below, we have the list of taxes detected in the invoice. E
 ```
 
 ### payment_details
-In the JSON response below, we have the value of all the suppliers' payment details.
+In the JSON response below, we have the list of all the suppliers' payment details.
 
 > **Info** 📘 
 >
@@ -742,15 +741,13 @@ In the JSON response below, each item contains different fields and they are set
 ```
 
 ### company_registration
-In the JSON response below, we have the list all of the company identifiers. Each item contains:
-
+In the JSON response below, we have the list all of the company identifiers. Each item may contain:
 - **value**: The company registration number value.
 - **type**: This is generic and can include: 
     - COMPANY REGISTRATION NUMBER or country specific: TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), RFC (Mexico), GSTIN (India) ...etc
     -  TAX ID 
     - VAT NUMBER etc
-   
- 
+  
 ```json
 {
   "company_registration": [
@@ -815,7 +812,7 @@ In the JSON response below, we have the value of the supplier name as written in
 ```
 
 ### locale
-In the JSON response, we have the value of the currency and language of the invoice.
+In the JSON response, we have the currency and language found on the invoice.
 
 ```json
 {
