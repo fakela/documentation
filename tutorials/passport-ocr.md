@@ -2,11 +2,7 @@
 title: Passport OCR
 excerpt: Automatically extracts data from passports
 ---
-Many on-boarding processes in mobile or web apps require to extract some data from ID documents. Using Mindee's Passport API, you can automatically extract data from passports to offer to your users the best on-boarding experience.
-
-![sample passport](https://files.readme.io/4a16b1d-passport_pic.jpg)
-
-The API extracts: 
+Many on-boarding processes in mobile or web apps require to extract some data from ID documents. Using Mindee's Passport API, you can automatically extract data from passports to offer to your users the best on-boarding experience. The API extracts: 
 
 - **birth_date**: Holder's date of birth
 - **birth_place**: Holder's birth place
@@ -20,18 +16,13 @@ The API extracts:
 -  **mrz2**: Passport's machine readable zone line 2
 - **surname**: Holder's surname
 
-**API Prerequisites**
-1. You’ll need a free Mindee account. [Sign up](https://platform.mindee.com/signup) and confirm your email to log in.
-2. A picture of a passport. You can download this fake one below.
-
-![Sample fake_passport](https://files.readme.io/f100914-fake_passport.jpeg "api prerequisite")
-
 ## Set up the API
-1. Log into your Mindee account and access your Passport API environment by clicking the **International Passport** card.
-![International Passports API card on the right](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "set up api")
+1. You'll need to get a picture of a passport. You can use this fake one below.
 
-2. You'll land on the dashboard page - where you can quickly see your API usage (you have none right now, but that will change). 
-![API passport dashbboard](https://files.readme.io/f47295e-api-passport-dashboard.png "set up api")
+![sample fake passport](https://files.readme.io/4a16b1d-passport_pic.jpg "set up apo")
+
+2. Log into your [Mindee account](https://platform.mindee.com/login) and access your Passport API dashbboard by clicking the **International Passport** card.
+![International Passports API card on the right](https://files.readme.io/f111f5b-Screenshot_2021-12-02_at_18.05.20.png "set up api")
 
 3. On the left navigation, click on **API Keys** to create an API key.
 ![API key on the left nav](https://files.readme.io/7ada39c-api-passport-api-key.png "set up api")
@@ -39,7 +30,8 @@ The API extracts:
 4. Click on the **Create API key** button and name your API key.
 ![create a new API key button](https://files.readme.io/33cf503-image_9.png "set up api")
 
-5. On the left navigation, go to Documentation > API reference, you'll find sample code in popular languages and command line. Copy and paste the sample code of your desired choice in your application, code environment, terminal etc
+5. From the left navigation, go to **Documentation > API reference**, you'll find sample code in popular languages and command line. Copy and paste the sample code of your desired choice in your application, code environment, terminal etc.
+![passport api sample code in the api reference section](https://files.readme.io/3ccc2e4-passport-sample-code.png "set up api")
 
 [block:code]
 {
@@ -70,9 +62,10 @@ The API extracts:
 }
 [/block]
 
-6. Replace **{my-api-key-here}** with your new API key, and **/path/to/your/file/png** with the path to your passport.
+- Replace **my-api-key-here** with your new API key, or use the _"select an API key"_ feature and it will be filled automatically.
+- Replace **/path/to/your/file/png** with the path to your passport.
 
-7. Run your code. You will receive a JSON response with the passport details. 
+6. Run your code. You will receive a JSON response with the passport details. 
 
 ## API Response
 Below is the full sample JSON response you get when you call the API. Since the response is quite verbose, we will walk through the fields section by section.
@@ -714,7 +707,7 @@ The extracted data appears in two different elements on the list.
 
 
 #### Confidence Score and Polygon
-Each predicted field contains a confidence_score and a polygon that shows the level of accuracy of the extracted data.
+Each predicted field contains a **confidence_score** and a **polygon** which is the box indicating the location of the properties extracted on the document.
 
 ```json
  {
