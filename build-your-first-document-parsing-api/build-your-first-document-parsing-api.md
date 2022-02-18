@@ -109,7 +109,7 @@ You can either manually add each field or upload a json-formatted file, typicall
 
  
 
-For each piece of data you are extracting, you'll need to choose the data type from the list on the right,  For simplicity in this demo, we'll use the** Text Field** entry for all of the data extracted.  (it is unlikely that you'll actually need the Social Security number as a number to perform operations on - you simply require the value).  [Learn more about](http://google.com) the data types we support.
+For each piece of data you are extracting, you'll need to choose the data type from the list on the right,  For simplicity in this demo, we'll use the** Text Field** entry for all of the data extracted.  (it is unlikely that you'll actually need the Social Security number as a number to perform operations on - you simply require the value).  [Learn more about](https://developers.mindee.com/docs/data-model-configuration) the data types we support.
 
  
 
