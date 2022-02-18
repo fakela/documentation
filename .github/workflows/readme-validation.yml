@@ -1,0 +1,33 @@
+name: validate
+
+on: push
+
+jobs:
+  validate_new_doc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout this repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Getting my sinch-readme-sync version
+        uses: actions/checkout@v2
+        with:
+          repository: 'fharper/readme-sync'
+          path: 'readme-sync'
+
+      - name: Setting up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Installing readme-sync
+        run: |
+          cd readme-sync
+          npm install
+          npm link
+          cd ..
+
+      - name: Validate the Markdown files
+        run: readme-sync --apikey ${{ secrets.APIKEY }} --docsversion ${{ secrets.DOCSVERSION }} -d . validate
