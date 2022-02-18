@@ -3,7 +3,7 @@ title: Overview
 excerpt: ''
 next:
   pages:
-    - receipr-ocr
+    - receipt-ocr
     - invoice-ocr
   description: ''
 ---
