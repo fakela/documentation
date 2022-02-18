@@ -2,10 +2,10 @@
 title: Predict Endpoint
 excerpt: ''
 ---
-# How to use the Predict endpoint with Postman
+## How to use the Predict endpoint with Postman
  
 
-## Objective
+### Objective
 In the previous article, we reviewed how to set up Postman to use a Mindee API Builder API. Each custom API you build and deploy with Mindee has one endpoint: ```/predict```.
 
  

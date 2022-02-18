@@ -3,7 +3,7 @@ title: Generate your clients
 excerpt: ''
 ---
 ​
-# Generate your client from Swagger json
+## Generate your client from Swagger json
  
 
  
@@ -12,9 +12,9 @@ In this tutorial, you'll learn how to generate your client library using an Open
 
  
 
-## Code generation
+### Code generation
  
-### Python
+#### Python
 
 First you will need to download the latest swagger-codegen-cli version from maven central : 
 
@@ -86,7 +86,7 @@ You can ignore this step if you are already using your own python3 virtual env.
 
  
  
-### Python Usage
+#### Python Usage
  
 
 Create your api key from the API Keys page of your Mindee project: 
@@ -111,7 +111,7 @@ Create your api key from the API Keys page of your Mindee project: 
 [/block]
  
 
-### Using the predict endpoint
+#### Using the predict endpoint
  
 ```
 import swagger_client
