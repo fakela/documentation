@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: fharper/github-action-markdown-link-check
+    - uses: fharper/github-action-markdown-link-check@master
       with:
         config-file: 'mlc_config.json'
