@@ -1,3 +1,14 @@
+---
+title: Python SDK CLI
+excerpt: ''
+next:
+  pages:
+    - python-receipt-ocr
+    - python-passport-ocr
+    - python-invoice-ocr
+  description: ''
+---
+
 ## Command Line Usage
 The CLI tool is provided mainly for quick tests and debugging.
 
