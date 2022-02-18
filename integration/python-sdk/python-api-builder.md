@@ -1,3 +1,13 @@
+---
+title: Python SDK CLI
+excerpt: ''
+next:
+  pages:
+    - python-receipt-ocr
+    - python-passport-ocr
+    - python-invoice-ocr
+  description: ''
+---
 
 ## Usage with the API Builder
 If your document isn't covered by one of Mindee's Off-the-Shelf document endpoints,
