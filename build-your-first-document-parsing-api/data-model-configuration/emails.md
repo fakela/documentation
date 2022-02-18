@@ -14,7 +14,7 @@ This section will walk you through the implications of setting up a Email Addres
 ### Prerequisites
 
 
-You’ll need a free account. [Sign up](https://platform.midee.com) and confirm your email to login.
+You’ll need a free account. [Sign up](https://platform.mindee.com) and confirm your email to login.
 
 
 ### Let’s get started! 
