@@ -272,7 +272,7 @@ In a nutshell, the algorithm will take as inputs the image of each document as w
 
  
 
-Once the model is trained, it’s going to be automatically deployed in your API, and you will see a **v1.1 ** version of your API appear in the documentation. A new [minor version](doc:prediction#versioning) is released every time a new model is deployed.
+Once the model is trained, it’s going to be automatically deployed in your API, and you will see a **v1.1 ** version of your API appear in the documentation. A new [minor version](https://developers.mindee.com/docs/prediction#minor-versions) is released every time a new model is deployed.
 
  
 
