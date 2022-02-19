@@ -2,11 +2,14 @@
 title: Python SDK
 excerpt: ''
 ---
-Mindee's API Helper Library for Python
 
-> [Getting started](doc:getting-started)
-> [Python Receipt OCR](doc:python-receipt-ocr)
-> [Python Invoice OCR](doc:python-invoice-ocr)
-> [Python Passport OCR](doc:python-passport-ocr)
-> [Python API Builder](doc:python-api-builder)
-> [Python Command Line](doc:python-cli)
+Mindee's SDK for Python
+
+![Python Logo](https://files.readme.io/d4f83de-Python.png)
+
+- [Getting started](https://developers.mindee.com/docs/getting-started)
+- [Command Line Interface (CLI)](https://developers.mindee.com/docs/python-cli)
+- [Custom APIs (API Builder)](https://developers.mindee.com/docs/python-api-builder)
+- [Invoice API](https://developers.mindee.com/docs/python-invoice-ocr)
+- [Passport API](https://developers.mindee.com/docs/python-passport-ocr)
+- [Receipt API](https://developers.mindee.com/docs/python-receipt-ocr)
