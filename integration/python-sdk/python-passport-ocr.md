@@ -1,5 +1,5 @@
 ---
-title: Python Passport OCR
+title: Passport API
 excerpt: ''
 ---
 ## Passport data structure

@@ -1,7 +1,8 @@
 ---
-title: Python Invoice OCR
+title: Invoice API
 excerpt: ''
 ---
+
 ## Invoice data structure
 [block:code]
 {

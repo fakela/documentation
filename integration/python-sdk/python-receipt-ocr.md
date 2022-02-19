@@ -1,5 +1,5 @@
 ---
-title: Python SDK Receipt OCR
+title: Receipt API
 excerpt: ''
 ---
 

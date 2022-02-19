@@ -1,5 +1,5 @@
 ---
-title: Python SDK CLI
+title: CLI
 excerpt: ''
 next:
   pages:

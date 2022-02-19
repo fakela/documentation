@@ -1,5 +1,5 @@
 ---
-title: Python SDK CLI
+title: Custom APIs (API Builder)
 excerpt: ''
 next:
   pages:
@@ -41,6 +41,7 @@ If this is set, it will mean having to update your code every time a new model i
 This is probably not what you want for development, but can be very useful for production use.
 
 ##### Code Sample
+
 ```python
 from mindee import Client
 
@@ -60,8 +61,8 @@ You can also set the API keys as environment variables.
 The format is `MINDEE_<username>_<document_type>_API_KEY` where `<username>` and `<document_type>` are uppercase, any `-` replaced with `_`.
 
 The example above would look for:
-* `MINDEE_PIKACHU_POKEMON_CARD_API_KEY`
 
+* `MINDEE_PIKACHU_POKEMON_CARD_API_KEY`
 
 ### Parsing Documents
 The call to the `parse` method is the same as with Off-the-Shelf documents.
