@@ -1,8 +1,5 @@
 name: Markdown Check
-on:
-  push:
-    branches:
-      - main
+on: push
 
 jobs:
   markdown-check:
