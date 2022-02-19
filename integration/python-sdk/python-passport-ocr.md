@@ -3,16 +3,14 @@ title: Passport API
 excerpt: ''
 ---
 ## Passport data structure
-[block:code]
-{
-  "codes": [
-    {
-      "code": "from mindee import Client\n\nmindee_client = Client(passport_api=\"your_passport_api_key_here\")\n\npassport_data = mindee_client.parse_passport(\"/path/to/file\")",
-      "language": "python"
-    }
-  ]
-}
-[/block]
+
+```python
+from mindee import Client
+
+mindee_client = Client().config_passport("passport-api-key")
+passport_data = mindee_client.doc_from_path("/path/to/file").parse("passport")
+```
+
 ### Document level prediction
 
 The document attribute is the passport object constructed by gathering all the pages into a single document. It can reveal useful if you have a pdf of two pages, each of them containing  different side of the passport.

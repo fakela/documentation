@@ -4,16 +4,14 @@ excerpt: ''
 ---
 
 ## Invoice data structure
-[block:code]
-{
-  "codes": [
-    {
-      "code": "from mindee import Client\n\nmindee_client = Client(invoice_token=\"your_invoices_api_key_here\")\n\ninvoice_data = mindee_client.parse_invoice(\"/path/to/file\")",
-      "language": "python"
-    }
-  ]
-}
-[/block]
+
+```python
+from mindee import Client
+
+mindee_client = Client().config_invoice("invoice-api-key")
+invoice_data = mindee_client.doc_from_path("/path/to/file").parse("invoice")
+```
+
 ### Document level prediction
 
 The document attribute is the Invoice object constructed by gathering all the pages into a single document.
