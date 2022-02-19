@@ -1,4 +1,4 @@
-name: validate
+name: Validate README.io syntax
 
 on: push
 
