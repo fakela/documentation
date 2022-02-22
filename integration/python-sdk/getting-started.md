@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Python SDK Getting started
 excerpt: ''
 next:
   pages:
@@ -9,15 +9,6 @@ next:
   description: ''
 ---
 Get started with Mindee's python SDK.
-
-[block:callout]
-{
-  "type": "warning",
-  "body": "The python SDK supports Invoice, Passport and Receipt OCR APIs. To create a Python SDK for a custom-built API from the API Builder, please [Follow this guide](doc:generate-your-clients).",
-  "title": ""
-}
-[/block]
- 
 
 ## Installation
 
