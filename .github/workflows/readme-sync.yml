@@ -10,8 +10,6 @@ jobs:
     steps:
       - name: Checkout this repository
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
 
       - name: Getting my sinch-readme-sync version
         uses: actions/checkout@v2
