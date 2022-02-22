@@ -1,5 +1,5 @@
 ---
-title: Python SDK Getting started
+title: Getting started
 excerpt: ''
 next:
   pages:
