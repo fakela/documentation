@@ -53,23 +53,9 @@ For multi-pages pdf, the 'pages' attribute is a list of document objects, each o
 Contains the full Mindee API HTTP response object in JSON format
 
 
-## Extracted invoice fields
+## Extracted fields
 
-Each invoice object contains a set of different fields.
-
-
-To access an invoice object, you need to create a **mindee.Client **and call the Client.parse_invoice method:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "from mindee import Client\n\n# Instantiate your client\nmindee_client = Client(invoice_token=\"your_api_key_here\")\n\n# Call the Mindee invoice endpoint and parse the result\ninvoice_data = mindee_client.parse_invoice(\"/path/to/my/file\")",
-      "language": "python"
-    }
-  ]
-}
-[/block]
-Each field contains the four following attributes:
+Each invoice object contains a set of different fields. Each field contains the four following attributes:
 
 
 > **value**: (Str or Float depending on the field type), corresponds to the field value. Set to None if the >field was not extracted.

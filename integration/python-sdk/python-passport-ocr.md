@@ -51,25 +51,9 @@ For multi pages pdf, the 'pages' attribute is a list of Passport objects, each o
 Contains the full Mindee API HTTP response object in JSON format
 
 
-## Extracted passport fields
+## Extracted fields
 
-Each Passport object contains a set of different fields.
- 
-
-To access a passport object, you need to create a **mindee.Client **and call the Client.parse_passport method:
-[block:code]
-{
-  "codes": [
-    {
-      "code": "from mindee import Client\n\n# Instantiate your client\nmindee_client = Client(passport_token=\"your_api_key_here\")\n\n# Call the Mindee passport endpoint and parse the result\npassport_data = mindee_client.parse_passport(\"/path/to/my/file\")",
-      "language": "python"
-    }
-  ]
-}
-[/block]
-  
-
-Whatever the field type, each of them contains the four following attributes:
+Each Passport object contains a set of different fields. Whatever the field type, each of them contains the four following attributes:
 > **value**: (Str or Float depending on the field type), corresponds to the field value. Set to None if the >field was not extracted.
 > **probability**: (Float), confidence score of the field prediction.
 > **bbox**: (Array[Float]), contains the relative vertices coordinates of the bounding box containing the > field in the image. If the field is not written, the bbox is an empty array. 
@@ -77,7 +61,6 @@ Whatever the field type, each of them contains the four following attributes:
 
 
 ### Passport's owner data
- 
 
 **passport.given_names**: List of passport's owner given names
 
