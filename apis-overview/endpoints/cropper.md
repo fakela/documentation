@@ -2,9 +2,6 @@
 title: Cropper
 excerpt: ''
 ---
-> 📘 **Info**
->
-> This feature is available as part of the [Mindee Enterprise plan](https://mindee.com/pricing).
 
 ## What is Cropper?
 Cropper enables users to retrieve the coordinates of cropped images from a document through our APIs.
