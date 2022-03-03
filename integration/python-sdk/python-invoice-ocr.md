@@ -816,18 +816,27 @@ for company_number in company_registration_numbers:
    company_number_value = company_number.value
 ```
 
-- **Invoice.company_name**: Company name as written on the invoice.
+### Customer Information
+
+- **Invoice.customer_name**: Customer name
 
 ```python
-# To get the company name
-company_name = invoice_data.invoice.company_name.value
+# To get the customer name
+customer_name = invoice_data.invoice.customer_name.value
 ```
 
-- **Invoice.company_address**: Company address as written on the invoice.
+- **Invoice.customer_address**: Customer address
 
 ```python
-# To get the company address
-company_address = invoice_data.invoice.company_address.value
+# To get the customer address
+customer_address = invoice_data.invoice.customer_address.value
+```
+
+- **Invoice.customer_company_registration**: Customer Company Registration
+
+```python
+# To get the customer company registation
+customer_registration_numbers = invoice_data.invoice.customer_company_registration.value
 ```
 
 ### Dates
@@ -844,7 +853,7 @@ invoice_date = invoice_data.invoice.invoice_date.value
 
 ```python
 # To get the invoice due date (string)
-due_date = invoice_data.invoice.invoice_date.value
+due_date = invoice_data.invoice.due_date.value
 ```
 
 ### Locale and Currency
@@ -878,16 +887,16 @@ payment_details = invoice_data.invoice.payment_details
 # Loop on each object
 for payment_detail in payment_details:
    # To get the IBAN
-   iban = payment_details.iban
+   iban = payment_detail.iban
 
    # To get the swift
-   swift = payment_details.swift
+   swift = payment_detail.swift
 
    # To get the routing number
-   routing_number = payment_details.routing_number
+   routing_number = payment_detail.routing_number
 
    # To get the account_number
-   account_number = payment_details.account_number
+   account_number = payment_detail.account_number
 ```
 
 ### Supplier Information
