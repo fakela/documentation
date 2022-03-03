@@ -822,21 +822,21 @@ for company_number in company_registration_numbers:
 - **Invoice.customer_name**: Customer name
 
 ```python
-# To get the customer name
+# To get the customer name (string)
 customer_name = invoice_data.invoice.customer_name.value
 ```
 
 - **Invoice.customer_address**: Customer address
 
 ```python
-# To get the customer address
+# To get the customer address (string)
 customer_address = invoice_data.invoice.customer_address.value
 ```
 
 - **Invoice.customer_company_registration**: Customer Company Registration
 
 ```python
-# To get the customer company registation
+# To get the customer company registation (string)
 customer_registration_numbers = invoice_data.invoice.customer_company_registration.value
 ```
 
