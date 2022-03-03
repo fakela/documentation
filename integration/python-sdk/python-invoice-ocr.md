@@ -797,7 +797,7 @@ Depending on the field type, there might be additional attributes that will be e
 - [Taxes](#taxes)
 - [Total Amounts](#total-amounts)
 
-#### Company Information
+### Company Information
 **Invoice.company_number**:  List of detected company registration number. Each object in the list contains extra attribute:
 
 - **type** (String Generic): VAT NUMBER, TAX ID, GST NUMBER, COMPANY REGISTRATION NUMBER  or
@@ -830,7 +830,7 @@ company_name = invoice_data.invoice.company_name.value
 company_address = invoice_data.invoice.company_address.value
 ```
 
-#### Dates
+### Dates
 **date_object**: Contains the date of issuance of the invoice. Each date field comes with extra attributes:
 
 - **invoice.invoice_date**: Datetime object from python datetime date library.
@@ -847,7 +847,7 @@ invoice_date = invoice_data.invoice.invoice_date.value
 due_date = invoice_data.invoice.invoice_date.value
 ```
 
-#### Locale and Currency
+### Locale and Currency
 
 - **invoice_data.locale**: Language ISO code.
 
@@ -863,7 +863,7 @@ language = invoice_data.invoice.locale.value
 currency = invoice_data.invoice.locale.currency
 ```
 
-#### Payment Information
+### Payment Information
 **Invoice.payment_details**: List of invoice's supplier payment details. Each object in the list contains extra attributes:
 
 - **iban**: (String)
@@ -890,7 +890,7 @@ for payment_detail in payment_details:
    account_number = payment_details.account_number
 ```
 
-#### Supplier Information
+### Supplier Information
 
 - **Invoice.supplier**: Supplier name as written in the invoice (logo or supplier Infos).
 
@@ -906,7 +906,7 @@ supplier_name = invoice_data.invoice.supplier.value
 supplier_address = invoice_data.invoice.supplier_address.value
 ```
 
-#### Taxes
+### Taxes
 **invoice.taxes**: Contains array of tax fields. Each of the tax fields has two extra attributes:
 
 - **code** (String): Optional tax code (HST, GST... for Canadian; City Tax, State tax for US, etc..).
@@ -928,7 +928,7 @@ for tax in taxes:
    tax_rate = tax.rate
 ```
 
-#### Total Amounts
+### Total Amounts
 
 - **Invoice.total_incl**: Total amount including taxes.
 
