@@ -790,6 +790,7 @@ Each invoice object contains a set of different fields. Each field contains the 
 Depending on the field type, there might be additional attributes that will be extracted in the invoice object. Below is the list of basic fields that can be extracted:
 
 - [Company Information](#company-information)
+- [Customer Information](#customer-information)
 - [Dates](#dates)
 - [Locale and Currency](#locale-and-currency)
 - [Payment Information](#payment-information)
