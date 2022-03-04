@@ -180,7 +180,7 @@ invoice_data.http_response
                   0.173
                 ]
               ],
-              "value": "LYDIA"
+              "value": "ClientName"
             },
             "customer_address": {
               "confidence": 1,
@@ -271,7 +271,7 @@ invoice_data.http_response
               {
                 "account_number": null,
                 "confidence": 1,
-                "iban": "FR7630003040400002620037292",
+                "iban": "FR763**********0037292",
                 "polygon": [
                   [
                     0.207,
@@ -314,7 +314,7 @@ invoice_data.http_response
                   0.876
                 ]
               ],
-              "value": "H2PROD"
+              "value": "SupplierName"
             },
             "supplier_address": {
               "confidence": 1,
@@ -506,7 +506,7 @@ invoice_data.http_response
               0.173
             ]
           ],
-          "value": "LYDIA"
+          "value": "ClientName"
         },
         "customer_address": {
           "confidence": 1,
@@ -597,7 +597,7 @@ invoice_data.http_response
           {
             "account_number": null,
             "confidence": 1,
-            "iban": "FR7630003040400002620037292",
+            "iban": "FR763**********0037292",
             "page_id": 0,
             "polygon": [
               [
@@ -642,7 +642,7 @@ invoice_data.http_response
               0.876
             ]
           ],
-          "value": "H2PROD"
+          "value": "SupplierName"
         },
         "supplier_address": {
           "confidence": 1,
@@ -885,8 +885,29 @@ for payment_detail in payment_details:
 
 **Invoice.company_number**:  List of detected supplier's company registration number. Each object in the list contains extra attribute:
 
-- **type** (String Generic): VAT NUMBER, TAX ID, GST NUMBER, COMPANY REGISTRATION NUMBER  or
-- **Value** (Country specific): TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), > RFC (Mexico), GSTIN (India) ...etc
+- **type** (String Generic): Type of company registration number among: 
+    [VAT NUMBER](https://en.wikipedia.org/wiki/VAT_identification_number),
+    [SIRET](https://en.wikipedia.org/wiki/SIRET_code),
+    [SIREN](https://en.wikipedia.org/wiki/SIREN_code),
+    [NIF](https://en.wikipedia.org/wiki/VAT_identification_number),
+    [CF](https://en.wikipedia.org/wiki/Italian_fiscal_code),
+    [UID](https://en.wikipedia.org/wiki/VAT_identification_number),
+    [STNR](),
+    [HRA/HRB](https://en.wikipedia.org/wiki/German_Commercial_Register),
+    [TIN](https://en.wikipedia.org/wiki/Taxpayer_Identification_Number) (includes EIN, FEIN, SSN, ATIN, PTIN, ITIN),
+    [RFC](https://wise.com/us/blog/clabe-rfc-curp-abm-meaning-mexico),
+    [BTW](https://en.wikipedia.org/wiki/European_Union_value_added_tax),
+    [ABN](https://abr.business.gov.au/Help/AbnFormat),
+    [UEN](https://www.uen.gov.sg/ueninternet/faces/pages/admin/aboutUEN.jspx),
+    [CVR](https://en.wikipedia.org/wiki/Central_Business_Register_(Denmark)),
+    [ORGNR](https://en.wikipedia.org/wiki/VAT_identification_number),
+    [INN](https://www.nalog.gov.ru/eng/exchinf/inn/),
+    [DPH](https://en.wikipedia.org/wiki/Value-added_tax),
+    [GSTIN](https://en.wikipedia.org/wiki/VAT_identification_number),
+    [COMPANY REGISTRATION NUMBER](https://en.wikipedia.org/wiki/VAT_identification_number) (UK),
+    [KVK](https://business.gov.nl/starting-your-business/registering-your-business/lei-rsin-vat-and-kvk-number-which-is-which/),
+    [DIC](https://www.vatify.eu/czech-vat-number.html)
+- **Value** (String): Value of the company identifier
 
 ```python
 # To get the list of company numbers
