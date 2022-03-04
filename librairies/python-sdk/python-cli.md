@@ -8,7 +8,6 @@ next:
     - python-invoice-ocr
   description: ''
 ---
-
 ## Command Line Usage
 The CLI tool is provided mainly for quick tests and debugging.
 

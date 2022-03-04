@@ -2,7 +2,6 @@
 title: Invoice API
 excerpt: ''
 ---
-
 The Python SDK supports the [invoice API](https://developers.mindee.com/docs/invoice-ocr) for extracting data from invoices.
 
 ```python

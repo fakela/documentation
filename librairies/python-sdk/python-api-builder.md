@@ -8,7 +8,6 @@ next:
     - python-invoice-ocr
   description: ''
 ---
-
 ## Usage with the API Builder
 If your document isn't covered by one of Mindee's Off-the-Shelf document endpoints,
 you can create your own with the

@@ -2,7 +2,6 @@
 title: Python SDK
 excerpt: ''
 ---
-
 Mindee's SDK for Python
 
 ![Python Logo](https://files.readme.io/d4f83de-Python.png)
