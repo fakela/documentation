@@ -36,13 +36,13 @@ Total amount including taxes: 4386.0
 Total amount excluding taxes: 3655.0
 Invoice date: 2020-09-29
 Invoice due date:
-Supplier name: H2PROD
+Supplier name: SupplierName
 Supplier address: 8 rue d'Uzès - 75002 Paris
-Customer name: LYDIA
+Customer name: ClientName
 Customer company registration:
 Customer address: 137 rue d'Aboukir 75002 Paris FRANCE
-Payment details: FR7630003040400002620037292; SOGEFRPP;
-Company numbers: FR95449587591; 44958759100032; 449587591
+Payment details: FR76***************92; SOGEFRPP;
+Company numbers: FR9544****591; 44****59100032; ****7591
 Taxes: 731.0 20.0%
 Total taxes: 731.0
 Locale: fr; fr; EUR;
@@ -797,24 +797,6 @@ Depending on the field type, there might be additional attributes that will be e
 - [Taxes](#taxes)
 - [Total Amounts](#total-amounts)
 
-### Company Information
-**Invoice.company_number**:  List of detected company registration number. Each object in the list contains extra attribute:
-
-- **type** (String Generic): VAT NUMBER, TAX ID, GST NUMBER, COMPANY REGISTRATION NUMBER  or
-- **Value** (Country specific): TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), > RFC (Mexico), GSTIN (India) ...etc
-
-```python
-# To get the list of company numbers
-company_registration_numbers = invoice_data.invoice.company_number
-
-# Loop on each object
-for company_number in company_registration_numbers:
-   # To get the type of number
-   company_number_type = company_number.type
-
-   # To get the company number
-   company_number_value = company_number.value
-```
 
 ### Customer Information
 
@@ -900,6 +882,24 @@ for payment_detail in payment_details:
 ```
 
 ### Supplier Information
+
+**Invoice.company_number**:  List of detected supplier's company registration number. Each object in the list contains extra attribute:
+
+- **type** (String Generic): VAT NUMBER, TAX ID, GST NUMBER, COMPANY REGISTRATION NUMBER  or
+- **Value** (Country specific): TIN (United States), GST/HST (Canada), SIREN/SIRET (France), UEN (Singapore), STNR (Germany), KVK (NL), CIF (Spain), NIF (Portugal), CVR (Denmark), CF (Italy), DIC (Czech Republic), > RFC (Mexico), GSTIN (India) ...etc
+
+```python
+# To get the list of company numbers
+company_registration_numbers = invoice_data.invoice.company_number
+
+# Loop on each object
+for company_number in company_registration_numbers:
+   # To get the type of number
+   company_number_type = company_number.type
+
+   # To get the company number
+   company_number_value = company_number.value
+```
 
 - **Invoice.supplier**: Supplier name as written in the invoice (logo or supplier Infos).
 
