@@ -1,6 +1,7 @@
 ---
 title: Cropper
 excerpt: ''
+hidden: true
 ---
 
 ## What is Cropper?
