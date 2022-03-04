@@ -5,9 +5,8 @@ next:
   pages:
     - build-your-first-document-parsing-api
     - invoice-ocr
-  description: 'mindee glossary'
 ---
-## Mindee Glossary
+
 This glossary introduces common Mindee terminology. You will frequently encounter these concepts throughout this docs as Mindee is centered around them.
 
 - **Annotation**: These are the labels used to train custom APIs; in other words, it refers to labels produced and provided to our API when the training Interface is used.
@@ -17,4 +16,3 @@ This glossary introduces common Mindee terminology. You will frequently encounte
 - **OpenAPI Definition**: This is a specification that defines a standard, language-agnostic interface to RESTful APIs.
 - **Payload**: A payload refers to the data that you submit to the Mindee server when you are making an API request.
 - **Predictions**: This refers to response or results that our APIs deliver on a given document.
-
