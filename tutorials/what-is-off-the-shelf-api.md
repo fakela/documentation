@@ -6,6 +6,7 @@ next:
     - receipt-ocr
     - invoice-ocr
   description: ''
+hidden: false
 ---
 
 ### What are Off-the-shelf APIs

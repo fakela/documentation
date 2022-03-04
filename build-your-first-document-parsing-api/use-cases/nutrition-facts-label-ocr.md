@@ -1,6 +1,7 @@
 ---
 title: Nutrition Facts label OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Nutrition Facts labels using our deep learning engine. It will work for any food brand or label template. 
 

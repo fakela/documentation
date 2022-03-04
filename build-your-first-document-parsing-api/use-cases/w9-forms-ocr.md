@@ -1,6 +1,7 @@
 ---
 title: W9 forms OCR
 excerpt: ''
+hidden: false
 ---
 This article describes how to build an OCR API that extracts data from W9 forms using our deep learning engine. If you want to automate your bank workflow, this article is for you. 
 

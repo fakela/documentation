@@ -1,6 +1,7 @@
 ---
 title: Energy performance diagnostic OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from energy performance diagnostics using our deep learning engine. It will work for any kind of EPD template. 
 

@@ -1,6 +1,7 @@
 ---
 title: Receipt API
 excerpt: ''
+hidden: false
 ---
 
 ## Data structure

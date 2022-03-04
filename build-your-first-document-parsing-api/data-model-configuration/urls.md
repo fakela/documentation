@@ -1,6 +1,7 @@
 ---
 title: URLs
 excerpt: ''
+hidden: false
 ---
 ## Set up an URL Address field
 

@@ -6,6 +6,7 @@ next:
     - build-your-first-document-parsing-api
     - invoice-ocr
   description: ''
+hidden: false
 ---
 
 This section provides an insight into the basics of Mindee UI. It describes all the features and its function.

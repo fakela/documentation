@@ -5,6 +5,7 @@ next:
   pages:
     - data-model-configuration
   description: ''
+hidden: false
 ---
 In this walkthrough, we'll walk through the steps to create your own document parsing API.  In this example, we'll use the W-9 tax form from the USA. 
 

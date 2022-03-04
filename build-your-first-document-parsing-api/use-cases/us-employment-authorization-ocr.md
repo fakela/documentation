@@ -1,6 +1,7 @@
 ---
 title: US Employment Authorization OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from US Employment Authorization using our deep learning engine. 
 

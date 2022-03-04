@@ -1,6 +1,7 @@
 ---
 title: 'Zapier: Invoice OCR Extraction'
 excerpt: ''
+hidden: false
 ---
 One of the most common ways we receive invoices for services rendered is via email.  The invoices are typically PDF files attached to the email.
 

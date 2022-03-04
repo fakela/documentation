@@ -1,6 +1,7 @@
 ---
 title: Invoice API
 excerpt: ''
+hidden: false
 ---
 
 The Python SDK supports the [invoice API](https://developers.mindee.com/docs/invoice-ocr) for extracting data from invoices.
@@ -30,6 +31,7 @@ invoice_data.invoice
 ```
 
 ```shell
+hidden: false
 -----Invoice data-----
 Filename: 995b49c5-acc4-4272-a01a-2e44e99ff704.pdf
 Invoice number: 149118
@@ -47,6 +49,7 @@ Company numbers: FR95449587591; 44958759100032; 449587591
 Taxes: 731.0 20.0%
 Total taxes: 731.0
 Locale: fr; fr; EUR;
+hidden: false
 ----------------------
 ```
 

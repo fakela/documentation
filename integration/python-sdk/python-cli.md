@@ -7,6 +7,7 @@ next:
     - python-passport-ocr
     - python-invoice-ocr
   description: ''
+hidden: false
 ---
 
 ## Command Line Usage

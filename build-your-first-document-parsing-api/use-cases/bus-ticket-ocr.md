@@ -1,6 +1,7 @@
 ---
 title: Bus Ticket OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Bus Ticket using our deep learning engine. It will work for any bus company.
 

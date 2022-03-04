@@ -1,6 +1,7 @@
 ---
 title: 'Zapier: Passport OCR Extraction'
 excerpt: ''
+hidden: false
 ---
 Every time you plan an international trip, you are asked for  your passport number, date of birth, country of citizenship, so that you can prove who you are.
 

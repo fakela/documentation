@@ -5,6 +5,7 @@ next:
   pages:
     - limitations
   description: ''
+hidden: false
 ---
 ## Documents in Mindee
 Documents used in Mindee include semi-structured files such as an invoice, receipt, ID document, W9-forms, train-ticket etc.

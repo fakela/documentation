@@ -1,6 +1,7 @@
 ---
 title: Numbers
 excerpt: ''
+hidden: false
 ---
 ## Set up a number field
  

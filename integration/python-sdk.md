@@ -1,6 +1,7 @@
 ---
 title: Python SDK
 excerpt: ''
+hidden: false
 ---
 
 Mindee's SDK for Python

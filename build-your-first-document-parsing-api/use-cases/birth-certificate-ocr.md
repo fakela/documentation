@@ -1,6 +1,7 @@
 ---
 title: Birth Certificate OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Birth certificates using our deep learning engine. It will work for any document issued in the United States.  
 

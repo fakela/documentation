@@ -1,6 +1,7 @@
 ---
 title: 'No code: Zapier'
 excerpt: ''
+hidden: false
 ---
 No code solutions are exactly that - solutions to use the Mindee APIs without writing a single line of code.
 

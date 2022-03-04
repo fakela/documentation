@@ -1,6 +1,7 @@
 ---
 title: Node.js receipt OCR
 excerpt: ''
+hidden: false
 ---
 ## Receipt data structure
 

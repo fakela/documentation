@@ -5,6 +5,7 @@ next:
   pages:
     - make-your-first-request
   description: ''
+hidden: false
 ---
 The steps outlined below will guide you through the process of setting up your account and getting started with Mindee APIs.
 

@@ -1,6 +1,7 @@
 ---
 title: Node.js SDK
 excerpt: ''
+hidden: false
 ---
 Mindee's helper library for Node.js
 

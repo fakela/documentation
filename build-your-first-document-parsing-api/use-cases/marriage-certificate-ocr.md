@@ -1,6 +1,7 @@
 ---
 title: Marriage Certificate OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Marriage Certificates using our deep learning engine. It will work for any bank company or bank statement template. 
 

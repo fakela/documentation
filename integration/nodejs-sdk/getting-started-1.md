@@ -7,6 +7,7 @@ next:
     - nodejs-receipt-ocr
     - generate-your-clients
   description: ''
+hidden: false
 ---
 Get started with Mindee's Node.js SDK.
 

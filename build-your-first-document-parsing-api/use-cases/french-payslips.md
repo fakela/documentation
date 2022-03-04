@@ -1,6 +1,7 @@
 ---
 title: French Payslips OCR
 excerpt: ''
+hidden: false
 ---
 This article explains how to build an OCR API that automatically extracts data from French payslips (bulletins de salaire). 
 

@@ -6,6 +6,7 @@ next:
     - prediction
     - annotation
   description: ''
+hidden: false
 ---
 Mindee's REST API endpoint are specific points of entry used to make requests.
 

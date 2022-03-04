@@ -1,6 +1,7 @@
 ---
 title: Train using the annotation endpoint
 excerpt: ''
+hidden: false
 ---
 When using the API, you can correct and upload the results back into the model to continue training. However, not every prediction is 100% accurate, so you may need to provide corrections. To get additional potential results, add the **annotations=true** URL parameter to the prediction API:
 

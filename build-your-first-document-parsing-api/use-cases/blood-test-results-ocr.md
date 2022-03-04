@@ -1,6 +1,7 @@
 ---
 title: Medical Certificate OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Medical Certificates using our deep learning engine. 
 

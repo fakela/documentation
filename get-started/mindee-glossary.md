@@ -6,6 +6,7 @@ next:
     - build-your-first-document-parsing-api
     - invoice-ocr
   description: 'mindee glossary'
+hidden: false
 ---
 ## Mindee Glossary
 This glossary introduces common Mindee terminology. You will frequently encounter these concepts throughout this docs as Mindee is centered around them.

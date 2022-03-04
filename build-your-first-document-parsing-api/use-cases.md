@@ -1,6 +1,7 @@
 ---
 title: Use-cases
 excerpt: ''
+hidden: false
 ---
 This article gives you a set of tutorials explaining how to build an accurate OCR API for many different types of documents using Mindee's engine.
 

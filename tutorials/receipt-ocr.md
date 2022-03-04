@@ -1,6 +1,7 @@
 ---
 title: Receipt OCR
 excerpt: Automatically extract data from receipts and bills
+hidden: false
 ---
 Mindee’s receipt OCR API uses deep learning to automatically, accurately, and instantaneously parse your receipt details.
 

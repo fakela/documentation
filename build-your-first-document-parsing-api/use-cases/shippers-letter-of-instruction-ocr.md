@@ -1,6 +1,7 @@
 ---
 title: Shipper's Letter of Instruction OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Shipper's letter of Instruction using our deep learning engine. This API works with any letter template. 
 

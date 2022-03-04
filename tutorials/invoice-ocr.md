@@ -1,6 +1,7 @@
 ---
 title: Invoice OCR
 excerpt: Automatically extract data from unstructured invoices
+hidden: false
 ---
 Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and instantaneously parse invoices in your applications. It takes the API a few seconds to extract data from your PDFs or photos of invoices. The API extracts data such as:
 
