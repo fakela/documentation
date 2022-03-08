@@ -1,6 +1,7 @@
 ---
 title: Boarding Pass OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Flight Boarding Passes using our deep learning engine. It will work for any airline company or boarding pass template. 
 

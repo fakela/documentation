@@ -1,6 +1,7 @@
 ---
 title: Certificate of Status OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Certificate of Status using our deep learning engine. It will work for any bank company or bank statement template. 
 

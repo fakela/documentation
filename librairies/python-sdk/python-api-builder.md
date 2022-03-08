@@ -7,6 +7,7 @@ next:
     - python-passport-ocr
     - python-invoice-ocr
   description: ''
+hidden: false
 ---
 ## Usage with the API Builder
 If your document isn't covered by one of Mindee's Off-the-Shelf document endpoints,

@@ -1,6 +1,7 @@
 ---
 title: Data model configuration
 excerpt: ''
+hidden: false
 ---
 ​
 ## Define your custom Data Model

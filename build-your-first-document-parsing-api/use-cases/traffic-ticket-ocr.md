@@ -1,6 +1,7 @@
 ---
 title: Traffic Ticket OCR
 excerpt: ''
+hidden: false
 ---
 This article describes how to build an OCR API that extracts data from Traffic ticket using our deep learning engine. If you want to automate your traffic ticket workflow, this article is for you. 
 

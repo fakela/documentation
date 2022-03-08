@@ -1,6 +1,7 @@
 ---
 title: Diploma OCR
 excerpt: ''
+hidden: false
 ---
 Reading this article you'll be able to build an OCR API that extracts data from diploma using our deep learning engine.
 

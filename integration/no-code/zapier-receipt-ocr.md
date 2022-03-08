@@ -1,6 +1,7 @@
 ---
 title: 'Zapier: Receipt OCR Extraction'
 excerpt: ''
+hidden: false
 ---
 Have you ever been out at a business meal, and collected the receipt, but before you could submit your expense, you lost the receipt? With Mindee's receipt parsing API, you can take a photo, and we'll extract all the details from the receipt.
 

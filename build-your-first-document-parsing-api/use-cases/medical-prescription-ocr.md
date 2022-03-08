@@ -1,6 +1,7 @@
 ---
 title: Medical prescription OCR
 excerpt: ''
+hidden: false
 ---
 Reading this article you'll be able to build an OCR API that extracts data from medical prescriptions using our deep learning engine.
 

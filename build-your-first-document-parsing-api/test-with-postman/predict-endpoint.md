@@ -1,6 +1,7 @@
 ---
 title: Predict Endpoint
 excerpt: ''
+hidden: false
 ---
 ## How to use the Predict endpoint with Postman
  

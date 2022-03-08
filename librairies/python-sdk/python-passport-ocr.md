@@ -1,6 +1,7 @@
 ---
 title: Passport API
 excerpt: ''
+hidden: false
 ---
 ## Passport data structure
 

@@ -1,6 +1,7 @@
 ---
 title: Affidavit of Residence OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Affidavits of Residence using our deep learning engine. 
 

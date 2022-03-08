@@ -1,6 +1,7 @@
 ---
 title: Training
 excerpt: ''
+hidden: false
 ---
 ## How it works
  

@@ -1,6 +1,7 @@
 ---
 title: Medicare health insurance card OCR
 excerpt: ''
+hidden: false
 ---
 This article explains how to quickly build and deploy an accurate OCR API that extracts data from US Medicare health insurance cards using our deep learning engine. It can be adapted to any type of health insurance card from other providers.
 

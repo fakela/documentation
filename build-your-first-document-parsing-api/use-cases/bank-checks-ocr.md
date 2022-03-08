@@ -1,6 +1,7 @@
 ---
 title: Bank Checks OCR
 excerpt: ''
+hidden: false
 ---
 This article describes how to build an OCR API that extracts data from Bank Checks using our deep learning engine. If you want to automate your bank workflow, this article is for you. 
 

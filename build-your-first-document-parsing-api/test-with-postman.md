@@ -1,6 +1,7 @@
 ---
 title: Test your API with Postman
 excerpt: ''
+hidden: false
 ---
 ## Test your document parsing API with Postman
 

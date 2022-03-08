@@ -1,6 +1,7 @@
 ---
 title: Train Ticket OCR
 excerpt: ''
+hidden: false
 ---
 This article shows you how to build an OCR API that extracts data from train tickets (or eTickets) using our deep learning engine. It will work for any train ticket format or template, paper or digital. Improve your workflow by extracting data directly from your train ticket documents. 
 

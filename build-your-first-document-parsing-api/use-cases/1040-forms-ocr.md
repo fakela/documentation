@@ -1,6 +1,7 @@
 ---
 title: 1040 Forms OCR
 excerpt: ''
+hidden: false
 ---
 This article describes how to build an OCR API that extracts data from 1040 Forms using our deep learning engine. If you want to automate your workflow, this article is for you. 
 

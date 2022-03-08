@@ -1,6 +1,7 @@
 ---
 title: Passport OCR
 excerpt: Automatically extracts data from passports
+hidden: false
 ---
 Many on-boarding processes in mobile or web apps require to extract some data from ID documents. Using Mindee's Passport API, you can automatically extract data from passports to offer to your users the best on-boarding experience. The API extracts: 
 

@@ -7,6 +7,7 @@ next:
     - python-passport-ocr
     - python-invoice-ocr
   description: ''
+hidden: false
 ---
 Get started with Mindee's python SDK.
 

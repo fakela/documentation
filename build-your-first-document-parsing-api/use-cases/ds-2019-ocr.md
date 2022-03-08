@@ -1,6 +1,7 @@
 ---
 title: DS 2019 OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from the DS 2019 form using our deep learning engine. It will work for any airline company or boarding pass template. 
 

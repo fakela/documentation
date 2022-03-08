@@ -1,6 +1,7 @@
 ---
 title: Error management
 excerpt: ''
+hidden: false
 ---
 
 ## Mindee REST API Status and Error Codes

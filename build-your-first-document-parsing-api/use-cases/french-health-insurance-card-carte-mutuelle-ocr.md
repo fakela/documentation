@@ -1,6 +1,7 @@
 ---
 title: French health insurance card OCR
 excerpt: ''
+hidden: false
 ---
 This article explains how to extract all the relevant data from French health insurance cards (carte mutuelle tiers payant) using our deep learning OCR engine.
 

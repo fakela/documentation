@@ -1,6 +1,7 @@
 ---
 title: Node.js invoice OCR
 excerpt: ''
+hidden: false
 ---
 ## Invoice data structure
 

@@ -1,6 +1,7 @@
 ---
 title: Phone Number
 excerpt: ''
+hidden: false
 ---
 ## Set up an Phone Number field
 

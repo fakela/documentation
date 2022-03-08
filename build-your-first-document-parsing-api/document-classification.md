@@ -6,6 +6,7 @@ next:
     - build-your-first-document-parsing-api
     - training-interface
   description: ''
+hidden: false
 ---
 Workflows often involve document processing. And sometimes, you need to classify those documents automatically in your software. One reason can be that your users upload a bunch of different data in a unique flow, or they upload a single pdf including many different documents. It can be very tricky to automate this depending on your use case.
 

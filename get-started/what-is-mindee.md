@@ -7,6 +7,7 @@ next:
     - build-your-first-document-parsing-api
     - invoice-ocr
   description: ''
+hidden: false
 ---
 
 ## What is Mindee?

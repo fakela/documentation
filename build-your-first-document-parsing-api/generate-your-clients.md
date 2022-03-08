@@ -1,6 +1,7 @@
 ---
 title: Generate your clients
 excerpt: ''
+hidden: false
 ---
 ​
 ## Generate your client from Swagger json

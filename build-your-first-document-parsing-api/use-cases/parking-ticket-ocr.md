@@ -1,6 +1,7 @@
 ---
 title: Parking Ticket OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from Parking Ticket using our deep learning engine.
 

@@ -1,6 +1,7 @@
 ---
 title: Text
 excerpt: ''
+hidden: false
 ---
 ## Set up a text field
 

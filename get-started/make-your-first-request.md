@@ -1,6 +1,7 @@
 ---
 title: Make your first request
 excerpt: ''
+hidden: false
 ---
 
 This guide will walk you through the fundamental processes of making API calls and queries using our document parsing APIs.

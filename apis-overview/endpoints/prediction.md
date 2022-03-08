@@ -7,6 +7,7 @@ next:
     - limitations
     - annotation
   description: ''
+hidden: false
 ---
 
 ## What is Prediction

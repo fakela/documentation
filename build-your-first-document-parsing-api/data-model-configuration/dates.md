@@ -1,6 +1,7 @@
 ---
 title: Dates
 excerpt: ''
+hidden: false
 ---
 ## Set up a date field
 

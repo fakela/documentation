@@ -1,6 +1,7 @@
 ---
 title: US Visa OCR
 excerpt: ''
+hidden: false
 ---
 This article walks you through the building process of an OCR API that extracts data from US Visas using our deep learning engine. It will work for any visa issued by the United States of America.  
 

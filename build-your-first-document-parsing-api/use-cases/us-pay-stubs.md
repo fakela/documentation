@@ -1,6 +1,7 @@
 ---
 title: US Pay Stubs OCR
 excerpt: ''
+hidden: false
 ---
 This article lays out the process recommended to build an OCR API that extracts data from US pay stubs using Mindee's deep learning engine.
 

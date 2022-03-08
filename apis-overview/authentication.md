@@ -6,6 +6,7 @@ next:
     - endpoints
     - error-management
   description: ''
+hidden: false
 ---
 
 Authentication is the process of identifying and verifying the identity of a user making the API call. Mindee API uses **API Keys** for authentication. The API key is a long string that you usually include either in the request URL or request header. To get your API key, see [Create your API key](https://developers.mindee.com/docs/make-your-first-request#create-an-api-key). Keep in mind that your API keys has alot of uses, so be careful to keep them safe! Keep your private API keys out of the public eye by avoiding putting them on GitHub, client-side code, or any other publicly accessible location.

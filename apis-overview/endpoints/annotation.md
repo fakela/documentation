@@ -5,6 +5,7 @@ next:
   pages:
     - limitations
   description: ''
+hidden: false
 ---
 ## Train your document parsing API
 When using the API builder, you train with your own documents your API. You can choose to use Mindee Platform to annotate your documents, or you can use the endpoint Annotation to send the labels found on the candidate boxes.

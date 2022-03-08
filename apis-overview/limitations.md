@@ -1,6 +1,7 @@
 ---
 title: Technical limitations
 excerpt: ''
+hidden: false
 ---
 
 A set of limits are enforced to ensure the safety of Mindee's parsing document APIs. An API may have additional limits depending on its plan. An API call that causes any of these limits to be exceeded will be rejected with an error. You can find limits specific to your API in the documentation tab.
