@@ -1,5 +1,5 @@
 ---
-title: Node.js receipt OCR
+title: Receipt API
 excerpt: ''
 hidden: false
 ---
