@@ -21,7 +21,7 @@ Mindee’s Invoice OCR API uses deep learning to automatically, accurately, and 
 
 - Customer address
 - Customer company registration
-- Customer company registration
+- Customer name
 - Supplier address
 
 ## Set up the API
