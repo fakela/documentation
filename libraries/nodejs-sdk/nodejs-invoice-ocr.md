@@ -1,5 +1,5 @@
 ---
-title: Node.js invoice OCR
+title: Invoice API
 excerpt: ''
 hidden: false
 ---
